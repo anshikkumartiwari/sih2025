@@ -1,10 +1,6 @@
 # Compliance Checker Project
 
-
-
 ## how to run (windows)
-
-
 1. **Create a folder and clone**
 
 ```
