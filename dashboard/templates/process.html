@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Compliance Checker - Process</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Provide Product Link</h1>
+    </header>
+
+    <!-- Minimal input form -->
+    <section class="box">
+      <form method="POST" action="{{ url_for('dashboard.process') }}">
+        <label for="product_url">Amazon Product URL</label><br>
+        <input type="url" id="product_url" name="product_url"
+               placeholder="https://www.amazon.in/..."
+               required style="width: 80%; padding: 8px;">
+        <br><br>
+        <button type="submit" class="btn">Check Compliance</button>
+      </form>
+    </section>
+  </div>
+</body>
+</html>

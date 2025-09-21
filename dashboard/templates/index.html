@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Compliance Checker - Home</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header>
+      <h1>Automated Compliance Checker</h1>
+      <p>
+        A tool to automatically verify Legal Metrology declarations on
+        e-commerce platforms like Amazon.
+      </p>
+    </header>
+
+    <!-- Problem Statement Overview -->
+    <section class="box">
+      <h2>Why this tool?</h2>
+      <p>
+        E-commerce platforms often fail to comply with packaging regulations.
+        Our AI-powered solution scans listings, extracts data, and validates
+        compliance in real time.
+      </p>
+    </section>
+
+    <!-- Action -->
+    <section class="action">
+      <form action="{{ url_for('dashboard.process') }}">
+        <button type="submit" class="btn">Start Checking</button>
+      </form>
+    </section>
+  </div>
+</body>
+</html>

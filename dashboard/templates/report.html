@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Compliance Checker - Report</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Compliance Report</h1>
+    </header>
+
+    <section class="box">
+      {% if data %}
+        <pre>{{ data }}</pre>
+      {% else %}
+        <p>No data found. Please process a product first.</p>
+      {% endif %}
+    </section>
+
+    <footer>
+      <a href="{{ url_for('dashboard.home') }}" class="btn">Back to Home</a>
+    </footer>
+  </div>
+</body>
+</html>
