@@ -1,1 +1,18 @@
-{'url': 'https://www.amazon.in/24-Mantra-Organic-Wheat-Premium/dp/B00L924APY?crid=845ADHX5973F&dib=eyJ2IjoiMSJ9.8IB2ALzy2W_upd94sUVOo5IE_-tq0TEdwHN3RpAayAtrOnJ-ahwkua9Df7-gBaiUtIyqucFybM8G_pJPQZyxet90tygXNxR2sIFjVQpEF1Ss0Z3v36fy-qDKBY_nJtDy2x9z9G5HBUJxllM8HTwFRS_b9W7timsa76LtLOSOevTNmPsOB28v3DZjLUt-4vySziNIsrTnTINPqnV-MIRUF54cFlB95ACVc2V4fzbHRvI3twzIstsDFM2G_XqikRhnXoHYUrfntrrzfEojVbfT6snBrHSjIYI11B_zY5TGP38.1gvthE9cLKkXoAte7o1173hVmVwPFY41QGffs9aPLhI&dib_tag=se&keywords=WHEAT&qid=1758491864&sprefix=wheat%2Caps%2C304&sr=8-5', 'title': 'Sample Amazon Product', 'mrp': '₹499', 'quantity': '250g', 'manufacturer': 'Sample Manufacturer', 'origin': 'India'}
+{
+  "url": "https://amzn.in/d/2Tiyzrg",
+  "title": "Bikano Bombay Mixture | Spicy & Tangy Indian Namkeen Snack | Crunchy Blend of Sev, Peanuts & Spices | Tea-Time Snack – 800g",
+  "mrp": "₹228.00",
+  "quantity": "authentic bombay-style flavor - a delicious mix of traditional spices like cumin, clove, cardamom, and dry mango powder offers a true taste of classic indian street food.",
+  "manufacturer": "A-28, Lawrence Road Industrial Area, Keshav Puram, Shakurpur, New Delhi, Delhi, 110035, Bikanervala Foods Pvt Ltd",
+  "origin": null,
+  "images": [
+    "temp\\temp2\\img1_360_icon_73x73v2__CB485971317_SX38_SY50_CR_0_0_38_50_FMpng_RI_.png",
+    "temp\\temp2\\img2_51fDGAgtKzL__SL1500_.jpg",
+    "temp\\temp2\\img3_61K_FdXHoFL__SL1500_.jpg",
+    "temp\\temp2\\img4_51cdnEhXZgL__SL1500_.jpg",
+    "temp\\temp2\\img5_41XGEEBm5JL__SL1500_.jpg",
+    "temp\\temp2\\img6_51AfRGe7EVL__SL1500_.jpg",
+    "temp\\temp2\\img7_51wMLKDzyYL__SL1500_.jpg",
+    "temp\\temp2\\img8_41eeJTlGb0L__SL1500_.jpg"
+  ]
+}

@@ -2,6 +2,9 @@
 from flask import Blueprint, render_template, request, redirect, url_for
 import os
 from core import master
+import json
+
+
 
 dashboard = Blueprint(
     "dashboard",
@@ -27,7 +30,7 @@ def process():
             # save raw data to temp (for now as a txt file)
             os.makedirs(TEMP_DIR, exist_ok=True)
             with open(os.path.join(TEMP_DIR, "output.txt"), "w", encoding="utf-8") as f:
-                f.write(str(data))
+                json.dump(data, f, indent=2, ensure_ascii=False)
             return redirect(url_for("dashboard.report"))
     return render_template("process.html")
 
@@ -38,5 +41,5 @@ def report():
     output_file = os.path.join(TEMP_DIR, "output.txt")
     if os.path.exists(output_file):
         with open(output_file, "r", encoding="utf-8") as f:
-            data = f.read()
+            data = json.load(f)
     return render_template("report.html", data=data)

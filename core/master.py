@@ -1,7 +1,6 @@
 from core.crawlers import amazon
 
 def process_product(url: str):
-    # currently only supports Amazon
-    if "amazon" in url.lower():
+    if any(domain in url.lower() for domain in ["amazon", "amzn.in"]):
         return amazon.crawl(url)
     return {"error": "Unsupported platform"}
