@@ -1,18 +1,26 @@
 {
-  "url": "https://amzn.in/d/2Tiyzrg",
-  "title": "Bikano Bombay Mixture | Spicy & Tangy Indian Namkeen Snack | Crunchy Blend of Sev, Peanuts & Spices | Tea-Time Snack – 800g",
-  "mrp": "₹228.00",
-  "quantity": "authentic bombay-style flavor - a delicious mix of traditional spices like cumin, clove, cardamom, and dry mango powder offers a true taste of classic indian street food.",
-  "manufacturer": "A-28, Lawrence Road Industrial Area, Keshav Puram, Shakurpur, New Delhi, Delhi, 110035, Bikanervala Foods Pvt Ltd",
-  "origin": null,
+  "url": "https://amzn.in/d/dTAL3KI",
+  "title": "Nutrabay Pure Micronised Creatine Monohydrate Powder 3000 mg/Serving – Pre/Post Workout Supplement for Muscle Gain & Recovery |33 Servings – 100g, Unflavoured | Trustified Certified | 100% Authentic",
+  "mrp": "₹229.00",
+  "quantity": "100.0 gram",
+  "manufacturer": "Abyss Pharma Pvt. Ltd., Abyss Pharma Pvt. Ltd. B121, Second Floor, Mayapuri Phase 1, New Delhi, 110064, India",
+  "origin": "India",
   "images": [
-    "temp\\temp2\\img1_360_icon_73x73v2__CB485971317_SX38_SY50_CR_0_0_38_50_FMpng_RI_.png",
-    "temp\\temp2\\img2_51fDGAgtKzL__SL1500_.jpg",
-    "temp\\temp2\\img3_61K_FdXHoFL__SL1500_.jpg",
-    "temp\\temp2\\img4_51cdnEhXZgL__SL1500_.jpg",
-    "temp\\temp2\\img5_41XGEEBm5JL__SL1500_.jpg",
-    "temp\\temp2\\img6_51AfRGe7EVL__SL1500_.jpg",
-    "temp\\temp2\\img7_51wMLKDzyYL__SL1500_.jpg",
-    "temp\\temp2\\img8_41eeJTlGb0L__SL1500_.jpg"
-  ]
+    "temp\\temp2\\img1_41DID9LXi0L__SL1500_.jpg",
+    "temp\\temp2\\img2_51l2vZTBOCL__SL1500_.jpg",
+    "temp\\temp2\\img3_51SYNAAjt5L__SL1500_.jpg",
+    "temp\\temp2\\img4_41kUeJs4fEL__SL1500_.jpg",
+    "temp\\temp2\\img5_41d5A3jigqL__SL1500_.jpg",
+    "temp\\temp2\\img6_41fL7-ugDNL__SL1500_.jpg"
+  ],
+  "Brand": "Nutrabay",
+  "Flavour": "Unflavoured",
+  "Primary Supplement Type": "Creatine",
+  "Net Quantity": "100.0 gram",
+  "Item Form": "Powder",
+  "Item Weight": "100 Grams",
+  "Item dimensions L x W x H": "15 x 10 x 3 Centimeters",
+  "Special Ingredients": "Creatine",
+  "Diet Type": "Vegetarian",
+  "Product Benefits": "Energy Management"
 }
