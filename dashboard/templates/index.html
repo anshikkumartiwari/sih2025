@@ -2,36 +2,502 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Compliance Checker - Home</title>
+  <title>Automated Compliance Checker for Legal Metrology</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-</head>
+  <script defer src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="{{ url_for('static', filename='img/placeholder.png') }}">
+  <meta name="color-scheme" content="light dark" />
+  <meta name="theme-color" content="#0b5cff" />
+  <meta name="description" content="AI-powered tool for real-time validation of product listings on e-commerce platforms under Legal Metrology Rules.">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --primary: #2563eb;
+      --primary-dark: #1d4ed8;
+      --secondary: #64748b;
+      --accent: #f59e0b;
+      --success: #10b981;
+      --danger: #ef4444;
+      --warning: #f59e0b;
+      --bg-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      --card-gradient: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
+    }
+
+    .hero-section {
+      background: var(--bg-gradient);
+      color: white;
+      padding: 120px 0;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+      opacity: 0.3;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+    .hero-text h1 {
+      font-size: 3.5rem;
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 20px;
+      background: linear-gradient(45deg, #ffffff, #e2e8f0);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hero-text .tagline {
+      font-size: 1.25rem;
+      opacity: 0.9;
+      margin-bottom: 30px;
+      line-height: 1.6;
+    }
+    .hero-cta {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 40px;
+    }
+    .btn-hero {
+      padding: 16px 32px;
+      border-radius: 12px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .btn-primary {
+      background: white;
+      color: var(--primary);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+    }
+    .btn-secondary {
+      background: rgba(255,255,255,0.1);
+      color: white;
+      border: 2px solid rgba(255,255,255,0.3);
+      backdrop-filter: blur(10px);
+    }
+    .btn-secondary:hover {
+      background: rgba(255,255,255,0.2);
+      border-color: rgba(255,255,255,0.5);
+    }
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .stat-item {
+      text-align: center;
+      padding: 20px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 12px;
+      backdrop-filter: blur(10px);
+    }
+    .stat-number {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .stat-label {
+      font-size: 0.9rem;
+      opacity: 0.8;
+    }
+    .hero-visual {
+      position: relative;
+    }
+    .dashboard-preview {
+      background: white;
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: 0 25px 50px rgba(0,0,0,0.3);
+      transform: rotate(3deg);
+      transition: transform 0.3s ease;
+    }
+    .dashboard-preview:hover {
+      transform: rotate(0deg) scale(1.02);
+    }
+    .preview-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 20px;
+      padding-bottom: 15px;
+      border-bottom: 2px solid #e2e8f0;
+    }
+    .preview-content {
+      display: grid;
+      gap: 15px;
+    }
+    .preview-card {
+      background: #f8fafc;
+      padding: 15px;
+      border-radius: 8px;
+      border-left: 4px solid var(--primary);
+    }
+    .preview-metric {
+      font-size: 0.8rem;
+      color: #64748b;
+      margin-bottom: 5px;
+    }
+    .preview-value {
+      font-weight: 600;
+      color: var(--primary);
+    }
+
+    .section {
+      padding: 80px 0;
+    }
+    .section-title {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+    .section-title h2 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #1e293b;
+      margin-bottom: 16px;
+    }
+    .section-title p {
+      font-size: 1.1rem;
+      color: #64748b;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .problem-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin-top: 60px;
+    }
+    .problem-card {
+      background: var(--card-gradient);
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      border-left: 5px solid var(--danger);
+      transition: transform 0.3s ease;
+    }
+    .problem-card:hover {
+      transform: translateY(-5px);
+    }
+    .problem-icon {
+      width: 60px;
+      height: 60px;
+      background: #fef2f2;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+    .problem-icon i {
+      font-size: 24px;
+      color: var(--danger);
+    }
+
+    .solution-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      margin-top: 60px;
+    }
+    .solution-card {
+      background: white;
+      padding: 40px 30px;
+      border-radius: 20px;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: all 0.3s ease;
+      border: 1px solid #e2e8f0;
+    }
+    .solution-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+    }
+    .solution-icon {
+      width: 80px;
+      height: 80px;
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 25px;
+      color: white;
+      font-size: 32px;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin-top: 60px;
+    }
+    .feature-card {
+      background: white;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      transition: all 0.3s ease;
+      border-top: 4px solid var(--primary);
+    }
+    .feature-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+    }
+    .feature-header {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+    .feature-icon {
+      width: 50px;
+      height: 50px;
+      background: #eff6ff;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--primary);
+      font-size: 20px;
+    }
+
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      margin-top: 60px;
+    }
+    .benefit-card {
+      background: white;
+      padding: 30px;
+      border-radius: 16px;
+      text-align: center;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      transition: all 0.3s ease;
+    }
+    .benefit-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+    }
+    .benefit-number {
+      font-size: 3rem;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 15px;
+    }
+
+    .audience-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      margin-top: 60px;
+    }
+    .audience-card {
+      background: white;
+      padding: 30px;
+      border-radius: 16px;
+      text-align: center;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      transition: all 0.3s ease;
+    }
+    .audience-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+    }
+    .audience-icon {
+      width: 70px;
+      height: 70px;
+      background: linear-gradient(135deg, var(--accent), #f97316);
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      color: white;
+      font-size: 28px;
+    }
+
+    .deliverables-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      margin-top: 60px;
+    }
+    .deliverable-card {
+      background: white;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      transition: all 0.3s ease;
+      border-left: 4px solid var(--success);
+    }
+    .deliverable-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+    }
+
+    .cta-section {
+      background: var(--bg-gradient);
+      color: white;
+      padding: 80px 0;
+      text-align: center;
+    }
+    .cta-content h2 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+    .cta-content p {
+      font-size: 1.2rem;
+      opacity: 0.9;
+      margin-bottom: 40px;
+    }
+
+    @media (max-width: 768px) {
+      .hero-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+      }
+      .hero-text h1 {
+        font-size: 2.5rem;
+      }
+      .hero-stats {
+        grid-template-columns: 1fr;
+      }
+      .section {
+        padding: 60px 0;
+      }
+      .section-title h2 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      const recent = JSON.parse(localStorage.getItem('recent_urls')||'[]');
+      const list = document.getElementById('recent-list');
+      if (recent.length && list) {
+        list.innerHTML = recent.map(u => `<li class="recent-item"><a href="{{ url_for('dashboard.process') }}?u=${encodeURIComponent(u)}">${u}</a></li>`).join('');
+      }
+    });
+  </script>
+  </head>
 <body>
-  <div class="container">
-    <!-- Header -->
-    <header>
-      <h1>Automated Compliance Checker</h1>
-      <p>
-        A tool to automatically verify Legal Metrology declarations on
-        e-commerce platforms like Amazon.
-      </p>
-    </header>
+  <nav class="topbar">
+    <div class="brand">LM Compliance</div>
+    <div class="topbar-actions">
+      <a class="link" href="{{ url_for('dashboard.process') }}">Start</a>
+      <a class="link" href="#how">How it works</a>
+      <a class="link" href="#features">Features</a>
+    </div>
+  </nav>
 
-    <!-- Problem Statement Overview -->
+  <main class="container">
+    <section class="hero box">
+      <div>
+        <span class="badge">LM 2025 • Prototype</span>
+        <h1 class="title" style="margin-top:6px">Automated Legal Metrology Compliance for E‑commerce</h1>
+        <p class="muted">Paste a product URL. We crawl, extract and evaluate declarations to flag potential non‑compliance with Legal Metrology (Packaged Commodities) Rules.</p>
+        <div class="hero-cta">
+          <a href="{{ url_for('dashboard.process') }}" class="btn btn-primary">Start Checking</a>
+          <a href="#features" class="btn btn-ghost">Explore Features</a>
+        </div>
+        <div class="stat-grid">
+          <div class="stat-card"><div class="kpi" data-counter="245">0</div><div class="muted">Listings screened</div></div>
+          <div class="stat-card"><div class="kpi" data-counter="10">0</div><div class="muted">LM rule heuristics</div></div>
+          <div class="stat-card"><div class="kpi" data-counter="92">0%</div><div class="muted">Avg. data capture</div></div>
+          <div class="stat-card"><div class="kpi">Privacy‑first</div><div class="muted">local processing</div></div>
+        </div>
+      </div>
+      <img src="{{ url_for('static', filename='img/placeholder.png') }}" class="hero-img" alt="Compliance dashboard preview"/>
+    </section>
+
+    <section id="features" class="box">
+      <h2>Capabilities</h2>
+      <div class="features">
+        <div class="feature">
+          <h3>Smart Crawling</h3>
+          <p>Retrieves title, price, quantity, manufacturer, origin and images from product detail pages.</p>
+        </div>
+        <div class="feature">
+          <h3>Image‑Aware</h3>
+          <p>Parses gallery to collect high‑resolution visuals for evidence and visual verification.</p>
+        </div>
+        <div class="feature">
+          <h3>Actionable Reports</h3>
+          <p>Summarizes what’s present, what’s missing and highlights potential LM non‑compliance.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="how" class="box">
+      <div class="section-title">
+        <h2>How it works</h2>
+        <span class="badge">DOM + Computer Vision</span>
+      </div>
+      <div class="grid-2">
+        <div class="timeline">
+          <div class="step"><strong>1. Ingest</strong><br/>Paste URL or choose from recents.</div>
+          <div class="step"><strong>2. Extract</strong><br/>Capture key fields and gallery images.</div>
+          <div class="step"><strong>3. Validate</strong><br/>Apply LM checks on presence/format.</div>
+          <div class="step"><strong>4. Report</strong><br/>Get a shareable, human‑readable summary.</div>
+        </div>
+        <div>
+          <table class="matrix">
+            <thead><tr><th>Declaration</th><th>Status</th></tr></thead>
+            <tbody>
+              <tr><td>MRP (₹)</td><td>Auto‑extracted</td></tr>
+              <tr><td>Net quantity</td><td>Auto‑extracted</td></tr>
+              <tr><td>Manufacturer / Packer</td><td>Parsed from details</td></tr>
+              <tr><td>Country of origin</td><td>Parsed from details</td></tr>
+              <tr><td>Product images</td><td>Hi‑res evidence</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="recent" style="margin-top:14px">
+        <h3>Recent URLs</h3>
+        <ul id="recent-list" class="recent-list"></ul>
+      </div>
+    </section>
+
     <section class="box">
-      <h2>Why this tool?</h2>
-      <p>
-        E-commerce platforms often fail to comply with packaging regulations.
-        Our AI-powered solution scans listings, extracts data, and validates
-        compliance in real time.
-      </p>
+      <h2>Use‑cases</h2>
+      <div class="features">
+        <div class="feature"><h3>Audit teams</h3><p>Rapidly screen large catalogs and prioritize listings requiring manual review.</p></div>
+        <div class="feature"><h3>Manufacturers</h3><p>Validate your PDPs before go‑live to avoid penalties and listing takedowns.</p></div>
+        <div class="feature"><h3>Marketplaces</h3><p>Automate baseline LM checks to drive consistent customer experience.</p></div>
+      </div>
     </section>
+  </main>
 
-    <!-- Action -->
-    <section class="action">
-      <form action="{{ url_for('dashboard.process') }}">
-        <button type="submit" class="btn">Start Checking</button>
-      </form>
-    </section>
-  </div>
+  <footer class="footer">Built for LM compliance evaluation • Demo</footer>
 </body>
 </html>

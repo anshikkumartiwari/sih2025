@@ -18,6 +18,10 @@ TEMP_DIR = os.path.join(os.getcwd(), "temp")
 
 @dashboard.route("/")
 def home():
+    return render_template("landing.html")
+
+@dashboard.route("/demo")
+def demo():
     return render_template("index.html")
 
 

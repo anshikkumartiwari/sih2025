@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Automated Compliance Checker for Legal Metrology</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <script defer src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="{{ url_for('static', filename='img/placeholder.png') }}">
+  <meta name="color-scheme" content="light dark" />
+  <meta name="theme-color" content="#0b5cff" />
+  <meta name="description" content="AI-powered tool for real-time validation of product listings on e-commerce platforms under Legal Metrology Rules.">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+            :root {
+              --primary: #3b82f6;
+              --primary-dark: #2563eb;
+              --secondary: #94a3b8;
+              --accent: #8b5cf6;
+              --success: #10b981;
+              --danger: #ef4444;
+              --warning: #f59e0b;
+              --bg-gradient: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+              --card-gradient: linear-gradient(145deg, #1e293b 0%, #334155 100%);
+              --bg-primary: #0f172a;
+              --bg-secondary: #1e293b;
+              --bg-tertiary: #334155;
+              --text-primary: #f8fafc;
+              --text-secondary: #cbd5e1;
+              --text-muted: #94a3b8;
+              --border: #475569;
+            }
+
+            .hero-section {
+              background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+              color: white;
+              padding: 120px 0;
+              position: relative;
+              overflow: hidden;
+            }
+    .hero-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+      opacity: 0.3;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+    .hero-text h1 {
+      font-size: 3.5rem;
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 20px;
+      background: linear-gradient(45deg, #ffffff, #e2e8f0);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hero-text .tagline {
+      font-size: 1.25rem;
+      opacity: 0.9;
+      margin-bottom: 30px;
+      line-height: 1.6;
+    }
+    .hero-cta {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 40px;
+    }
+    .btn-hero {
+      padding: 16px 32px;
+      border-radius: 12px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .btn-primary {
+      background: white;
+      color: var(--primary);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+    }
+    .btn-secondary {
+      background: rgba(255,255,255,0.1);
+      color: white;
+      border: 2px solid rgba(255,255,255,0.3);
+      backdrop-filter: blur(10px);
+    }
+    .btn-secondary:hover {
+      background: rgba(255,255,255,0.2);
+      border-color: rgba(255,255,255,0.5);
+    }
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .stat-item {
+      text-align: center;
+      padding: 20px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 12px;
+      backdrop-filter: blur(10px);
+    }
+    .stat-number {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .stat-label {
+      font-size: 0.9rem;
+      opacity: 0.8;
+    }
+    .hero-visual {
+      position: relative;
+    }
+            .dashboard-preview {
+              background: var(--bg-secondary);
+              border-radius: 20px;
+              padding: 30px;
+              box-shadow: 0 25px 50px rgba(0,0,0,0.5);
+              transform: rotate(3deg);
+              transition: transform 0.3s ease;
+              border: 1px solid var(--border);
+            }
+    .dashboard-preview:hover {
+      transform: rotate(0deg) scale(1.02);
+    }
+    .preview-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 20px;
+      padding-bottom: 15px;
+      border-bottom: 2px solid #e2e8f0;
+    }
+            .preview-content {
+              display: grid;
+              gap: 15px;
+            }
+            .preview-card {
+              background: var(--bg-tertiary);
+              padding: 15px;
+              border-radius: 8px;
+              border-left: 4px solid var(--primary);
+              color: var(--text-primary);
+            }
+            .preview-metric {
+              font-size: 0.8rem;
+              color: var(--text-muted);
+              margin-bottom: 5px;
+            }
+            .preview-value {
+              font-weight: 600;
+              color: var(--primary);
+            }
+
+            .section {
+              padding: 80px 0;
+              background: var(--bg-primary);
+            }
+            .section-title {
+              text-align: center;
+              margin-bottom: 60px;
+            }
+            .section-title h2 {
+              font-size: 2.5rem;
+              font-weight: 700;
+              color: var(--text-primary);
+              margin-bottom: 16px;
+            }
+            .section-title p {
+              font-size: 1.1rem;
+              color: var(--text-muted);
+              max-width: 600px;
+              margin: 0 auto;
+            }
+
+    .problem-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin-top: 60px;
+    }
+            .problem-card {
+              background: var(--card-gradient);
+              padding: 30px;
+              border-radius: 16px;
+              box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+              border-left: 5px solid var(--danger);
+              transition: transform 0.3s ease;
+              color: var(--text-primary);
+            }
+    .problem-card:hover {
+      transform: translateY(-5px);
+    }
+    .problem-icon {
+      width: 60px;
+      height: 60px;
+      background: #fef2f2;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+    .problem-icon i {
+      font-size: 24px;
+      color: var(--danger);
+    }
+
+    .solution-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      margin-top: 60px;
+    }
+            .solution-card {
+              background: var(--bg-secondary);
+              padding: 40px 30px;
+              border-radius: 20px;
+              box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+              text-align: center;
+              transition: all 0.3s ease;
+              border: 1px solid var(--border);
+              color: var(--text-primary);
+            }
+    .solution-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+    }
+    .solution-icon {
+      width: 80px;
+      height: 80px;
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 25px;
+      color: white;
+      font-size: 32px;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin-top: 60px;
+    }
+            .feature-card {
+              background: var(--bg-secondary);
+              padding: 30px;
+              border-radius: 16px;
+              box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+              transition: all 0.3s ease;
+              border-top: 4px solid var(--primary);
+              color: var(--text-primary);
+            }
+    .feature-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+    }
+    .feature-header {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+    .feature-icon {
+      width: 50px;
+      height: 50px;
+      background: #eff6ff;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--primary);
+      font-size: 20px;
+    }
+
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      margin-top: 60px;
+    }
+            .benefit-card {
+              background: var(--bg-secondary);
+              padding: 30px;
+              border-radius: 16px;
+              text-align: center;
+              box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+              transition: all 0.3s ease;
+              color: var(--text-primary);
+            }
+    .benefit-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+    }
+    .benefit-number {
+      font-size: 3rem;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 15px;
+    }
+
+    .audience-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      margin-top: 60px;
+    }
+    .audience-card {
+      background: white;
+      padding: 30px;
+      border-radius: 16px;
+      text-align: center;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      transition: all 0.3s ease;
+    }
+    .audience-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+    }
+    .audience-icon {
+      width: 70px;
+      height: 70px;
+      background: linear-gradient(135deg, var(--accent), #f97316);
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      color: white;
+      font-size: 28px;
+    }
+
+    .deliverables-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      margin-top: 60px;
+    }
+    .deliverable-card {
+      background: white;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      transition: all 0.3s ease;
+      border-left: 4px solid var(--success);
+    }
+    .deliverable-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+    }
+
+            .cta-section {
+              background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+              color: white;
+              padding: 80px 0;
+              text-align: center;
+            }
+    .cta-content h2 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+    .cta-content p {
+      font-size: 1.2rem;
+      opacity: 0.9;
+      margin-bottom: 40px;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(8px);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 22px;
+      background: rgba(255,255,255,0.9);
+      border-bottom: 1px solid #e2e8f0;
+    }
+    .brand {
+      font-weight: 700;
+      letter-spacing: 0.2px;
+      font-size: 1.2rem;
+      color: var(--primary);
+    }
+    .topbar-actions {
+      display: flex;
+      gap: 24px;
+    }
+    .topbar .link {
+      color: #64748b;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+    .topbar .link:hover {
+      color: var(--primary);
+    }
+
+    @media (max-width: 768px) {
+      .hero-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+      }
+      .hero-text h1 {
+        font-size: 2.5rem;
+      }
+      .hero-stats {
+        grid-template-columns: 1fr;
+      }
+      .section {
+        padding: 60px 0;
+      }
+      .section-title h2 {
+        font-size: 2rem;
+      }
+      .topbar-actions {
+        gap: 16px;
+      }
+    }
+  </style>
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      // Animate counters
+      const counters = document.querySelectorAll('[data-counter]');
+      const animateCounter = (element) => {
+        const target = element.getAttribute('data-counter');
+        const isPercent = target.includes('%');
+        const isFraction = target.includes('/');
+        const value = parseInt(target.replace(/[^\d]/g, ''));
+        
+        let current = 0;
+        const increment = value / 50;
+        const timer = setInterval(() => {
+          current += increment;
+          if (current >= value) {
+            current = value;
+            clearInterval(timer);
+          }
+          
+          if (isPercent) {
+            element.textContent = Math.floor(current) + '%';
+          } else if (isFraction) {
+            element.textContent = Math.floor(current) + '/7';
+          } else {
+            element.textContent = Math.floor(current).toLocaleString();
+          }
+        }, 30);
+      };
+
+      // Intersection Observer for animations
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const counter = entry.target.querySelector('[data-counter]');
+            if (counter && !counter.classList.contains('animated')) {
+              counter.classList.add('animated');
+              animateCounter(counter);
+            }
+          }
+        });
+      }, { threshold: 0.5 });
+
+      counters.forEach(counter => {
+        observer.observe(counter.closest('.stat-item'));
+      });
+
+      // Smooth scrolling for navigation links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            target.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+            });
+          }
+        });
+      });
+    });
+  </script>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="topbar">
+    <div class="brand">
+      <i class="fas fa-shield-check"></i>
+      LM Compliance Checker
+    </div>
+    <div class="topbar-actions">
+      <a class="link" href="{{ url_for('dashboard.process') }}">Try Demo</a>
+      <a class="link" href="#features">Features</a>
+      <a class="link" href="#solution">Solution</a>
+      <a class="link" href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1>Automated Compliance Checker for Legal Metrology</h1>
+        <p class="tagline">AI-powered tool for real-time validation of product listings on e-commerce platforms</p>
+        <div class="hero-cta">
+          <a href="{{ url_for('dashboard.process') }}" class="btn-hero btn-primary">
+            <i class="fas fa-play"></i>
+            Try Demo
+          </a>
+          <a href="#solution" class="btn-hero btn-secondary">
+            <i class="fas fa-info-circle"></i>
+            Learn More
+          </a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat-item">
+            <div class="stat-number" data-counter="1000">0</div>
+            <div class="stat-label">Products Analyzed</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number" data-counter="95">0%</div>
+            <div class="stat-label">Accuracy Rate</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number" data-counter="24">0/7</div>
+            <div class="stat-label">Availability</div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="dashboard-preview">
+          <div class="preview-header">
+            <i class="fas fa-chart-line" style="color: var(--primary);"></i>
+            <span style="font-weight: 600;">Compliance Dashboard</span>
+          </div>
+          <div class="preview-content">
+            <div class="preview-card">
+              <div class="preview-metric">Compliance Score</div>
+              <div class="preview-value">92%</div>
+            </div>
+            <div class="preview-card">
+              <div class="preview-metric">Violations Found</div>
+              <div class="preview-value">3</div>
+            </div>
+            <div class="preview-card">
+              <div class="preview-metric">Products Scanned</div>
+              <div class="preview-value">1,247</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Compact Features Section -->
+  <section class="section" id="features" style="background: #f8fafc; padding: 60px 0;">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+      <div class="section-title" style="margin-bottom: 40px;">
+        <h2>How It Works</h2>
+        <p>AI-powered compliance validation in three simple steps</p>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px;">
+        <div class="feature-card" onclick="window.location.href='{{ url_for('dashboard.process') }}'" style="cursor: pointer;">
+          <div class="feature-header">
+            <div class="feature-icon">
+              <i class="fas fa-upload"></i>
+            </div>
+            <h3>1. Upload Product URL</h3>
+          </div>
+          <p>Simply paste any Amazon product URL to start the analysis process.</p>
+          <div style="margin-top: 15px; color: var(--primary); font-weight: 600;">
+            <i class="fas fa-arrow-right"></i> Try Now
+          </div>
+        </div>
+        <div class="feature-card" onclick="window.location.href='{{ url_for('dashboard.process') }}'" style="cursor: pointer;">
+          <div class="feature-header">
+            <div class="feature-icon">
+              <i class="fas fa-brain"></i>
+            </div>
+            <h3>2. AI Analysis</h3>
+          </div>
+          <p>Our system crawls the product, extracts images, and runs OCR + compliance checks.</p>
+          <div style="margin-top: 15px; color: var(--primary); font-weight: 600;">
+            <i class="fas fa-arrow-right"></i> See Demo
+          </div>
+        </div>
+        <div class="feature-card" onclick="window.location.href='{{ url_for('dashboard.process') }}'" style="cursor: pointer;">
+          <div class="feature-header">
+            <div class="feature-icon">
+              <i class="fas fa-chart-bar"></i>
+            </div>
+            <h3>3. Get Report</h3>
+          </div>
+          <p>Receive detailed compliance analysis with missing fields and recommendations.</p>
+          <div style="margin-top: 15px; color: var(--primary); font-weight: 600;">
+            <i class="fas fa-arrow-right"></i> View Results
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Compact Stats Section -->
+  <section class="section" style="padding: 60px 0;">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+      <div class="section-title" style="margin-bottom: 40px;">
+        <h2>Why Choose Our Solution</h2>
+        <p>Proven results and cutting-edge technology</p>
+      </div>
+      <div class="benefits-grid">
+        <div class="benefit-card">
+          <div class="benefit-number">95%</div>
+          <h3>Accuracy</h3>
+          <p>AI-powered validation with high precision</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-number">90%</div>
+          <h3>Time Saved</h3>
+          <p>Automated compliance checking</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-number">24/7</div>
+          <h3>Monitoring</h3>
+          <p>Continuous compliance validation</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-number">100%</div>
+          <h3>Compliance</h3>
+          <p>Complete regulatory coverage</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+      <div class="cta-content">
+        <h2>Ready to Transform Compliance Monitoring?</h2>
+        <p>Experience the power of AI-driven compliance validation</p>
+        <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+          <a href="{{ url_for('dashboard.process') }}" class="btn-hero btn-primary">
+            <i class="fas fa-play"></i>
+            Try Live Demo
+          </a>
+          <a href="#contact" class="btn-hero btn-secondary">
+            <i class="fas fa-envelope"></i>
+            Get in Touch
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="section" id="contact" style="background: white;">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+      <div class="section-title">
+        <h2>Contact Us</h2>
+        <p>Get in touch for demonstrations, partnerships, or technical inquiries</p>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; margin-top: 60px;">
+        <div style="text-align: center;">
+          <div style="width: 80px; height: 80px; background: #eff6ff; border-radius: 20px; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; color: var(--primary); font-size: 32px;">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <h3>Email</h3>
+          <p>compliance@example.com</p>
+        </div>
+        <div style="text-align: center;">
+          <div style="width: 80px; height: 80px; background: #eff6ff; border-radius: 20px; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; color: var(--primary); font-size: 32px;">
+            <i class="fas fa-phone"></i>
+          </div>
+          <h3>Phone</h3>
+          <p>+1 (555) 123-4567</p>
+        </div>
+        <div style="text-align: center;">
+          <div style="width: 80px; height: 80px; background: #eff6ff; border-radius: 20px; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; color: var(--primary); font-size: 32px;">
+            <i class="fas fa-map-marker-alt"></i>
+          </div>
+          <h3>Location</h3>
+          <p>San Francisco, CA</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer style="background: #1e293b; color: white; padding: 40px 0; text-align: center;">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+      <div style="display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 20px;">
+        <i class="fas fa-shield-check"></i>
+        <span style="font-weight: 700; font-size: 1.2rem;">Automated Compliance Checker</span>
+      </div>
+      <p style="opacity: 0.8;">Built for Legal Metrology compliance evaluation • Demo Version</p>
+      <div style="margin-top: 20px; padding-top: 20px; border-top: 1px solid #374151; opacity: 0.6;">
+        <p>&copy; 2025 Compliance Checker. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
