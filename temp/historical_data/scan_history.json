@@ -1,5 +1,5 @@
 {
-  "total_scans": 2,
+  "total_scans": 3,
   "scan_history": [
     {
       "scan_id": "scan_20250926_031539_1",
@@ -168,11 +168,108 @@
         "license": null,
         "barcode": null
       }
+    },
+    {
+      "scan_id": "scan_20250926_140516_3",
+      "timestamp": "2025-09-26T14:05:16.060640",
+      "product_info": {
+        "title": "Nutrabay Pure Micronised Creatine Monohydrate Powder 3000 mg/Serving – Pre/Post Workout Supplement for Muscle Gain & Recovery |33 Servings – 100g, Unflavoured | Trustified Certified | 100% Authentic",
+        "url": "https://amzn.in/d/dTAL3KI",
+        "manufacturer": "Abyss Pharma Pvt. Ltd., Abyss Pharma Pvt. Ltd. B121, Second Floor, Mayapuri Phase 1, New Delhi, 110064, India",
+        "origin": "al products",
+        "mrp": "₹229.00",
+        "quantity": "8 G",
+        "category": "Pharmaceuticals"
+      },
+      "compliance_data": {
+        "score": 1.0,
+        "level": "excellent",
+        "required_present": 4,
+        "required_total": 4,
+        "compliance_summary": {
+          "total_fields_found": 4,
+          "required_present": 4,
+          "required_total": 4,
+          "compliance_score": "4/4"
+        },
+        "compliance": {
+          "mrp": true,
+          "quantity": true,
+          "manufacturer": true,
+          "origin": true,
+          "support": false,
+          "dates": false,
+          "batch": false,
+          "license": false,
+          "barcode": false
+        },
+        "missing_fields": [],
+        "warnings": [
+          "Optional: Consumer Care Contact",
+          "Optional: Manufacturing/Expiry Date",
+          "Optional: Batch/Lot Number",
+          "Optional: FSSAI License Number",
+          "Optional: Product Barcode"
+        ]
+      },
+      "technical_data": {
+        "images_count": 6,
+        "ocr_text_length": 2506,
+        "vision_selected": 0,
+        "gemini_analysis": {},
+        "gemini_comprehensive": {},
+        "manufacturer_analytics": {
+          "manufacturer_name": "Abyss Pharma Pvt. Ltd., Abyss Pharma Pvt. Ltd. B121, Second Floor, Mayapuri Phase 1, New Delhi, 110064, India",
+          "total_products": 1,
+          "average_compliance_score": 1.0,
+          "compliance_level": "Excellent"
+        },
+        "product_details": {
+          "Product Dimensions   15 x 10 x 3 cm; 100 g": "Product Dimensions  :",
+          "Date First Available   16 March 2022": "Date First Available  :",
+          "Manufacturer   Abyss Pharma Pvt. Ltd.": "Manufacturer  :",
+          "ASIN   B09VP6HL5J": "ASIN  :",
+          "Item model number   NB-NUT-1009-03": "Item model number  :",
+          "Country of Origin   India": "Country of Origin  :",
+          "Manufacturer   Abyss Pharma Pvt. Ltd., Abyss Pharma Pvt. Ltd. B121, Second Floor, Mayapuri Phase 1, New Delhi, 110064, India": "Manufacturer  :",
+          "Packer   Abyss Pharma Pvt. Ltd. B121, Second Floor, Mayapuri Phase 1, New Delhi, 110064, India": "Packer  :",
+          "Importer   Abyss Pharma Pvt. Ltd. B121, Second Floor, Mayapuri Phase 1, New Delhi, 110064, India": "Importer  :",
+          "Item Weight   100 g": "Item Weight  :",
+          "Item Dimensions LxWxH   15 x 10 x 3 Centimeters": "Item Dimensions LxWxH  :",
+          "Net Quantity   100.0 gram": "Net Quantity  :",
+          "Generic Name   Creatine": "Generic Name  :",
+          "Best Sellers Rank #266 in Health & Personal Care (See Top 100 in Health & Personal Care)\n#4 in Creatine": "Best Sellers Rank:",
+          "Customer Reviews 4.2 \n4.2 out of 5 stars\n    7,820 ratings": "Customer Reviews:",
+          "Manufacturer": "Abyss Pharma Pvt. Ltd., Abyss Pharma Pvt. Ltd. B121, Second Floor, Mayapuri Phase 1, New Delhi, 110064, India",
+          "Country of Origin": "India",
+          "Item model number": "NB-NUT-1009-03",
+          "Product Dimensions": "15 x 10 x 3 cm; 100 g",
+          "ASIN": "B09VP6HL5J",
+          "Packer": "Abyss Pharma Pvt. Ltd. B121, Second Floor, Mayapuri Phase 1, New Delhi, 110064, India",
+          "Importer": "Abyss Pharma Pvt. Ltd. B121, Second Floor, Mayapuri Phase 1, New Delhi, 110064, India",
+          "Item Weight": "100 g",
+          "Item Dimensions LxWxH": "15 x 10 x 3 Centimeters",
+          "Net Quantity": "100.0 gram",
+          "Generic Name": "Creatine",
+          "Best Sellers Rank": "#266 in Health & Personal Care (See Top 100 in Health & Personal Care)\n#4 in Creatine"
+        }
+      },
+      "extracted_fields": {
+        "mrp": "₹229.00",
+        "quantity": "8 G",
+        "manufacturer": "Abyss Pharma Pvt. Ltd., Abyss Pharma Pvt. Ltd. B121, Second Floor, Mayapuri Phase 1, New Delhi, 110064, India",
+        "origin": "al products",
+        "support": null,
+        "dates": null,
+        "batch": null,
+        "license": null,
+        "barcode": null
+      }
     }
   ],
   "statistics": {
     "compliance_distribution": {
-      "excellent": 2,
+      "excellent": 3,
       "good": 0,
       "fair": 0,
       "poor": 0
@@ -180,22 +277,22 @@
     "field_compliance": {
       "required_fields": {
         "mrp": {
-          "present": 2,
+          "present": 3,
           "missing": 0,
           "percentage": 100.0
         },
         "quantity": {
-          "present": 2,
+          "present": 3,
           "missing": 0,
           "percentage": 100.0
         },
         "manufacturer": {
-          "present": 2,
+          "present": 3,
           "missing": 0,
           "percentage": 100.0
         },
         "origin": {
-          "present": 2,
+          "present": 3,
           "missing": 0,
           "percentage": 100.0
         }
@@ -203,27 +300,27 @@
       "optional_fields": {
         "support": {
           "present": 1,
-          "missing": 1,
-          "percentage": 50.0
+          "missing": 2,
+          "percentage": 33.33333333333333
         },
         "dates": {
           "present": 0,
-          "missing": 2,
+          "missing": 3,
           "percentage": 0.0
         },
         "batch": {
           "present": 0,
-          "missing": 2,
+          "missing": 3,
           "percentage": 0.0
         },
         "license": {
           "present": 1,
-          "missing": 1,
-          "percentage": 50.0
+          "missing": 2,
+          "percentage": 33.33333333333333
         },
         "barcode": {
           "present": 0,
-          "missing": 2,
+          "missing": 3,
           "percentage": 0.0
         }
       }
@@ -256,6 +353,20 @@
         "categories": [
           "Food & Beverages"
         ]
+      },
+      "Abyss Pharma Pvt. Ltd., Abyss Pharma Pvt. Ltd. B121, Second Floor, Mayapuri Phase 1, New Delhi, 110064, India": {
+        "total_scans": 1,
+        "total_compliance_score": 1.0,
+        "average_compliance_score": 1.0,
+        "compliance_levels": {
+          "excellent": 1,
+          "good": 0,
+          "fair": 0,
+          "poor": 0
+        },
+        "categories": [
+          "Pharmaceuticals"
+        ]
       }
     },
     "category_stats": {
@@ -286,21 +397,35 @@
         "manufacturers": [
           "Kellogg India Pvt Ltd. , Plot No. L2 & L3, Taloja Midc, District Raigad, Maharashtra, Kellogg's India Pvt Ltd"
         ]
+      },
+      "Pharmaceuticals": {
+        "total_scans": 1,
+        "total_compliance_score": 1.0,
+        "average_compliance_score": 1.0,
+        "compliance_levels": {
+          "excellent": 1,
+          "good": 0,
+          "fair": 0,
+          "poor": 0
+        },
+        "manufacturers": [
+          "Abyss Pharma Pvt. Ltd., Abyss Pharma Pvt. Ltd. B121, Second Floor, Mayapuri Phase 1, New Delhi, 110064, India"
+        ]
       }
     },
     "trends": {
       "daily_scans": {
-        "2025-09-26": 2
+        "2025-09-26": 3
       },
       "weekly_compliance": {
         "2025-W38": {
-          "total_scans": 2,
-          "total_score": 2.0,
+          "total_scans": 3,
+          "total_score": 3.0,
           "average_score": 1.0
         }
       },
       "monthly_analysis": {}
     }
   },
-  "last_updated": "2025-09-26T12:25:43.091026"
+  "last_updated": "2025-09-26T14:05:16.060640"
 }

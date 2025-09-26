@@ -1,107 +1,103 @@
 {
-  "url": "https://www.amazon.in/Kelloggs-Muesli-21-Fruit-Pouch/dp/B083JP2NZX?crid=845ADHX5973F&dib=eyJ2IjoiMSJ9.XfhKKeuLftqesUwEEJdIYCbg1u2UXQrvP7Vl3IjJbnNZtKT0qqzaZVQgBrHP03VHMtt0wz9h0xu-A20ro5yyCpMClNQyTu2lcUJNa47FkKqFGe5RP_Si_ceRXhJGATNy7zz0Sl5NbAcpE0OCV-Fv-vPLcqhlsVki-Trfbjio1Eemaaj43s6H2FvN0JpE0ZGsjzJeJYwmdmLXzb3bo2wW-3Tz02sfWVPehT3rugsqzdvqM39DxtSGMgWk51ml0RLpBGFi-qXTDuvfDmmvBrjqjcx61S0WF_gY_fLM_NeIRpA.prRfcZPEYxy-uCaopgzJDKBvNbhxlzqEQuB9UGq9Jz0&dib_tag=se&keywords=muesli&qid=1758869608&sprefix=wheat%2Caps%2C304&sr=8-5",
-  "title": "Kellogg's Muesli Fruit Nut & Seeds 750G | 12-In-1 Power Breakfast | India'S No. 1 Muesli | Multigrain Breakfast Cereal",
-  "mrp": "₹323.00",
-  "quantity": "12 G",
-  "manufacturer": "Kellogg India Pvt Ltd. , Plot No. L2 & L3, Taloja Midc, District Raigad, Maharashtra, Kellogg's India Pvt Ltd",
-  "origin": "India",
+  "url": "https://amzn.in/d/dTAL3KI",
+  "title": "Nutrabay Pure Micronised Creatine Monohydrate Powder 3000 mg/Serving – Pre/Post Workout Supplement for Muscle Gain & Recovery |33 Servings – 100g, Unflavoured | Trustified Certified | 100% Authentic",
+  "mrp": "₹229.00",
+  "quantity": "8 G",
+  "manufacturer": "Abyss Pharma Pvt. Ltd., Abyss Pharma Pvt. Ltd. B121, Second Floor, Mayapuri Phase 1, New Delhi, 110064, India",
+  "origin": "al products",
   "images": [
-    "temp\\temp2\\img1_51hHC869QiL_SL1500.jpg",
-    "temp\\temp2\\img2_51wLvlyxmJL_SL1500.jpg",
-    "temp\\temp2\\img3_51ivnEtyJHL_SL1500.jpg",
-    "temp\\temp2\\img4_518ovnG7nTL_SL1500.jpg",
-    "temp\\temp2\\img5_511botv-nlL_SL1500.jpg",
-    "temp\\temp2\\img6_51Z9oH3z82L_SL1500.jpg"
+    "temp\\temp2\\img1_41DID9LXi0L_SL1500.jpg",
+    "temp\\temp2\\img2_51l2vZTBOCL_SL1500.jpg",
+    "temp\\temp2\\img3_51SYNAAjt5L_SL1500.jpg",
+    "temp\\temp2\\img4_41kUeJs4fEL_SL1500.jpg",
+    "temp\\temp2\\img5_41d5A3jigqL_SL1500.jpg",
+    "temp\\temp2\\img6_41fL7-ugDNL_SL1500.jpg"
   ],
-  "Brand": "Kellogg's",
+  "Brand": "Nutrabay",
+  "Flavour": "Unflavoured",
+  "Primary Supplement Type": "Creatine",
+  "Net Quantity": "100.0 gram",
+  "Item Form": "Powder",
+  "Item Weight": "100 Grams",
+  "Item dimensions L x W x H": "15 x 10 x 3 Centimeters",
+  "Special Ingredients": "Creatine",
   "Diet Type": "Vegetarian",
-  "Flavour": "Fruit and Nut",
-  "Age Range (Description)": "Adult",
-  "Item Form": "Flaked",
-  "Speciality": "High Fibre, High Protein, Whole Grain",
-  "Net Quantity": "750.0 Grams",
-  "Number of Items": "1",
-  "Item Weight": "750 Grams",
-  "Total Eaches": "1",
+  "Product Benefits": "Energy Management",
   "product_details": {
-    "Specialty": "High Fibre, High Protein, Whole Grain",
-    "Weight": "750 Grams",
-    "Ingredient Type": "Vegetarian",
-    "Brand": "Kellogg's",
-    "Item package quantity": "1",
-    "Form": "Flaked",
-    "Appropriate Age Range": "Adult",
-    "Serving Recommendation": "As per age",
-    "Package Information": "Pouch",
-    "Manufacturer": "Kellogg India Pvt Ltd. , Plot No. L2 & L3, Taloja Midc, District Raigad, Maharashtra, Kellogg's India Pvt Ltd",
-    "Additives": "Fruit, Nut, Seeds, Multigrain",
-    "Allergen Information": "Barley",
-    "Item model number": "FN600R05",
-    "Net Quantity": "750.0 gram",
-    "Product Dimensions": "25 x 10 x 33 cm; 750 g",
-    "Ingredients": "Corn Grits,Wheat,Rice",
-    "Serving Size": "1",
-    "Energy (kcal)": "392.00 Kilocalories",
-    "Protein": "8 g",
-    "Fat": "6 g",
-    "Carbohydrate": "79 g",
-    "- Sugars": "23.5 g",
+    "Product Dimensions   15 x 10 x 3 cm; 100 g": "Product Dimensions  :",
+    "Date First Available   16 March 2022": "Date First Available  :",
+    "Manufacturer   Abyss Pharma Pvt. Ltd.": "Manufacturer  :",
+    "ASIN   B09VP6HL5J": "ASIN  :",
+    "Item model number   NB-NUT-1009-03": "Item model number  :",
+    "Country of Origin   India": "Country of Origin  :",
+    "Manufacturer   Abyss Pharma Pvt. Ltd., Abyss Pharma Pvt. Ltd. B121, Second Floor, Mayapuri Phase 1, New Delhi, 110064, India": "Manufacturer  :",
+    "Packer   Abyss Pharma Pvt. Ltd. B121, Second Floor, Mayapuri Phase 1, New Delhi, 110064, India": "Packer  :",
+    "Importer   Abyss Pharma Pvt. Ltd. B121, Second Floor, Mayapuri Phase 1, New Delhi, 110064, India": "Importer  :",
+    "Item Weight   100 g": "Item Weight  :",
+    "Item Dimensions LxWxH   15 x 10 x 3 Centimeters": "Item Dimensions LxWxH  :",
+    "Net Quantity   100.0 gram": "Net Quantity  :",
+    "Generic Name   Creatine": "Generic Name  :",
+    "Best Sellers Rank #266 in Health & Personal Care (See Top 100 in Health & Personal Care)\n#4 in Creatine": "Best Sellers Rank:",
+    "Customer Reviews 4.2 \n4.2 out of 5 stars\n    7,820 ratings": "Customer Reviews:",
+    "Manufacturer": "Abyss Pharma Pvt. Ltd., Abyss Pharma Pvt. Ltd. B121, Second Floor, Mayapuri Phase 1, New Delhi, 110064, India",
     "Country of Origin": "India",
-    "ASIN": "B083JP2NZX",
-    "Customer Reviews": "4.4 \n4.4 out of 5 stars\n    26,642 ratings\n4.4 out of 5 stars",
-    "Best Sellers Rank": "#27 in Grocery & Gourmet Foods (See Top 100 in Grocery & Gourmet Foods)\n#1 in Muesli",
-    "Date First Available": "5 January 2020",
-    "Packer": "kconsumer@kellogg.com",
-    "Importer": "India",
-    "Item Weight": "750 g",
-    "Item Dimensions LxWxH": "25 x 10 x 33 Centimeters",
-    "Generic Name": "Muesli 21% Fruit & Nut"
+    "Item model number": "NB-NUT-1009-03",
+    "Product Dimensions": "15 x 10 x 3 cm; 100 g",
+    "ASIN": "B09VP6HL5J",
+    "Packer": "Abyss Pharma Pvt. Ltd. B121, Second Floor, Mayapuri Phase 1, New Delhi, 110064, India",
+    "Importer": "Abyss Pharma Pvt. Ltd. B121, Second Floor, Mayapuri Phase 1, New Delhi, 110064, India",
+    "Item Weight": "100 g",
+    "Item Dimensions LxWxH": "15 x 10 x 3 Centimeters",
+    "Net Quantity": "100.0 gram",
+    "Generic Name": "Creatine",
+    "Best Sellers Rank": "#266 in Health & Personal Care (See Top 100 in Health & Personal Care)\n#4 in Creatine"
   },
   "vision": {
     "selected": [],
     "scoring": {
-      "temp\\temp2\\img1_51hHC869QiL_SL1500.jpg": {
+      "temp\\temp2\\img1_41DID9LXi0L_SL1500.jpg": {
         "score": 0,
         "matched": [],
-        "text_preview": "SUPER SAVER PACK $ Relloygs MUESLI FRUII NUT & SEEDS 12in1 POWER BRCAKTAST"
+        "text_preview": "NUTRABAY Pure CREATINE MONOHYDRATE Micronizcd eccruc FonaoUlTa Darelnaanana"
       },
-      "temp\\temp2\\img2_51wLvlyxmJL_SL1500.jpg": {
+      "temp\\temp2\\img2_51l2vZTBOCL_SL1500.jpg": {
         "score": 0,
         "matched": [],
-        "text_preview": "DIFFERENT WAYS Kelloygs MUESLI Jndia SNo)  Muesli 82her, NO CcO ISetht 43t Mapta GAt4es'"
+        "text_preview": "60% Strength Increase In 10 Weeks* Basad on Scientific Research"
       },
-      "temp\\temp2\\img3_51ivnEtyJHL_SL1500.jpg": {
+      "temp\\temp2\\img3_51SYNAAjt5L_SL1500.jpg": {
         "score": 0,
         "matched": [],
-        "text_preview": "Kellogga NUIRMION JNFORLAAILON' pF?10d o Fen LoC # Loam Eneict [NEAS fovA Ic[I Eeecennacne Vouacid Oy 7nae Fneamt Doinec IctltRa?TDRLIES CtChtotefuearI Wooocosden Jnea- 27 Elvy uiauivg Ihlyikce D4mJ B..."
+        "text_preview": "We've Raised the Bar on Trust & Purityl Trustified NUTRABAY Pure HERQY CREATINE MONOHYDRATE WndisoD LABTESTING 7~ 3 uliEo Lncrontnad Kenaae SUPER For 2 8.N3ia3891`"
       },
-      "temp\\temp2\\img4_518ovnG7nTL_SL1500.jpg": {
+      "temp\\temp2\\img4_41kUeJs4fEL_SL1500.jpg": {
         "score": 0,
         "matched": [],
-        "text_preview": "Ketloygs NEW ZIPLOCK PACK Zip_EAT; REPEAT: ZIp LOCK SUPER SAVER PACK' SUPER SAVER PACK' Kelloggs Kelloyga MUESLI MUESLI ER483uT '12i] E3483uT 12in] Powgs? DoweR Senennennnnnne"
+        "text_preview": "NUTRABAY Pure Other Creatine Creatines CREATINE Parameters Purity 99.996 <90% Formula 100% Micronized Non-Micronized Absorption Fast Slow Mixability Dissolves Easily Mixability Issues Passed Blind No ..."
       },
-      "temp\\temp2\\img5_511botv-nlL_SL1500.jpg": {
+      "temp\\temp2\\img5_41d5A3jigqL_SL1500.jpg": {
         "score": 0,
         "matched": [],
-        "text_preview": "SUPER SAVER PACK ' Kelloggs MUESLI FRUIT, NUT & SEEDS 12in1 POWER BREAKFAST Creatve Visuollsatlon NEW"
+        "text_preview": "You may receive either packaging: Nutraday Puri NUTRABAY MicRONIZED Pure CREATINE CREATINE MONOHYDRATE MONOHYDRATE 4 Both are the same & 10O% original products"
       },
-      "temp\\temp2\\img6_51Z9oH3z82L_SL1500.jpg": {
+      "temp\\temp2\\img6_41fL7-ugDNL_SL1500.jpg": {
         "score": 0,
         "matched": [],
-        "text_preview": "12 GRAINS, FRUIT; NUT 1 & SUPER SEEDS IN Oats Raisins Ragi Papaya Wheat Corn Rice +Vitamins / Iron Almonds Pumpkin \" Seeds Black Currants Cranberries Barley"
+        "text_preview": "Higher Muscle Volume in a Month\" \"Based On Scientific Research"
       }
     }
   },
   "ocr": {
-    "extracted_text": "SUPER SAVER PACK $ \nMUESLI \nFRUII NUT \n& SEEDS \n12in1 \nPOWER \nBRCAKTAST \nSUPER SAVER PACK ' \nRelloygs \nMUESLI \nFRUII NUT \n& SEEDS \n12in7 \nPOWER \nSUPER SHVER PHCK ' \nMUESLI \nFRUIT NUT \n& SEEDs \n'POWER \nA= \n0 \nSUPER SAVER PACK ' \nMUESLI \nFRUIT NUT \n& SEEDS \n12in] \nPOWER \nDIFFERENT WAYS \nKelloygs \nMUESLI \nNO \nDIFFERENT WAYS \nMUESLI \nIndia' s No] \nNO \nkelkggccn \nDIFTERE \nMUESLI \nIndia5 Nol Mutsli \nDIFFERENT WAYS \nMUESLI \nIndia'5 No | Muesii \nNO \nWeht \n750,9 \nVaP [ \nKellogga \nNUIRMION JNFORLAAILON' \nD4mJ \npER I00 \nIhiHIRE \nkoma \n42m0 \nPFR1009 \nnoq \nLog \n4199 \n509 \nMitaming \n780 \nm \n@Gm \nNEW ZIPLOCK PACK \nZip_EAT; REPEAT: \nZIp LOCK \nSUPER SAVER PACK' \nSUPER SAVER PACK' \nKelloggs \nKelloyga \nMUESLI \nMUESLI \n'12i] \n12in] \nNEW ZIPLock PACK \nZip EAT: REPEAT: \nSUPER SAWER PACK \nMUESLI \nMUESLI \nFRUI NUT \n12 \nSEEDS \n12 \nNEWZIPLOcKPACK \nZIPJEATE REPEAL \nSUPER SMVER PACT \nSUPER SAVER PACK\" \nMUESLI \nMUESLI \n1241 \n1 \nNEW ZIPlock PACK \nZip EAT: REPEAT. \nZipLoek \nSUPER SAVER PACK\" \nSUPER SAVER PaCA\" \nMUESLI \nMUESLI \nFRUI NUT \nFRUIINUT \nSEEDS \n12i] \n& SEEDS \n121 \nSUPER SAVER PACK ' \nKelloggs \nMUESLI \nFRUIT, NUT \n& SEEDS \n12in1 \nPOWER \nBREAKFAST \nCreatve \nVisuollsatlon \nNEW \nSUPER SAVER PACK ' \nKelluyaa \nMUESL \n&SEEDS \n12in1 \nPOWER \nBrEaKFAST \nCranue \nNEW \new \nN \nSUFER SAVER PACK' \nMUESLI \nFRUITNUT \n8SEEDS \n12 \nPOWER \nBREAKFAST \nSUPER SAVER PACK ' \nRelloyga \nMUESLI \nFRUII NUT \n& SEEDS \n12in] \nPoweR \nBreakFAST \nCreatue \nulalleation \nNEW \n12 \nGRAINS, FRUIT; NUT \n& SUPER SEEDS IN \nOats \nRaisins \nRagi \nPapaya \nWheat \nCorn \nRice \n+Vitamins / Iron \nAlmonds \nPumpkin \" \nSeeds \nBlack \nCurrants \nCranberries \nBarley \n12 \nGRAINS, FRUIT, NUT \n& SUPER SEEDS IN \nOats \nRaisins \nrag \nPapaya \nWheat \nCorn \nRice \n+Vitaming \nIron \nAlmonds \nPumpkin - \nSeeds \nBlack \nCurrants \nCranberries \nBarley \n12 \nGRAINS, FRUIT; NUT \n& SUPER SEEDS IN \nRasing \nRag \nPapaya \nWheat: \nCorn \nRicb \nAlmonds \nPumgkh \nSieds \nBlack \nburrants \n~Cranberrlesz \nBarkey \n12 \nGRAINS, FRUIT, NUT \n& SUPER SEEDS IN \nRaisins \nRagi \nPapaya \nWheat \nCorn $ Rice \n~Vitamins & Iron \nAlmonds \nPumpkin \" \nSeeds \nBlack \nCurrants \nCranberries \nOats",
+    "extracted_text": "NUTRABAY \nPure \nCREATINE \nMONOHYDRATE \nMicronizcd \nNUTRABAY \nPure \nCREATINE \nMONOHYDRATE \nMicronied \nNUTRABAY \nCREATINE \nMONOHYDRATE \nNUTRABAY \nPure \nCREATINE \nMONOHYDRATE \nMicronned \n33 \n60% \nStrength Increase \nIn 10 Weeks* \nBasad on Scientific Research \n60% \nStrength Increase \nIn 10 Weeks\" \nBasad on Sciantific Research \n60% \nStrength ncrease) \n60% \nStrength Increase \nIn 10 Weeks\" \n'Basad on Scientific Research \nWe've Raised the Bar on \nTrust & Purityl \nTrustified \nNUTRABAY \nPure \nCREATINE \nMONOHYDRATE \nLABTESTING \nSUPER \nFor \nWe've Raised the Bar on \nTrust & Purityl \nTrustified \npure \nCREATINE \nMONOHYDRATE \nLAB TESTNG \n8 \nGuper  \n0 \n8n3i03891` \nWeve Raised the Bar on} \nTrustlePurityl \nTrustified \nCREATINB \nWe'vve Raised the Bar on \nTrust & Purityl \nTrustified \nPure \nCREATINE \nUNBLSED \nLAB TESTING \nRAIED  \nFor \n8 \nNUTRABAY Pure \nOther \nCreatine \nCreatines \nCREATINE \nParameters \nPurity \n99.996 \n<90% \nFormula \n100% Micronized \nNon-Micronized \nAbsorption \nFast \nSlow \nMixability \nDissolves Easily \nMixability Issues \nPassed Blind \nNo Lab \nCertification \nTesting \nTesting \nNUTRABAY Pure \nOther \nCreatine \nCreatines \nParameters \nPurity \n99.996 \n<90% \nFormula \n100% Micronized \nNon-Micronized \nAbsorption \nFast \nSlow \nMixability \nDissolves Easily \nMixability Issues \nPassed Blind \nNo Lab \nCertification \nTesting \nTesting \nNUTRABAY Pure \n[Other : \nCreatine; \nreatines' \nParameters; \nFormul \nNon Mcronizea \nBeorrtlon} \nSlow \nalves Easily \nssues \nCertification \nPassed Blind \nNoLab \n(esting \nTestlng) \nDlssol \nMbabilly! \nNUTRABAY Pure \nOther \nCreatine \nCreatines \nParameters \nPurity \n99.9% \n<90% \nFormula \n100% Micronized \nNon-Micronized \nAbsorption \nFast \nSlow \nMixability \nDissolves Easily \nMixability Issues \nPassed Blind \nNo Lab \nCertification \nTesting \nTesting \nYou may receive either packaging: \nNUTRABAY \nMicRONIZED \nPure \nCREATINE \nCREATINE \nMONOHYDRATE \nMONOHYDRATE \n4 \nBoth are the same & 10O% original products \nYou may receive either packaging: \nMUIRADAY \nMicronized \nCREATINE \nCREATINE \nMONOHYDRATE \nBoth are the same & 1OO% original products \nYou may receive either packaging: \nCREATINE \nCREATINE \nBoth are the same & 10O% original products \nYou may receive either packaging: \nNUTRADAy \nMicronized \nDure \nCREATINE \nCREATINE \nMONOHYDRATE \nBoth are the same \n10O% original products. \nHigher Muscle \nVolume \nin a Month\" \n\"Based On Scientific Research \nHigher Muscle \nVolume \nin a Month' \nHigherMuscle \nVolume \nineMonth  \nHigher Muscle \nVolume \nin a Month' \nBasad On Scieritific Research \n1",
     "fields": {
-      "quantity": "12 G"
+      "origin": "al products",
+      "quantity": "8 G"
     },
     "compliance": {
       "mrp": false,
       "quantity": true,
       "manufacturer": false,
-      "origin": false,
+      "origin": true,
       "support": false,
       "dates": false,
       "batch": false,
@@ -110,8 +106,7 @@
     },
     "missing": [
       "Maximum Retail Price (₹)",
-      "Manufacturer/Packer Name",
-      "Country of Origin"
+      "Manufacturer/Packer Name"
     ],
     "warnings": [
       "Optional: Consumer Care Contact",
@@ -121,10 +116,10 @@
       "Optional: Product Barcode"
     ],
     "summary": {
-      "total_fields_found": 1,
-      "required_present": 1,
+      "total_fields_found": 2,
+      "required_present": 2,
       "required_total": 4,
-      "compliance_score": "1/4"
+      "compliance_score": "2/4"
     }
   },
   "compliance": {
@@ -153,7 +148,7 @@
     "compliance_score": "4/4"
   },
   "manufacturer_analytics": {
-    "manufacturer_name": "Kellogg India Pvt Ltd. , Plot No. L2 & L3, Taloja Midc, District Raigad, Maharashtra, Kellogg'S India",
+    "manufacturer_name": "Abyss Pharma Pvt. Ltd., Abyss Pharma Pvt. Ltd. B121, Second Floor, Mayapuri Phase 1, New Delhi, 110064, India",
     "total_products": 1,
     "average_compliance_score": 1.0,
     "compliance_level": "Excellent"
@@ -172,7 +167,5 @@
   },
   "gemini_comprehensive": {
     "error": "Comprehensive analysis failed: 400 API key not valid. Please pass a valid API key. [reason: \"API_KEY_INVALID\"\ndomain: \"googleapis.com\"\nmetadata {\n  key: \"service\"\n  value: \"generativelanguage.googleapis.com\"\n}\n, locale: \"en-US\"\nmessage: \"API key not valid. Please pass a valid API key.\"\n]"
-  },
-  "source": "extension",
-  "api_version": "1.0"
+  }
 }

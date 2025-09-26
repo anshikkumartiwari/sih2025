@@ -1,0 +1,95 @@
+{
+  "manufacturer_name": "Abyss Pharma Pvt. Ltd., Abyss Pharma Pvt. Ltd. B121, Second Floor, Mayapuri Phase 1, New Delhi, 110064, India",
+  "total_products": 1,
+  "compliance_history": [
+    {
+      "timestamp": "2025-09-26T14:05:16.060640",
+      "product_title": "Nutrabay Pure Micronised Creatine Monohydrate Powder 3000 mg/Serving – Pre/Post Workout Supplement for Muscle Gain & Recovery |33 Servings – 100g, Unflavoured | Trustified Certified | 100% Authentic",
+      "compliance_score": 1.0,
+      "required_fields_present": 4,
+      "required_fields_total": 4,
+      "missing_fields": [],
+      "warnings": [
+        "Optional: Consumer Care Contact",
+        "Optional: Manufacturing/Expiry Date",
+        "Optional: Batch/Lot Number",
+        "Optional: FSSAI License Number",
+        "Optional: Product Barcode"
+      ],
+      "url": "https://amzn.in/d/dTAL3KI",
+      "category": "General Products"
+    }
+  ],
+  "compliance_stats": {
+    "total_scans": 1,
+    "compliant_scans": 1,
+    "non_compliant_scans": 0,
+    "average_compliance_score": 1.0,
+    "required_fields_compliance": {
+      "mrp": {
+        "present": 1,
+        "missing": 0,
+        "percentage": 100.0
+      },
+      "quantity": {
+        "present": 1,
+        "missing": 0,
+        "percentage": 100.0
+      },
+      "manufacturer": {
+        "present": 1,
+        "missing": 0,
+        "percentage": 100.0
+      },
+      "origin": {
+        "present": 1,
+        "missing": 0,
+        "percentage": 100.0
+      }
+    },
+    "optional_fields_compliance": {
+      "support": {
+        "present": 0,
+        "missing": 1,
+        "percentage": 0.0
+      },
+      "dates": {
+        "present": 0,
+        "missing": 1,
+        "percentage": 0.0
+      },
+      "batch": {
+        "present": 0,
+        "missing": 1,
+        "percentage": 0.0
+      },
+      "license": {
+        "present": 0,
+        "missing": 1,
+        "percentage": 0.0
+      },
+      "barcode": {
+        "present": 0,
+        "missing": 1,
+        "percentage": 0.0
+      }
+    }
+  },
+  "product_categories": {
+    "General Products": {
+      "total_products": 1,
+      "compliant_products": 1,
+      "average_compliance_score": 1.0
+    }
+  },
+  "recent_products": [
+    {
+      "title": "Nutrabay Pure Micronised Creatine Monohydrate Powder 3000 mg/Serving – Pre/Post Workout Supplement for Muscle Gain & Recovery |33 Servings – 100g, Unflavoured | Trustified Certified | 100% Authentic",
+      "compliance_score": 1.0,
+      "timestamp": "2025-09-26T14:05:16.060640",
+      "category": "General Products",
+      "url": "https://amzn.in/d/dTAL3KI"
+    }
+  ],
+  "last_updated": "2025-09-26T14:05:16.060640"
+}

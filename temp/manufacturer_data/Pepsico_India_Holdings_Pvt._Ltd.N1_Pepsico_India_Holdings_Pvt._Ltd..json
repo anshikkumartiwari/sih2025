@@ -1,0 +1,149 @@
+{
+  "manufacturer_name": "Pepsico India Holdings Pvt. Ltd.N1 Pepsico India Holdings Pvt. Ltd.",
+  "total_products": 3,
+  "compliance_history": [
+    {
+      "timestamp": "2025-09-26T12:33:41.000903",
+      "product_title": "Kurkure, Masala Munch, 36g/38g (25.3g+12.7g EXTRA)",
+      "compliance_score": 0.75,
+      "required_fields_present": 3,
+      "required_fields_total": 4,
+      "missing_fields": [
+        "Country of Origin"
+      ],
+      "warnings": [
+        "Optional: Consumer Care Contact",
+        "Optional: Manufacturing/Expiry Date",
+        "Optional: Batch/Lot Number",
+        "Optional: FSSAI License Number",
+        "Optional: Product Barcode"
+      ],
+      "url": "https://www.amazon.in/Kurkure-Namkeen-Masala-Munch-50g/dp/B0186XLBWS?crid=13DYFIBGBQK1R&dib=eyJ2IjoiMSJ9.TqDtbd2ycXMiCHrzTHhXRYnRIHkewsJwITCKkNQYpevZSwz63THCHoZVpe_Pg6XAMLwWhM47YdHYaM3bApQf_H2I68f0zlfNOprfFNf8Nk1ZeCY7SEDODUjeS5m5_wJyzdFCfLFkxI48hzflrXzrRvgZL8mQPoA34oBG5WcalPRZnm-_PO6I6SqF_70eu8KS75Nj_k-m0h4by6vR_sS3nIXIf0cS0UBg7IzM5fxAk2iQXbB7u1GQ0fNeSde7bQnrhdk7onhSzkybZ0oXlU0JbLDnuWgL4KU2utFM0n2Qs08.qAMlvKtgasQhz4pJ1G9A4_m2qpakS_FKaCWDHiYb3Xg&dib_tag=se&keywords=kurkure%2Bchips&qid=1758869941&sprefix=kurkure%2Caps%2C448&sr=8-5&th=1",
+      "category": "General Products"
+    },
+    {
+      "timestamp": "2025-09-26T12:54:50.758813",
+      "product_title": "Kurkure, Masala Munch, 36g/38g (25.3g+12.7g EXTRA)",
+      "compliance_score": 0.75,
+      "required_fields_present": 3,
+      "required_fields_total": 4,
+      "missing_fields": [
+        "Country of Origin"
+      ],
+      "warnings": [
+        "Optional: Consumer Care Contact",
+        "Optional: Manufacturing/Expiry Date",
+        "Optional: Batch/Lot Number",
+        "Optional: FSSAI License Number",
+        "Optional: Product Barcode"
+      ],
+      "url": "https://www.amazon.in/Kurkure-Namkeen-Masala-Munch-50g/dp/B0186XLBWS?crid=13DYFIBGBQK1R&dib=eyJ2IjoiMSJ9.TqDtbd2ycXMiCHrzTHhXRYnRIHkewsJwITCKkNQYpevZSwz63THCHoZVpe_Pg6XAMLwWhM47YdHYaM3bApQf_H2I68f0zlfNOprfFNf8Nk1ZeCY7SEDODUjeS5m5_wJyzdFCfLFkxI48hzflrXzrRvgZL8mQPoA34oBG5WcalPRZnm-_PO6I6SqF_70eu8KS75Nj_k-m0h4by6vR_sS3nIXIf0cS0UBg7IzM5fxAk2iQXbB7u1GQ0fNeSde7bQnrhdk7onhSzkybZ0oXlU0JbLDnuWgL4KU2utFM0n2Qs08.qAMlvKtgasQhz4pJ1G9A4_m2qpakS_FKaCWDHiYb3Xg&dib_tag=se&keywords=kurkure%2Bchips&qid=1758869941&sprefix=kurkure%2Caps%2C448&sr=8-5&th=1",
+      "category": "General Products"
+    },
+    {
+      "timestamp": "2025-09-26T13:59:01.742102",
+      "product_title": "Kurkure, Masala Munch, 36g/38g (25.3g+12.7g EXTRA)",
+      "compliance_score": 0.75,
+      "required_fields_present": 3,
+      "required_fields_total": 4,
+      "missing_fields": [
+        "Country of Origin"
+      ],
+      "warnings": [
+        "Optional: Consumer Care Contact",
+        "Optional: Manufacturing/Expiry Date",
+        "Optional: Batch/Lot Number",
+        "Optional: FSSAI License Number",
+        "Optional: Product Barcode"
+      ],
+      "url": "https://www.amazon.in/Kurkure-Namkeen-Masala-Munch-50g/dp/B0186XLBWS?crid=13DYFIBGBQK1R&dib=eyJ2IjoiMSJ9.TqDtbd2ycXMiCHrzTHhXRYnRIHkewsJwITCKkNQYpevZSwz63THCHoZVpe_Pg6XAMLwWhM47YdHYaM3bApQf_H2I68f0zlfNOprfFNf8Nk1ZeCY7SEDODUjeS5m5_wJyzdFCfLFkxI48hzflrXzrRvgZL8mQPoA34oBG5WcalPRZnm-_PO6I6SqF_70eu8KS75Nj_k-m0h4by6vR_sS3nIXIf0cS0UBg7IzM5fxAk2iQXbB7u1GQ0fNeSde7bQnrhdk7onhSzkybZ0oXlU0JbLDnuWgL4KU2utFM0n2Qs08.qAMlvKtgasQhz4pJ1G9A4_m2qpakS_FKaCWDHiYb3Xg&dib_tag=se&keywords=kurkure%2Bchips&qid=1758869941&sprefix=kurkure%2Caps%2C448&sr=8-5&th=1",
+      "category": "General Products"
+    }
+  ],
+  "compliance_stats": {
+    "total_scans": 3,
+    "compliant_scans": 3,
+    "non_compliant_scans": 0,
+    "average_compliance_score": 0.75,
+    "required_fields_compliance": {
+      "mrp": {
+        "present": 3,
+        "missing": 0,
+        "percentage": 100.0
+      },
+      "quantity": {
+        "present": 3,
+        "missing": 0,
+        "percentage": 100.0
+      },
+      "manufacturer": {
+        "present": 3,
+        "missing": 0,
+        "percentage": 100.0
+      },
+      "origin": {
+        "present": 0,
+        "missing": 3,
+        "percentage": 0.0
+      }
+    },
+    "optional_fields_compliance": {
+      "support": {
+        "present": 0,
+        "missing": 3,
+        "percentage": 0.0
+      },
+      "dates": {
+        "present": 0,
+        "missing": 3,
+        "percentage": 0.0
+      },
+      "batch": {
+        "present": 0,
+        "missing": 3,
+        "percentage": 0.0
+      },
+      "license": {
+        "present": 0,
+        "missing": 3,
+        "percentage": 0.0
+      },
+      "barcode": {
+        "present": 0,
+        "missing": 3,
+        "percentage": 0.0
+      }
+    }
+  },
+  "product_categories": {
+    "General Products": {
+      "total_products": 3,
+      "compliant_products": 3,
+      "average_compliance_score": 0.75
+    }
+  },
+  "recent_products": [
+    {
+      "title": "Kurkure, Masala Munch, 36g/38g (25.3g+12.7g EXTRA)",
+      "compliance_score": 0.75,
+      "timestamp": "2025-09-26T13:59:01.761366",
+      "category": "General Products",
+      "url": "https://www.amazon.in/Kurkure-Namkeen-Masala-Munch-50g/dp/B0186XLBWS?crid=13DYFIBGBQK1R&dib=eyJ2IjoiMSJ9.TqDtbd2ycXMiCHrzTHhXRYnRIHkewsJwITCKkNQYpevZSwz63THCHoZVpe_Pg6XAMLwWhM47YdHYaM3bApQf_H2I68f0zlfNOprfFNf8Nk1ZeCY7SEDODUjeS5m5_wJyzdFCfLFkxI48hzflrXzrRvgZL8mQPoA34oBG5WcalPRZnm-_PO6I6SqF_70eu8KS75Nj_k-m0h4by6vR_sS3nIXIf0cS0UBg7IzM5fxAk2iQXbB7u1GQ0fNeSde7bQnrhdk7onhSzkybZ0oXlU0JbLDnuWgL4KU2utFM0n2Qs08.qAMlvKtgasQhz4pJ1G9A4_m2qpakS_FKaCWDHiYb3Xg&dib_tag=se&keywords=kurkure%2Bchips&qid=1758869941&sprefix=kurkure%2Caps%2C448&sr=8-5&th=1"
+    },
+    {
+      "title": "Kurkure, Masala Munch, 36g/38g (25.3g+12.7g EXTRA)",
+      "compliance_score": 0.75,
+      "timestamp": "2025-09-26T12:54:50.783775",
+      "category": "General Products",
+      "url": "https://www.amazon.in/Kurkure-Namkeen-Masala-Munch-50g/dp/B0186XLBWS?crid=13DYFIBGBQK1R&dib=eyJ2IjoiMSJ9.TqDtbd2ycXMiCHrzTHhXRYnRIHkewsJwITCKkNQYpevZSwz63THCHoZVpe_Pg6XAMLwWhM47YdHYaM3bApQf_H2I68f0zlfNOprfFNf8Nk1ZeCY7SEDODUjeS5m5_wJyzdFCfLFkxI48hzflrXzrRvgZL8mQPoA34oBG5WcalPRZnm-_PO6I6SqF_70eu8KS75Nj_k-m0h4by6vR_sS3nIXIf0cS0UBg7IzM5fxAk2iQXbB7u1GQ0fNeSde7bQnrhdk7onhSzkybZ0oXlU0JbLDnuWgL4KU2utFM0n2Qs08.qAMlvKtgasQhz4pJ1G9A4_m2qpakS_FKaCWDHiYb3Xg&dib_tag=se&keywords=kurkure%2Bchips&qid=1758869941&sprefix=kurkure%2Caps%2C448&sr=8-5&th=1"
+    },
+    {
+      "title": "Kurkure, Masala Munch, 36g/38g (25.3g+12.7g EXTRA)",
+      "compliance_score": 0.75,
+      "timestamp": "2025-09-26T12:33:41.016552",
+      "category": "General Products",
+      "url": "https://www.amazon.in/Kurkure-Namkeen-Masala-Munch-50g/dp/B0186XLBWS?crid=13DYFIBGBQK1R&dib=eyJ2IjoiMSJ9.TqDtbd2ycXMiCHrzTHhXRYnRIHkewsJwITCKkNQYpevZSwz63THCHoZVpe_Pg6XAMLwWhM47YdHYaM3bApQf_H2I68f0zlfNOprfFNf8Nk1ZeCY7SEDODUjeS5m5_wJyzdFCfLFkxI48hzflrXzrRvgZL8mQPoA34oBG5WcalPRZnm-_PO6I6SqF_70eu8KS75Nj_k-m0h4by6vR_sS3nIXIf0cS0UBg7IzM5fxAk2iQXbB7u1GQ0fNeSde7bQnrhdk7onhSzkybZ0oXlU0JbLDnuWgL4KU2utFM0n2Qs08.qAMlvKtgasQhz4pJ1G9A4_m2qpakS_FKaCWDHiYb3Xg&dib_tag=se&keywords=kurkure%2Bchips&qid=1758869941&sprefix=kurkure%2Caps%2C448&sr=8-5&th=1"
+    }
+  ],
+  "last_updated": "2025-09-26T13:59:01.761366"
+}
