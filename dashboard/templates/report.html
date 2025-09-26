@@ -882,6 +882,9 @@
       <h1><i class="fas fa-file-alt"></i> Compliance Report</h1>
       <div class="meta">
         Generated on {{ data.timestamp or 'Unknown' }}
+        {% if data.platform %}
+        <br><span style="color: #3b82f6; font-weight: 600;">Platform: {{ data.platform }}</span>
+        {% endif %}
         {% if data.url %}
         <br><a href="{{ data.url }}" target="_blank" style="color: white; text-decoration: underline;">View Product</a>
       {% endif %}
@@ -988,21 +991,6 @@
           <span class="kv-label">Support Contact</span>
           <span class="kv-value">{{ data.support or 'Not Found' }}</span>
         </div>
-        
-        <!-- Amazon Product Details from product_direct_details -->
-        {% if data.product_details and data.product_details|length > 0 %}
-        <div style="margin-top: 15px; padding-top: 15px; border-top: 1px solid #e2e8f0;">
-          <h4 style="color: #3b82f6; margin-bottom: 10px; font-size: 0.9rem;">
-            <i class="fas fa-info-circle"></i> Amazon Product Details
-          </h4>
-          {% for key, value in data.product_details.items() %}
-          <div class="kv-row" style="font-size: 0.85rem;">
-            <span class="kv-label" style="font-weight: 500;">{{ key }}</span>
-            <span class="kv-value">{{ value }}</span>
-          </div>
-          {% endfor %}
-        </div>
-        {% endif %}
       </div>
 
       <div class="summary-card">
@@ -1062,6 +1050,36 @@
         {% endif %}
       </div>
     </div>
+
+    <!-- Amazon Product Details Section -->
+    {% if data.product_details and data.product_details|length > 0 %}
+    <div class="summary-card" style="margin-bottom: 30px;">
+      <h3>
+        {% if data.platform == "Amazon" %}
+        <div class="card-icon" style="background: linear-gradient(135deg, #ff9500, #ff6600);">
+          <i class="fab fa-amazon"></i>
+        </div>
+        Amazon Product Details
+        {% elif data.platform == "Flipkart" %}
+        <div class="card-icon" style="background: linear-gradient(135deg, #047bd6, #0056b3);">
+          <i class="fas fa-shopping-cart"></i>
+        </div>
+        Flipkart Product Details
+        {% else %}
+        <div class="card-icon" style="background: linear-gradient(135deg, #6366f1, #4f46e5);">
+          <i class="fas fa-info-circle"></i>
+        </div>
+        Product Details
+        {% endif %}
+      </h3>
+      {% for key, value in data.product_details.items() %}
+      <div class="kv-row">
+        <span class="kv-label">{{ key }}</span>
+        <span class="kv-value">{{ value }}</span>
+      </div>
+      {% endfor %}
+    </div>
+    {% endif %}
 
     <!-- Issues Section -->
     {% if data.missing_fields or data.warnings %}
