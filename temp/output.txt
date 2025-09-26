@@ -1,114 +1,108 @@
 {
-  "url": "https://www.amazon.in/Bingo-Potato-Chips-Chilli-Sprinkled/dp/B08DNR1513/ref=sr_1_1_in_f3_0o_fs_sspa?crid=1QUFY8U7KFMTP&dib=eyJ2IjoiMSJ9.KQVz5M-pBRUrTiWDB47OfppjxEOyRSWYv06CYhfN7lbLvkqp43Q1ALjbQDDzwQK_8_g2H03yfNy_BJfw5RiVon3uRrGYO7dvM_TFQWgyu0ptX-ZeRKpwliTk9BJnxeKBAQxOzHawId2LjO7iKLKnXWCrTc8TFxYs2C99XlJiAyQIPW5mmkokYtKGLoa9K2FM2sRn2EfkUG2t9AOX6Vk51tI62xfOEwT9bahC-OgCzKWFkCbXXvGWeIJPLeEpgIMsfdn33BrV41O5vT_xDww8q8mVBYSVLvQr6-SiScycBVY.8XuZXjmvsrKCNf4hTVW-5TgTtsVLAxtNWHF-kv5v6_U&dib_tag=se&keywords=chips&qid=1758572888&sprefix=chips%2Caps%2C297&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1",
-  "title": "Bingo Potato Chips - Chilli Sprinkled, 52g Pouch",
-  "mrp": "₹20",
-  "quantity": "52 Grams",
-  "manufacturer": "Bingo",
-  "origin": null,
+  "url": "https://www.amazon.in/Sunfeast-Yumfills-Whoopie-Chocolate-Chip/dp/B06WGM2HK2/ref=pd_sbs_d_sccl_2_4/260-7690809-9772731?pd_rd_w=EMnl6&content-id=amzn1.sym.6d240404-f8ea-42f5-98fe-bf3c8ec77086&pf_rd_p=6d240404-f8ea-42f5-98fe-bf3c8ec77086&pf_rd_r=QXNVTJ052GG6047JHVQK&pd_rd_wg=mqaUv&pd_rd_r=e658a169-24e2-498f-8e4a-3aa310ca49e7&pd_rd_i=B06WGM2HK2&th=1",
+  "title": "Sunfeast Dark Fantasy Yumfills Whoopie Pie, Chocolate Chip, 253g",
+  "mrp": "₹80.00",
+  "quantity": "100 g",
+  "manufacturer": "ITC, ITC Limited, Kolkata",
+  "origin": "India",
   "images": [
-    "temp\\temp2\\img1_81tzFgAzZBL__SX679_.jpg",
-    "temp\\temp2\\img2_51OqN1FHk9L_SL1500.jpg",
-    "temp\\temp2\\img3_51UDa3gWx1L_SL1500.jpg",
-    "temp\\temp2\\img4_51LXUSWC7ZL_SL1500.jpg",
-    "temp\\temp2\\img5_51U7f32lSxL_SL1500.jpg",
-    "temp\\temp2\\img6_518NaRMq1_L_SL1500.jpg",
-    "temp\\temp2\\img7_51E0w4_1-ML_SL1500.jpg",
-    "temp\\temp2\\img8_51d-5RpAi5L_SL1500.jpg"
+    "temp\\temp2\\img1_51W7pWPWBjL_SL1500.jpg",
+    "temp\\temp2\\img2_51LaFCsm3-L_SL1500.jpg",
+    "temp\\temp2\\img3_61CjBfZneWL_SL1500.jpg",
+    "temp\\temp2\\img4_41b6mGeySTL_SL1500.jpg",
+    "temp\\temp2\\img5_41swDiMzRxL_SL1500.jpg",
+    "temp\\temp2\\img6_51-RdCiqtML_SL1500.jpg"
   ],
-  "Brand": "Bingo",
-  "Flavour": "Chili",
-  "Net Quantity": "52 Grams",
-  "Number of Items": "1",
-  "Type": "Potato Chip",
+  "Flavour": "Chocolate Chip",
+  "Brand": "Sunfeast Dark Fantasy",
+  "Item Weight": "253 Grams",
+  "Speciality": "Vegetarian",
   "Diet Type": "Vegetarian",
-  "Item Form": "Chips",
-  "Item Weight": "0.05 Kilograms",
-  "Size": "52 g (Pack of 1)",
-  "Item dimensions L x W x H": "17.8 x 15.2 x 7.6 Centimeters",
   "product_details": {
     "Specialty": "Vegetarian",
-    "Weight": "0.05 Kilograms",
+    "Weight": "253 Grams",
     "Ingredient Type": "Vegetarian",
-    "Brand": "Bingo",
-    "Form": "Chips",
-    "Package Information": "Bag",
-    "Manufacturer": "Bingo",
-    "Item part number": "100625073",
-    "Net Quantity": "52 Grams",
-    "Product Dimensions": "17.78 x 15.24 x 7.62 cm; 50 g",
-    "Ingredients": "Potato (55.7%), Refined palamolein, seasoning mix{iodised salt, chilli powder (1.1%), #Spices & condiments. onion, maltodextrin, refined whear flour (Maida), Milk Solids, Black Salt, Tomato Powder [Tomato Paste, Anticaking Agent (INS 551)], Refined Sugar, Hydrolyzed Vegetable Protein, Acidity Regulators (INS 296, INS 330, INS 334), Garlic, Anticaking Agent (INS 551), Flavour Enhancers (INS 627, INS 631)) And lodised Salt.",
-    "ASIN": "B08DNR1513",
-    "Customer Reviews": "4.3 \n4.3 out of 5 stars\n    15,844 ratings\n4.3 out of 5 stars",
-    "Best Sellers Rank": "#65 in Grocery & Gourmet Foods (See Top 100 in Grocery & Gourmet Foods)\n#2 in Potato Chips",
-    "Date First Available": "28 April 2020",
-    "Item Weight": "50 g",
-    "Item Dimensions LxWxH": "17.8 x 15.2 x 7.6 Centimeters"
+    "Brand": "Sunfeast Dark Fantasy",
+    "Form": "whole",
+    "Package Information": "Box",
+    "Manufacturer": "ITC, ITC Limited, Kolkata",
+    "Additives": "Chocolate Pie Cake",
+    "Item model number": "8901725134693",
+    "Net Quantity": "242.0 gram",
+    "Product Dimensions": "17.3 x 12.3 x 4 cm; 253 g",
+    "Ingredients": "Refined Wheat Flour (Maida), Milk choco covering (22.9%) {Sugar, Interesterified Vegetable Fat, Milk Solids (2.75%), Cocoa Solids (1.37%), Hydrogenated Vegetable Oils, Artificial Flavouring Substances (Vanilla)}, Sugar, Liquid Glucose, Refined Palmolein, Humectant (INS 422), Invert Syrup, Cake Gel {Emulsifiers [Mono- and di-glycerides of fatty acids (from Palm oil), Salts of myristic, palmitic and stearic acids with ammonia, calcium, potassium and sodium (from Palm oil), Propylene glycol esters of fatty Acids (from Palm oil)], Humectant (INS 422)}, Milk Solids (1.61%), Raising Agents [INS 500(ii), INS 450(i), INS 450(vii), INS 503(ii)] , Emulsifiers [Polyglycerol esters of fatty acid (from Palm oil), Lecithin (from Soyabean)], Stabilizer (INS 407, INS 415), Acidity Regulator (INS 330), Preservative (INS 202), Hydrolysed Vegetable Protein, Nature Identical Flavouring Substances, Iodized Salt, Flour Treatment Agent (INS 223) and Colour (INS 102)",
+    "Serving Size": "1",
+    "Energy (kcal)": "438.00 Kilocalories",
+    "Protein": "5.4 g",
+    "Fat": "17.2 g",
+    "Carbohydrate": "65.5 g",
+    "- Sugars": "41.1 g",
+    "Country of Origin": "India",
+    "ASIN": "B06WGM2HK2",
+    "Customer Reviews": "4.3 \n4.3 out of 5 stars\n    12,445 ratings\n4.3 out of 5 stars",
+    "Date First Available": "7 August 2016",
+    "Packer": "ITC Ltd, Foods Division, Plot No 1, Sector 11, 11E, BHEL, Haridwar (UK) 249403",
+    "Item Weight": "253 g",
+    "Item Dimensions LxWxH": "17.3 x 12.3 x 4 Centimeters",
+    "Generic Name": "Yumfills Chocolate Pie Cake"
   },
   "vision": {
     "selected": [
-      "temp\\temp2\\img3_51UDa3gWx1L_SL1500.jpg",
-      "temp\\temp2\\img4_51LXUSWC7ZL_SL1500.jpg"
+      "temp\\temp2\\img2_51LaFCsm3-L_SL1500.jpg",
+      "temp\\temp2\\img6_51-RdCiqtML_SL1500.jpg",
+      "temp\\temp2\\img3_61CjBfZneWL_SL1500.jpg"
     ],
     "scoring": {
-      "temp\\temp2\\img1_81tzFgAzZBL__SX679_.jpg": {
+      "temp\\temp2\\img1_51W7pWPWBjL_SL1500.jpg": {
         "score": 0,
         "matched": [],
-        "text_preview": "POTATO CHIPS CHILLI SPRINKLED BINGOI Tyle"
+        "text_preview": "Ait2 Siea Dark Fantasy Deliciously Choco Treat Yumfills Pie MECin11INDIVIDUAL PACKS INSIDE IVED New & IMprov ChocO TASTE"
       },
-      "temp\\temp2\\img2_51OqN1FHk9L_SL1500.jpg": {
-        "score": 0,
-        "matched": [],
-        "text_preview": "POTATO CHIPS CHILLI SPRINKLED BINGo?"
-      },
-      "temp\\temp2\\img3_51UDa3gWx1L_SL1500.jpg": {
-        "score": 4,
+      "temp\\temp2\\img2_51LaFCsm3-L_SL1500.jpg": {
+        "score": 2,
         "matched": [
-          "FSSAI",
           "Nutritional",
-          "Ingredients",
-          "Numbers"
+          "Ingredients"
         ],
-        "text_preview": "DNUIRITION  INFORMATION Energy (Kcal) 544 Protein (g) 7.1 Carbohydrate (g) 54.1 of which Sugar (g) 2.6 Fat (g) 33.2 Trans fat (g) 0.1 Saturate fat (g) 16.2 Sodium (mg) 859 fssai Lic; No. 1001203100031..."
+        "text_preview": "NUTRITIONAL INFORMATION PER IPER SERVEI % RDA PER (APPROX, VALUES) 100 g (22 g) SERVE ENERGY (kcah 425 PROTEIN (9) 54 CARBOHYDRATE (9) 63.9 1 TOIALSUGARS () 381 ADDED SUGARS (@) 263  TOTAL FAT (0) 164..."
       },
-      "temp\\temp2\\img4_51LXUSWC7ZL_SL1500.jpg": {
+      "temp\\temp2\\img3_61CjBfZneWL_SL1500.jpg": {
         "score": 1,
         "matched": [
-          "MRP"
+          "Numbers"
         ],
-        "text_preview": "na9it In oet bile 04 Jochioa Vert Iperlult BNcoI 74i5s4 ao1yro Tnea 'MRP 20,00 incl: cfall taxes Vahdugue Cnneuritiee 'dAEMAMLi4 u4egLaui 204 M Tiatua #m; MFDCJI : Moanneohre Ruds@ In 312 ci\""
+        "text_preview": "C 673 Shies PROPRIETARY FOOD PIE CAKE Q20 WWicB 1420 FrD JUAICHNag Use; Mof Jta/oa Perg) Mnittedontguhncc Issat LcNa. 10012051000512 [ia Eajooozzoooia No I} rofIED Whert Four (HludaO Hilk choco concri..."
       },
-      "temp\\temp2\\img5_51U7f32lSxL_SL1500.jpg": {
+      "temp\\temp2\\img4_41b6mGeySTL_SL1500.jpg": {
         "score": 0,
         "matched": [],
-        "text_preview": "CRISPV, CRUNCHY & SPICY eo1pgo CHILLI SPRINKIFD BINGo?"
+        "text_preview": "@Dark Fantasy Yumfills Pie Gtt OR CDark Fantasy Doliciusly Cha nent Yumfills Pie} abili Te4"
       },
-      "temp\\temp2\\img6_518NaRMq1_L_SL1500.jpg": {
+      "temp\\temp2\\img5_41swDiMzRxL_SL1500.jpg": {
         "score": 0,
         "matched": [],
-        "text_preview": "PACKETFUL OF SUNSHINE BINGoI ceteo CHILLI TRIYKFO"
+        "text_preview": "GDark Fantasy Doloccal Cheonln Yumfills Pie}"
       },
-      "temp\\temp2\\img7_51E0w4_1-ML_SL1500.jpg": {
-        "score": 0,
-        "matched": [],
-        "text_preview": "POTzo PERFEGTION"
-      },
-      "temp\\temp2\\img8_51d-5RpAi5L_SL1500.jpg": {
-        "score": 0,
-        "matched": [],
-        "text_preview": "'PERFECT PARTNER THE SNACKING BINGo? re1ao  CHI Sriinri"
+      "temp\\temp2\\img6_51-RdCiqtML_SL1500.jpg": {
+        "score": 2,
+        "matched": [
+          "Nutritional",
+          "Ingredients"
+        ],
+        "text_preview": "Ingrediehts; REFINED Wheat FLour (Maidaj; Milk choco coverino (2208) {Sugar; INTERESTCRIFICD VLOLTABLI FaT; Milk solids (2,7531, Cocoa solids 01.3731, HYDROGENATED VeGETABLE Oils; rtificial FLAvOURING..."
       }
     }
   },
   "ocr": {
-    "extracted_text": "DNUIRITION  \nINFORMATION \nEnergy (Kcal) \n544 \nProtein (g) \n7.1 \nCarbohydrate (g) \n54.1 \nof which Sugar (g) \n2.6 \nFat (g) \n33.2 \nTrans fat (g) \n0.1 \nSaturate fat (g) \n16.2 \nSodium (mg) \n859 \nfssai \nLic; No. 10012031000312 \nDNUIRIIIONC \nINFORMATION \nEnergy (Kcal) \n544 \nProtein \n7.1 \nCarbohydrate (g) \n54.1 \nof which Sugar (g) \n2.6 \nFat (g) \n33.2 \nTrans fat (g) \n0.1 \nSaturate fat (g) \n16.2 \nSodium (mg) \n859 \nfssai \nLic No. 10012031000312 \nONUIRIION \nvhich Sugar \nturate fat \nDNUIRIITIONC \nINFORMATION \nEnergy (Kcal) \n544 \nProtein (g) \n7.1 \nCarbohydrate (g) \n54.1 \nof which Sugar (g) \n2.6 \n(g) \n33.2 \nTrans fat (g) \n0.1 \nSaturate fat (g) \n16.2 \nSodium (mg) \n859 \nfssai \nLic No 10012031000312 \nFat \n'MRP \n20,00 incl: cfall taxes \nlochron \n\"MRP \n20,00 incl: ofall taxes \nBINc? \n'MRP Rs 20,00 incl: ofall taxes  \nGum",
+    "extracted_text": "NUTRITIONAL INFORMATION \nPER \nIPER SERVEI % RDA PER \n(APPROX, VALUES) \n100 g \n(22 g) \nSERVE \nENERGY (kcah \n425 \nPROTEIN (9) \n54 \nCARBOHYDRATE (9) \n63.9 \n1 \nTOIALSUGARS () \n381 \nADDED SUGARS (@) \n263  \nTOTAL FAT (0) \n164 \n36 \n16 \n001 \n05 \nSATURATED FAT (@) \n107 \n24 \n10.9 \nCHOLESTEROL (mg) \n24 \n05 \nSODIUM (m9) \n[1468 | \n323 \n16 \nNUTRITIONAL INFORMATION \nPER \nIPER SERVE \n% RDA PER \n(APPROX. VALUES) \n100 g \n(22 g) \nSERVE \n425 \nPROIN ( \n3 \n283 \nTOIN FAT @ \n# \n005 \nQ01 \n05 \n24 \n109 \nCHKOLESIEROL (uD) \n24 \n05 \n323 \n16 \nNUTRITIONAL INFORMATION \nPER \nPER SERVEI % RDA PER \n{APPROX VALUES) \n100 g \n(22 g) \nSERVE \n425 \nPROIEN \n3 \nCARDOHMRAE @@ \nTOTALSUGARS() \n3 \nQo1 \n24 \n05 \n16 \nNUTRITIONAL INFORMATION \nPER \nIPER SERVE] % RDA PER \n(APPROX. VALUES) \n100 g \n(22 g) \nSERVE \nENERGY(c) \n435 \n54 \n69 \n81 \n263 \n59 \n116 \nTOINFAT @ \n36 \n54 \n001 \n05 \n24 \n109 \n24 \n05 \nSOLIUM(D) \ns8 \n323 \n16 \nShies \nPROPRIETARY FOOD \nPIE CAKE Q20 \n1420 \nUse; \nIssat \nNo \nCDark \ncool \nDry PLACE \nFantasy \nBENGALURU - \n500005 \nYumfills Pie \neltccares@ltc In 31000 425444444 \nLkNa 1012051000512 \n202 \n@Dark \nFantasy \nYumfills Pic \nGDark \nTu \nFantasy \nYumfills Pie \nM4ea \nsssat \nDark \nFantasy \nBENOALURU \nYumfills Pic \nrtificial FLAvOURING SUBSTANCES \nFATTY \n(INS 407, INS 415), \ntl \nKan \nKony \n407,",
     "fields": {
-      "mrp": "₹20",
-      "license": "10012031000312",
-      "support": "10012031000312"
+      "support": "1012051000512",
+      "license": "1012051000512",
+      "quantity": "100 g"
     },
     "compliance": {
-      "mrp": true,
-      "quantity": false,
+      "mrp": false,
+      "quantity": true,
       "manufacturer": false,
       "origin": false,
       "support": true,
@@ -118,7 +112,7 @@
       "barcode": false
     },
     "missing": [
-      "Net Quantity/Weight",
+      "Maximum Retail Price (₹)",
       "Manufacturer/Packer Name",
       "Country of Origin"
     ],
@@ -134,38 +128,36 @@
       "compliance_score": "1/4"
     }
   },
-  "support": "10012031000312",
-  "license": "10012031000312",
+  "support": "1012051000512",
+  "license": "1012051000512",
   "compliance": {
     "mrp": true,
     "quantity": true,
     "manufacturer": true,
-    "origin": false,
+    "origin": true,
     "support": true,
     "dates": false,
     "batch": false,
     "license": true,
     "barcode": false
   },
-  "missing_fields": [
-    "Country of Origin"
-  ],
+  "missing_fields": [],
   "warnings": [
     "Optional: Manufacturing/Expiry Date",
     "Optional: Batch/Lot Number",
     "Optional: Product Barcode"
   ],
   "compliance_summary": {
-    "total_fields_found": 5,
-    "required_present": 3,
+    "total_fields_found": 6,
+    "required_present": 4,
     "required_total": 4,
-    "compliance_score": "3/4"
+    "compliance_score": "4/4"
   },
   "manufacturer_analytics": {
-    "manufacturer_name": "Bingo",
-    "total_products": 2,
-    "average_compliance_score": 0.75,
-    "compliance_level": "Good"
+    "manufacturer_name": "Itc, Itc Limited, Kolkata",
+    "total_products": 3,
+    "average_compliance_score": 1.0,
+    "compliance_level": "Excellent"
   },
   "gemini_status": {
     "gemini_available": true,

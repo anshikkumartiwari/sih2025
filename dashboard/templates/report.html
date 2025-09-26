@@ -988,6 +988,21 @@
           <span class="kv-label">Support Contact</span>
           <span class="kv-value">{{ data.support or 'Not Found' }}</span>
         </div>
+        
+        <!-- Amazon Product Details from product_direct_details -->
+        {% if data.product_details and data.product_details|length > 0 %}
+        <div style="margin-top: 15px; padding-top: 15px; border-top: 1px solid #e2e8f0;">
+          <h4 style="color: #3b82f6; margin-bottom: 10px; font-size: 0.9rem;">
+            <i class="fas fa-info-circle"></i> Amazon Product Details
+          </h4>
+          {% for key, value in data.product_details.items() %}
+          <div class="kv-row" style="font-size: 0.85rem;">
+            <span class="kv-label" style="font-weight: 500;">{{ key }}</span>
+            <span class="kv-value">{{ value }}</span>
+          </div>
+          {% endfor %}
+        </div>
+        {% endif %}
       </div>
 
       <div class="summary-card">
