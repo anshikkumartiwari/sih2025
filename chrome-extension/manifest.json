@@ -1,0 +1,34 @@
+{
+  "manifest_version": 3,
+  "name": "LM Compliance Checker",
+  "version": "1.0.0",
+  "description": "Instantly check Legal Metrology compliance for e-commerce products with AI-powered analysis",
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+  "host_permissions": [
+    "https://www.amazon.in/*",
+    "https://www.amazon.com/*",
+    "https://blinkit.com/*",
+    "http://localhost:5000/*",
+    "http://127.0.0.1:5000/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Check Compliance",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  }
+}

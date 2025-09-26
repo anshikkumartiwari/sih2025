@@ -1,5 +1,5 @@
 # Dashboard module
-from flask import Blueprint, render_template, request, redirect, url_for, send_from_directory
+from flask import Blueprint, render_template, request, redirect, url_for, send_from_directory, jsonify
 import os
 from core import master
 from core import normalize_image_to_jpeg
@@ -206,3 +206,74 @@ def product_detail(scan_id: str):
     except Exception as e:
         return render_template("product_detail.html", 
                              product={"error": str(e)})
+
+
+# API Endpoints for Chrome Extension
+@dashboard.route("/api/analyze", methods=["POST", "OPTIONS"])
+def api_analyze():
+    """API endpoint for Chrome extension to analyze product URLs."""
+    
+    # Handle CORS preflight request
+    if request.method == "OPTIONS":
+        response = jsonify({"status": "ok"})
+        response.headers.add("Access-Control-Allow-Origin", "*")
+        response.headers.add("Access-Control-Allow-Headers", "Content-Type")
+        response.headers.add("Access-Control-Allow-Methods", "POST, OPTIONS")
+        return response
+    
+    try:
+        # Get JSON data from request
+        data = request.get_json()
+        if not data or not data.get("url"):
+            return jsonify({"error": "No URL provided"}), 400
+        
+        product_url = data["url"]
+        source = data.get("source", "api")
+        
+        # Process the product using existing master function
+        result = master.process_product(product_url)
+        
+        # Add source information
+        result["source"] = source
+        result["api_version"] = "1.0"
+        
+        # Save to temp directory for potential web app access
+        os.makedirs(TEMP_DIR, exist_ok=True)
+        with open(os.path.join(TEMP_DIR, "output.txt"), "w", encoding="utf-8") as f:
+            json.dump(result, f, indent=2, ensure_ascii=False)
+        
+        # Return JSON response
+        response = jsonify(result)
+        response.headers.add("Access-Control-Allow-Origin", "*")
+        return response
+        
+    except Exception as e:
+        error_response = {
+            "error": "Analysis failed",
+            "message": str(e),
+            "api_version": "1.0"
+        }
+        response = jsonify(error_response)
+        response.headers.add("Access-Control-Allow-Origin", "*")
+        return response, 500
+
+
+@dashboard.route("/api/status", methods=["GET"])
+def api_status():
+    """API endpoint to check service status."""
+    try:
+        response = jsonify({
+            "status": "online",
+            "version": "1.0",
+            "supported_sites": ["amazon.in", "amazon.com", "blinkit.com"],
+            "features": ["OCR", "AI Analysis", "Compliance Validation", "Manufacturer Tracking"]
+        })
+        response.headers.add("Access-Control-Allow-Origin", "*")
+        return response
+    except Exception as e:
+        error_response = jsonify({
+            "status": "error", 
+            "message": str(e)
+        })
+        error_response.headers.add("Access-Control-Allow-Origin", "*")
+        return error_response, 500

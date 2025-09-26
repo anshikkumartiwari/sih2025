@@ -1,5 +1,5 @@
 {
-  "total_scans": 1,
+  "total_scans": 2,
   "scan_history": [
     {
       "scan_id": "scan_20250926_031539_1",
@@ -66,11 +66,113 @@
         "license": "10018012000497",
         "barcode": null
       }
+    },
+    {
+      "scan_id": "scan_20250926_122543_2",
+      "timestamp": "2025-09-26T12:25:43.090028",
+      "product_info": {
+        "title": "Kellogg's Muesli Fruit Nut & Seeds 750G | 12-In-1 Power Breakfast | India'S No. 1 Muesli | Multigrain Breakfast Cereal",
+        "url": "https://www.amazon.in/Kelloggs-Muesli-21-Fruit-Pouch/dp/B083JP2NZX?crid=845ADHX5973F&dib=eyJ2IjoiMSJ9.XfhKKeuLftqesUwEEJdIYCbg1u2UXQrvP7Vl3IjJbnNZtKT0qqzaZVQgBrHP03VHMtt0wz9h0xu-A20ro5yyCpMClNQyTu2lcUJNa47FkKqFGe5RP_Si_ceRXhJGATNy7zz0Sl5NbAcpE0OCV-Fv-vPLcqhlsVki-Trfbjio1Eemaaj43s6H2FvN0JpE0ZGsjzJeJYwmdmLXzb3bo2wW-3Tz02sfWVPehT3rugsqzdvqM39DxtSGMgWk51ml0RLpBGFi-qXTDuvfDmmvBrjqjcx61S0WF_gY_fLM_NeIRpA.prRfcZPEYxy-uCaopgzJDKBvNbhxlzqEQuB9UGq9Jz0&dib_tag=se&keywords=muesli&qid=1758869608&sprefix=wheat%2Caps%2C304&sr=8-5",
+        "manufacturer": "Kellogg India Pvt Ltd. , Plot No. L2 & L3, Taloja Midc, District Raigad, Maharashtra, Kellogg's India Pvt Ltd",
+        "origin": "India",
+        "mrp": "₹323.00",
+        "quantity": "12 G",
+        "category": "Food & Beverages"
+      },
+      "compliance_data": {
+        "score": 1.0,
+        "level": "excellent",
+        "required_present": 4,
+        "required_total": 4,
+        "compliance_summary": {
+          "total_fields_found": 4,
+          "required_present": 4,
+          "required_total": 4,
+          "compliance_score": "4/4"
+        },
+        "compliance": {
+          "mrp": true,
+          "quantity": true,
+          "manufacturer": true,
+          "origin": true,
+          "support": false,
+          "dates": false,
+          "batch": false,
+          "license": false,
+          "barcode": false
+        },
+        "missing_fields": [],
+        "warnings": [
+          "Optional: Consumer Care Contact",
+          "Optional: Manufacturing/Expiry Date",
+          "Optional: Batch/Lot Number",
+          "Optional: FSSAI License Number",
+          "Optional: Product Barcode"
+        ]
+      },
+      "technical_data": {
+        "images_count": 6,
+        "ocr_text_length": 2094,
+        "vision_selected": 0,
+        "gemini_analysis": {},
+        "gemini_comprehensive": {},
+        "manufacturer_analytics": {
+          "manufacturer_name": "Kellogg India Pvt Ltd. , Plot No. L2 & L3, Taloja Midc, District Raigad, Maharashtra, Kellogg'S India",
+          "total_products": 1,
+          "average_compliance_score": 1.0,
+          "compliance_level": "Excellent"
+        },
+        "product_details": {
+          "Specialty": "High Fibre, High Protein, Whole Grain",
+          "Weight": "750 Grams",
+          "Ingredient Type": "Vegetarian",
+          "Brand": "Kellogg's",
+          "Item package quantity": "1",
+          "Form": "Flaked",
+          "Appropriate Age Range": "Adult",
+          "Serving Recommendation": "As per age",
+          "Package Information": "Pouch",
+          "Manufacturer": "Kellogg India Pvt Ltd. , Plot No. L2 & L3, Taloja Midc, District Raigad, Maharashtra, Kellogg's India Pvt Ltd",
+          "Additives": "Fruit, Nut, Seeds, Multigrain",
+          "Allergen Information": "Barley",
+          "Item model number": "FN600R05",
+          "Net Quantity": "750.0 gram",
+          "Product Dimensions": "25 x 10 x 33 cm; 750 g",
+          "Ingredients": "Corn Grits,Wheat,Rice",
+          "Serving Size": "1",
+          "Energy (kcal)": "392.00 Kilocalories",
+          "Protein": "8 g",
+          "Fat": "6 g",
+          "Carbohydrate": "79 g",
+          "- Sugars": "23.5 g",
+          "Country of Origin": "India",
+          "ASIN": "B083JP2NZX",
+          "Customer Reviews": "4.4 \n4.4 out of 5 stars\n    26,642 ratings\n4.4 out of 5 stars",
+          "Best Sellers Rank": "#27 in Grocery & Gourmet Foods (See Top 100 in Grocery & Gourmet Foods)\n#1 in Muesli",
+          "Date First Available": "5 January 2020",
+          "Packer": "kconsumer@kellogg.com",
+          "Importer": "India",
+          "Item Weight": "750 g",
+          "Item Dimensions LxWxH": "25 x 10 x 33 Centimeters",
+          "Generic Name": "Muesli 21% Fruit & Nut"
+        }
+      },
+      "extracted_fields": {
+        "mrp": "₹323.00",
+        "quantity": "12 G",
+        "manufacturer": "Kellogg India Pvt Ltd. , Plot No. L2 & L3, Taloja Midc, District Raigad, Maharashtra, Kellogg's India Pvt Ltd",
+        "origin": "India",
+        "support": null,
+        "dates": null,
+        "batch": null,
+        "license": null,
+        "barcode": null
+      }
     }
   ],
   "statistics": {
     "compliance_distribution": {
-      "excellent": 1,
+      "excellent": 2,
       "good": 0,
       "fair": 0,
       "poor": 0
@@ -78,22 +180,22 @@
     "field_compliance": {
       "required_fields": {
         "mrp": {
-          "present": 1,
+          "present": 2,
           "missing": 0,
           "percentage": 100.0
         },
         "quantity": {
-          "present": 1,
+          "present": 2,
           "missing": 0,
           "percentage": 100.0
         },
         "manufacturer": {
-          "present": 1,
+          "present": 2,
           "missing": 0,
           "percentage": 100.0
         },
         "origin": {
-          "present": 1,
+          "present": 2,
           "missing": 0,
           "percentage": 100.0
         }
@@ -101,27 +203,27 @@
       "optional_fields": {
         "support": {
           "present": 1,
-          "missing": 0,
-          "percentage": 100.0
+          "missing": 1,
+          "percentage": 50.0
         },
         "dates": {
           "present": 0,
-          "missing": 1,
+          "missing": 2,
           "percentage": 0.0
         },
         "batch": {
           "present": 0,
-          "missing": 1,
+          "missing": 2,
           "percentage": 0.0
         },
         "license": {
           "present": 1,
-          "missing": 0,
-          "percentage": 100.0
+          "missing": 1,
+          "percentage": 50.0
         },
         "barcode": {
           "present": 0,
-          "missing": 1,
+          "missing": 2,
           "percentage": 0.0
         }
       }
@@ -140,6 +242,20 @@
         "categories": [
           "General Products"
         ]
+      },
+      "Kellogg India Pvt Ltd. , Plot No. L2 & L3, Taloja Midc, District Raigad, Maharashtra, Kellogg's India Pvt Ltd": {
+        "total_scans": 1,
+        "total_compliance_score": 1.0,
+        "average_compliance_score": 1.0,
+        "compliance_levels": {
+          "excellent": 1,
+          "good": 0,
+          "fair": 0,
+          "poor": 0
+        },
+        "categories": [
+          "Food & Beverages"
+        ]
       }
     },
     "category_stats": {
@@ -156,21 +272,35 @@
         "manufacturers": [
           "ITC, ITC Limited, Kolkata"
         ]
+      },
+      "Food & Beverages": {
+        "total_scans": 1,
+        "total_compliance_score": 1.0,
+        "average_compliance_score": 1.0,
+        "compliance_levels": {
+          "excellent": 1,
+          "good": 0,
+          "fair": 0,
+          "poor": 0
+        },
+        "manufacturers": [
+          "Kellogg India Pvt Ltd. , Plot No. L2 & L3, Taloja Midc, District Raigad, Maharashtra, Kellogg's India Pvt Ltd"
+        ]
       }
     },
     "trends": {
       "daily_scans": {
-        "2025-09-26": 1
+        "2025-09-26": 2
       },
       "weekly_compliance": {
         "2025-W38": {
-          "total_scans": 1,
-          "total_score": 1.0,
+          "total_scans": 2,
+          "total_score": 2.0,
           "average_score": 1.0
         }
       },
       "monthly_analysis": {}
     }
   },
-  "last_updated": "2025-09-26T03:15:39.158828"
+  "last_updated": "2025-09-26T12:25:43.091026"
 }

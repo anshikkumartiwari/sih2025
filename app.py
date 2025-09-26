@@ -1,4 +1,5 @@
 from flask import Flask
+from flask_cors import CORS
 try:
     from dotenv import load_dotenv  # type: ignore
     load_dotenv()
@@ -9,6 +10,10 @@ from dashboard.dashboard import dashboard  # import the Blueprint object
 def create_app():
     app = Flask(__name__)
     app.static_folder = 'dashboard/static'
+    
+    # Enable CORS for Chrome extension
+    CORS(app, origins=["chrome-extension://*", "http://localhost:*", "http://127.0.0.1:*"])
+    
     app.register_blueprint(dashboard)
     return app
 

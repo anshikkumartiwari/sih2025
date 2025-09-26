@@ -1,0 +1,95 @@
+{
+  "manufacturer_name": "Kellogg India Pvt Ltd. , Plot No. L2 & L3, Taloja Midc, District Raigad, Maharashtra, Kellogg'S India",
+  "total_products": 1,
+  "compliance_history": [
+    {
+      "timestamp": "2025-09-26T12:25:43.017482",
+      "product_title": "Kellogg's Muesli Fruit Nut & Seeds 750G | 12-In-1 Power Breakfast | India'S No. 1 Muesli | Multigrain Breakfast Cereal",
+      "compliance_score": 1.0,
+      "required_fields_present": 4,
+      "required_fields_total": 4,
+      "missing_fields": [],
+      "warnings": [
+        "Optional: Consumer Care Contact",
+        "Optional: Manufacturing/Expiry Date",
+        "Optional: Batch/Lot Number",
+        "Optional: FSSAI License Number",
+        "Optional: Product Barcode"
+      ],
+      "url": "https://www.amazon.in/Kelloggs-Muesli-21-Fruit-Pouch/dp/B083JP2NZX?crid=845ADHX5973F&dib=eyJ2IjoiMSJ9.XfhKKeuLftqesUwEEJdIYCbg1u2UXQrvP7Vl3IjJbnNZtKT0qqzaZVQgBrHP03VHMtt0wz9h0xu-A20ro5yyCpMClNQyTu2lcUJNa47FkKqFGe5RP_Si_ceRXhJGATNy7zz0Sl5NbAcpE0OCV-Fv-vPLcqhlsVki-Trfbjio1Eemaaj43s6H2FvN0JpE0ZGsjzJeJYwmdmLXzb3bo2wW-3Tz02sfWVPehT3rugsqzdvqM39DxtSGMgWk51ml0RLpBGFi-qXTDuvfDmmvBrjqjcx61S0WF_gY_fLM_NeIRpA.prRfcZPEYxy-uCaopgzJDKBvNbhxlzqEQuB9UGq9Jz0&dib_tag=se&keywords=muesli&qid=1758869608&sprefix=wheat%2Caps%2C304&sr=8-5",
+      "category": "General Products"
+    }
+  ],
+  "compliance_stats": {
+    "total_scans": 1,
+    "compliant_scans": 1,
+    "non_compliant_scans": 0,
+    "average_compliance_score": 1.0,
+    "required_fields_compliance": {
+      "mrp": {
+        "present": 1,
+        "missing": 0,
+        "percentage": 100.0
+      },
+      "quantity": {
+        "present": 1,
+        "missing": 0,
+        "percentage": 100.0
+      },
+      "manufacturer": {
+        "present": 1,
+        "missing": 0,
+        "percentage": 100.0
+      },
+      "origin": {
+        "present": 1,
+        "missing": 0,
+        "percentage": 100.0
+      }
+    },
+    "optional_fields_compliance": {
+      "support": {
+        "present": 0,
+        "missing": 1,
+        "percentage": 0.0
+      },
+      "dates": {
+        "present": 0,
+        "missing": 1,
+        "percentage": 0.0
+      },
+      "batch": {
+        "present": 0,
+        "missing": 1,
+        "percentage": 0.0
+      },
+      "license": {
+        "present": 0,
+        "missing": 1,
+        "percentage": 0.0
+      },
+      "barcode": {
+        "present": 0,
+        "missing": 1,
+        "percentage": 0.0
+      }
+    }
+  },
+  "product_categories": {
+    "General Products": {
+      "total_products": 1,
+      "compliant_products": 1,
+      "average_compliance_score": 1.0
+    }
+  },
+  "recent_products": [
+    {
+      "title": "Kellogg's Muesli Fruit Nut & Seeds 750G | 12-In-1 Power Breakfast | India'S No. 1 Muesli | Multigrain Breakfast Cereal",
+      "compliance_score": 1.0,
+      "timestamp": "2025-09-26T12:25:43.088030",
+      "category": "General Products",
+      "url": "https://www.amazon.in/Kelloggs-Muesli-21-Fruit-Pouch/dp/B083JP2NZX?crid=845ADHX5973F&dib=eyJ2IjoiMSJ9.XfhKKeuLftqesUwEEJdIYCbg1u2UXQrvP7Vl3IjJbnNZtKT0qqzaZVQgBrHP03VHMtt0wz9h0xu-A20ro5yyCpMClNQyTu2lcUJNa47FkKqFGe5RP_Si_ceRXhJGATNy7zz0Sl5NbAcpE0OCV-Fv-vPLcqhlsVki-Trfbjio1Eemaaj43s6H2FvN0JpE0ZGsjzJeJYwmdmLXzb3bo2wW-3Tz02sfWVPehT3rugsqzdvqM39DxtSGMgWk51ml0RLpBGFi-qXTDuvfDmmvBrjqjcx61S0WF_gY_fLM_NeIRpA.prRfcZPEYxy-uCaopgzJDKBvNbhxlzqEQuB9UGq9Jz0&dib_tag=se&keywords=muesli&qid=1758869608&sprefix=wheat%2Caps%2C304&sr=8-5"
+    }
+  ],
+  "last_updated": "2025-09-26T12:25:43.088030"
+}

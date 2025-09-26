@@ -66,3 +66,14 @@ sih2025
 ├─ 📄README.md
 └─ 📄requirements.txt
 ```
+
+
+```
+chrome-extension/
+├── manifest.json     # Extension configuration with proper permissions
+├── popup.html       # Professional popup interface
+├── popup.css        # Dark theme styling matching your app
+├── popup.js         # Complete functionality and API integration
+├── icons/           # Extension icons (generate using provided tool)
+└── README.md       # Complete installation & usage guide
+```

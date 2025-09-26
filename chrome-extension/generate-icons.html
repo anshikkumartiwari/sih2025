@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Icon Generator</title>
+</head>
+<body>
+    <canvas id="canvas16" width="16" height="16"></canvas>
+    <canvas id="canvas48" width="48" height="48"></canvas>
+    <canvas id="canvas128" width="128" height="128"></canvas>
+    
+    <script>
+        function createIcon(canvas, size) {
+            const ctx = canvas.getContext('2d');
+            
+            // Background gradient
+            const gradient = ctx.createLinearGradient(0, 0, size, size);
+            gradient.addColorStop(0, '#3b82f6');
+            gradient.addColorStop(1, '#1d4ed8');
+            
+            ctx.fillStyle = gradient;
+            ctx.fillRect(0, 0, size, size);
+            
+            // Shield shape
+            ctx.fillStyle = 'white';
+            ctx.beginPath();
+            const centerX = size / 2;
+            const centerY = size / 2;
+            const shieldWidth = size * 0.6;
+            const shieldHeight = size * 0.7;
+            
+            ctx.moveTo(centerX, centerY - shieldHeight/2);
+            ctx.quadraticCurveTo(centerX + shieldWidth/2, centerY - shieldHeight/2, centerX + shieldWidth/2, centerY);
+            ctx.quadraticCurveTo(centerX + shieldWidth/2, centerY + shieldHeight/2, centerX, centerY + shieldHeight/2);
+            ctx.quadraticCurveTo(centerX - shieldWidth/2, centerY + shieldHeight/2, centerX - shieldWidth/2, centerY);
+            ctx.quadraticCurveTo(centerX - shieldWidth/2, centerY - shieldHeight/2, centerX, centerY - shieldHeight/2);
+            ctx.fill();
+            
+            // Check mark
+            ctx.strokeStyle = '#3b82f6';
+            ctx.lineWidth = size * 0.06;
+            ctx.lineCap = 'round';
+            ctx.lineJoin = 'round';
+            ctx.beginPath();
+            ctx.moveTo(centerX - shieldWidth/4, centerY);
+            ctx.lineTo(centerX - shieldWidth/8, centerY + shieldHeight/6);
+            ctx.lineTo(centerX + shieldWidth/4, centerY - shieldHeight/6);
+            ctx.stroke();
+            
+            // Download link
+            const link = document.createElement('a');
+            link.download = `icon${size}.png`;
+            link.href = canvas.toDataURL();
+            link.textContent = `Download ${size}x${size} icon`;
+            link.style.display = 'block';
+            link.style.margin = '10px';
+            document.body.appendChild(link);
+        }
+        
+        // Generate icons
+        createIcon(document.getElementById('canvas16'), 16);
+        createIcon(document.getElementById('canvas48'), 48);
+        createIcon(document.getElementById('canvas128'), 128);
+    </script>
+</body>
+</html>

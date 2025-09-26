@@ -1,1 +1,178 @@
-null
+{
+  "url": "https://www.amazon.in/Kelloggs-Muesli-21-Fruit-Pouch/dp/B083JP2NZX?crid=845ADHX5973F&dib=eyJ2IjoiMSJ9.XfhKKeuLftqesUwEEJdIYCbg1u2UXQrvP7Vl3IjJbnNZtKT0qqzaZVQgBrHP03VHMtt0wz9h0xu-A20ro5yyCpMClNQyTu2lcUJNa47FkKqFGe5RP_Si_ceRXhJGATNy7zz0Sl5NbAcpE0OCV-Fv-vPLcqhlsVki-Trfbjio1Eemaaj43s6H2FvN0JpE0ZGsjzJeJYwmdmLXzb3bo2wW-3Tz02sfWVPehT3rugsqzdvqM39DxtSGMgWk51ml0RLpBGFi-qXTDuvfDmmvBrjqjcx61S0WF_gY_fLM_NeIRpA.prRfcZPEYxy-uCaopgzJDKBvNbhxlzqEQuB9UGq9Jz0&dib_tag=se&keywords=muesli&qid=1758869608&sprefix=wheat%2Caps%2C304&sr=8-5",
+  "title": "Kellogg's Muesli Fruit Nut & Seeds 750G | 12-In-1 Power Breakfast | India'S No. 1 Muesli | Multigrain Breakfast Cereal",
+  "mrp": "₹323.00",
+  "quantity": "12 G",
+  "manufacturer": "Kellogg India Pvt Ltd. , Plot No. L2 & L3, Taloja Midc, District Raigad, Maharashtra, Kellogg's India Pvt Ltd",
+  "origin": "India",
+  "images": [
+    "temp\\temp2\\img1_51hHC869QiL_SL1500.jpg",
+    "temp\\temp2\\img2_51wLvlyxmJL_SL1500.jpg",
+    "temp\\temp2\\img3_51ivnEtyJHL_SL1500.jpg",
+    "temp\\temp2\\img4_518ovnG7nTL_SL1500.jpg",
+    "temp\\temp2\\img5_511botv-nlL_SL1500.jpg",
+    "temp\\temp2\\img6_51Z9oH3z82L_SL1500.jpg"
+  ],
+  "Brand": "Kellogg's",
+  "Diet Type": "Vegetarian",
+  "Flavour": "Fruit and Nut",
+  "Age Range (Description)": "Adult",
+  "Item Form": "Flaked",
+  "Speciality": "High Fibre, High Protein, Whole Grain",
+  "Net Quantity": "750.0 Grams",
+  "Number of Items": "1",
+  "Item Weight": "750 Grams",
+  "Total Eaches": "1",
+  "product_details": {
+    "Specialty": "High Fibre, High Protein, Whole Grain",
+    "Weight": "750 Grams",
+    "Ingredient Type": "Vegetarian",
+    "Brand": "Kellogg's",
+    "Item package quantity": "1",
+    "Form": "Flaked",
+    "Appropriate Age Range": "Adult",
+    "Serving Recommendation": "As per age",
+    "Package Information": "Pouch",
+    "Manufacturer": "Kellogg India Pvt Ltd. , Plot No. L2 & L3, Taloja Midc, District Raigad, Maharashtra, Kellogg's India Pvt Ltd",
+    "Additives": "Fruit, Nut, Seeds, Multigrain",
+    "Allergen Information": "Barley",
+    "Item model number": "FN600R05",
+    "Net Quantity": "750.0 gram",
+    "Product Dimensions": "25 x 10 x 33 cm; 750 g",
+    "Ingredients": "Corn Grits,Wheat,Rice",
+    "Serving Size": "1",
+    "Energy (kcal)": "392.00 Kilocalories",
+    "Protein": "8 g",
+    "Fat": "6 g",
+    "Carbohydrate": "79 g",
+    "- Sugars": "23.5 g",
+    "Country of Origin": "India",
+    "ASIN": "B083JP2NZX",
+    "Customer Reviews": "4.4 \n4.4 out of 5 stars\n    26,642 ratings\n4.4 out of 5 stars",
+    "Best Sellers Rank": "#27 in Grocery & Gourmet Foods (See Top 100 in Grocery & Gourmet Foods)\n#1 in Muesli",
+    "Date First Available": "5 January 2020",
+    "Packer": "kconsumer@kellogg.com",
+    "Importer": "India",
+    "Item Weight": "750 g",
+    "Item Dimensions LxWxH": "25 x 10 x 33 Centimeters",
+    "Generic Name": "Muesli 21% Fruit & Nut"
+  },
+  "vision": {
+    "selected": [],
+    "scoring": {
+      "temp\\temp2\\img1_51hHC869QiL_SL1500.jpg": {
+        "score": 0,
+        "matched": [],
+        "text_preview": "SUPER SAVER PACK $ Relloygs MUESLI FRUII NUT & SEEDS 12in1 POWER BRCAKTAST"
+      },
+      "temp\\temp2\\img2_51wLvlyxmJL_SL1500.jpg": {
+        "score": 0,
+        "matched": [],
+        "text_preview": "DIFFERENT WAYS Kelloygs MUESLI Jndia SNo)  Muesli 82her, NO CcO ISetht 43t Mapta GAt4es'"
+      },
+      "temp\\temp2\\img3_51ivnEtyJHL_SL1500.jpg": {
+        "score": 0,
+        "matched": [],
+        "text_preview": "Kellogga NUIRMION JNFORLAAILON' pF?10d o Fen LoC # Loam Eneict [NEAS fovA Ic[I Eeecennacne Vouacid Oy 7nae Fneamt Doinec IctltRa?TDRLIES CtChtotefuearI Wooocosden Jnea- 27 Elvy uiauivg Ihlyikce D4mJ B..."
+      },
+      "temp\\temp2\\img4_518ovnG7nTL_SL1500.jpg": {
+        "score": 0,
+        "matched": [],
+        "text_preview": "Ketloygs NEW ZIPLOCK PACK Zip_EAT; REPEAT: ZIp LOCK SUPER SAVER PACK' SUPER SAVER PACK' Kelloggs Kelloyga MUESLI MUESLI ER483uT '12i] E3483uT 12in] Powgs? DoweR Senennennnnnne"
+      },
+      "temp\\temp2\\img5_511botv-nlL_SL1500.jpg": {
+        "score": 0,
+        "matched": [],
+        "text_preview": "SUPER SAVER PACK ' Kelloggs MUESLI FRUIT, NUT & SEEDS 12in1 POWER BREAKFAST Creatve Visuollsatlon NEW"
+      },
+      "temp\\temp2\\img6_51Z9oH3z82L_SL1500.jpg": {
+        "score": 0,
+        "matched": [],
+        "text_preview": "12 GRAINS, FRUIT; NUT 1 & SUPER SEEDS IN Oats Raisins Ragi Papaya Wheat Corn Rice +Vitamins / Iron Almonds Pumpkin \" Seeds Black Currants Cranberries Barley"
+      }
+    }
+  },
+  "ocr": {
+    "extracted_text": "SUPER SAVER PACK $ \nMUESLI \nFRUII NUT \n& SEEDS \n12in1 \nPOWER \nBRCAKTAST \nSUPER SAVER PACK ' \nRelloygs \nMUESLI \nFRUII NUT \n& SEEDS \n12in7 \nPOWER \nSUPER SHVER PHCK ' \nMUESLI \nFRUIT NUT \n& SEEDs \n'POWER \nA= \n0 \nSUPER SAVER PACK ' \nMUESLI \nFRUIT NUT \n& SEEDS \n12in] \nPOWER \nDIFFERENT WAYS \nKelloygs \nMUESLI \nNO \nDIFFERENT WAYS \nMUESLI \nIndia' s No] \nNO \nkelkggccn \nDIFTERE \nMUESLI \nIndia5 Nol Mutsli \nDIFFERENT WAYS \nMUESLI \nIndia'5 No | Muesii \nNO \nWeht \n750,9 \nVaP [ \nKellogga \nNUIRMION JNFORLAAILON' \nD4mJ \npER I00 \nIhiHIRE \nkoma \n42m0 \nPFR1009 \nnoq \nLog \n4199 \n509 \nMitaming \n780 \nm \n@Gm \nNEW ZIPLOCK PACK \nZip_EAT; REPEAT: \nZIp LOCK \nSUPER SAVER PACK' \nSUPER SAVER PACK' \nKelloggs \nKelloyga \nMUESLI \nMUESLI \n'12i] \n12in] \nNEW ZIPLock PACK \nZip EAT: REPEAT: \nSUPER SAWER PACK \nMUESLI \nMUESLI \nFRUI NUT \n12 \nSEEDS \n12 \nNEWZIPLOcKPACK \nZIPJEATE REPEAL \nSUPER SMVER PACT \nSUPER SAVER PACK\" \nMUESLI \nMUESLI \n1241 \n1 \nNEW ZIPlock PACK \nZip EAT: REPEAT. \nZipLoek \nSUPER SAVER PACK\" \nSUPER SAVER PaCA\" \nMUESLI \nMUESLI \nFRUI NUT \nFRUIINUT \nSEEDS \n12i] \n& SEEDS \n121 \nSUPER SAVER PACK ' \nKelloggs \nMUESLI \nFRUIT, NUT \n& SEEDS \n12in1 \nPOWER \nBREAKFAST \nCreatve \nVisuollsatlon \nNEW \nSUPER SAVER PACK ' \nKelluyaa \nMUESL \n&SEEDS \n12in1 \nPOWER \nBrEaKFAST \nCranue \nNEW \new \nN \nSUFER SAVER PACK' \nMUESLI \nFRUITNUT \n8SEEDS \n12 \nPOWER \nBREAKFAST \nSUPER SAVER PACK ' \nRelloyga \nMUESLI \nFRUII NUT \n& SEEDS \n12in] \nPoweR \nBreakFAST \nCreatue \nulalleation \nNEW \n12 \nGRAINS, FRUIT; NUT \n& SUPER SEEDS IN \nOats \nRaisins \nRagi \nPapaya \nWheat \nCorn \nRice \n+Vitamins / Iron \nAlmonds \nPumpkin \" \nSeeds \nBlack \nCurrants \nCranberries \nBarley \n12 \nGRAINS, FRUIT, NUT \n& SUPER SEEDS IN \nOats \nRaisins \nrag \nPapaya \nWheat \nCorn \nRice \n+Vitaming \nIron \nAlmonds \nPumpkin - \nSeeds \nBlack \nCurrants \nCranberries \nBarley \n12 \nGRAINS, FRUIT; NUT \n& SUPER SEEDS IN \nRasing \nRag \nPapaya \nWheat: \nCorn \nRicb \nAlmonds \nPumgkh \nSieds \nBlack \nburrants \n~Cranberrlesz \nBarkey \n12 \nGRAINS, FRUIT, NUT \n& SUPER SEEDS IN \nRaisins \nRagi \nPapaya \nWheat \nCorn $ Rice \n~Vitamins & Iron \nAlmonds \nPumpkin \" \nSeeds \nBlack \nCurrants \nCranberries \nOats",
+    "fields": {
+      "quantity": "12 G"
+    },
+    "compliance": {
+      "mrp": false,
+      "quantity": true,
+      "manufacturer": false,
+      "origin": false,
+      "support": false,
+      "dates": false,
+      "batch": false,
+      "license": false,
+      "barcode": false
+    },
+    "missing": [
+      "Maximum Retail Price (₹)",
+      "Manufacturer/Packer Name",
+      "Country of Origin"
+    ],
+    "warnings": [
+      "Optional: Consumer Care Contact",
+      "Optional: Manufacturing/Expiry Date",
+      "Optional: Batch/Lot Number",
+      "Optional: FSSAI License Number",
+      "Optional: Product Barcode"
+    ],
+    "summary": {
+      "total_fields_found": 1,
+      "required_present": 1,
+      "required_total": 4,
+      "compliance_score": "1/4"
+    }
+  },
+  "compliance": {
+    "mrp": true,
+    "quantity": true,
+    "manufacturer": true,
+    "origin": true,
+    "support": false,
+    "dates": false,
+    "batch": false,
+    "license": false,
+    "barcode": false
+  },
+  "missing_fields": [],
+  "warnings": [
+    "Optional: Consumer Care Contact",
+    "Optional: Manufacturing/Expiry Date",
+    "Optional: Batch/Lot Number",
+    "Optional: FSSAI License Number",
+    "Optional: Product Barcode"
+  ],
+  "compliance_summary": {
+    "total_fields_found": 4,
+    "required_present": 4,
+    "required_total": 4,
+    "compliance_score": "4/4"
+  },
+  "manufacturer_analytics": {
+    "manufacturer_name": "Kellogg India Pvt Ltd. , Plot No. L2 & L3, Taloja Midc, District Raigad, Maharashtra, Kellogg'S India",
+    "total_products": 1,
+    "average_compliance_score": 1.0,
+    "compliance_level": "Excellent"
+  },
+  "gemini_status": {
+    "gemini_available": true,
+    "api_key_set": true,
+    "ready": true
+  },
+  "gemini_enhanced": {
+    "enhanced": false,
+    "reason": "Gemini enhancement failed: 400 API key not valid. Please pass a valid API key. [reason: \"API_KEY_INVALID\"\ndomain: \"googleapis.com\"\nmetadata {\n  key: \"service\"\n  value: \"generativelanguage.googleapis.com\"\n}\n, locale: \"en-US\"\nmessage: \"API key not valid. Please pass a valid API key.\"\n]"
+  },
+  "gemini_analysis": {
+    "error": "Gemini analysis failed: 400 API key not valid. Please pass a valid API key. [reason: \"API_KEY_INVALID\"\ndomain: \"googleapis.com\"\nmetadata {\n  key: \"service\"\n  value: \"generativelanguage.googleapis.com\"\n}\n, locale: \"en-US\"\nmessage: \"API key not valid. Please pass a valid API key.\"\n]"
+  },
+  "gemini_comprehensive": {
+    "error": "Comprehensive analysis failed: 400 API key not valid. Please pass a valid API key. [reason: \"API_KEY_INVALID\"\ndomain: \"googleapis.com\"\nmetadata {\n  key: \"service\"\n  value: \"generativelanguage.googleapis.com\"\n}\n, locale: \"en-US\"\nmessage: \"API key not valid. Please pass a valid API key.\"\n]"
+  },
+  "source": "extension",
+  "api_version": "1.0"
+}

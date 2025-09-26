@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LM Compliance Checker</title>
+  <link rel="stylesheet" href="popup.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div class="popup-container">
+    <!-- Header -->
+    <div class="popup-header">
+      <div class="brand">
+        <i class="fas fa-shield-check"></i>
+        <span>LM Compliance</span>
+      </div>
+      <div class="status-indicator" id="status-indicator">
+        <i class="fas fa-circle"></i>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="popup-content">
+      <!-- Initial State -->
+      <div class="section" id="initial-section">
+        <div class="current-page">
+          <div class="page-icon">
+            <i class="fas fa-globe"></i>
+          </div>
+          <div class="page-info">
+            <div class="page-title" id="page-title">Loading...</div>
+            <div class="page-url" id="page-url">Getting current page...</div>
+          </div>
+        </div>
+
+        <div class="actions">
+          <button class="btn btn-primary" id="analyze-btn">
+            <i class="fas fa-search"></i>
+            <span>Check Compliance</span>
+          </button>
+          <button class="btn btn-secondary" id="open-app-btn">
+            <i class="fas fa-external-link-alt"></i>
+            <span>Open Web App</span>
+          </button>
+        </div>
+
+        <div class="supported-sites">
+          <div class="supported-header">Supported Sites:</div>
+          <div class="site-badges">
+            <span class="site-badge amazon">
+              <i class="fab fa-amazon"></i>
+              Amazon
+            </span>
+            <span class="site-badge blinkit">
+              <i class="fas fa-shopping-cart"></i>
+              Blinkit
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Loading State -->
+      <div class="section hidden" id="loading-section">
+        <div class="loading-animation">
+          <div class="loading-spinner"></div>
+          <div class="loading-text">
+            <div class="loading-title">Analyzing Product...</div>
+            <div class="loading-step" id="loading-step">Extracting product data</div>
+          </div>
+        </div>
+
+        <div class="progress-steps">
+          <div class="progress-step" id="step-crawl">
+            <div class="step-icon">
+              <i class="fas fa-download"></i>
+            </div>
+            <span>Crawling</span>
+          </div>
+          <div class="progress-step" id="step-ocr">
+            <div class="step-icon">
+              <i class="fas fa-eye"></i>
+            </div>
+            <span>OCR</span>
+          </div>
+          <div class="progress-step" id="step-validate">
+            <div class="step-icon">
+              <i class="fas fa-check-circle"></i>
+            </div>
+            <span>Validate</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Results State -->
+      <div class="section hidden" id="results-section">
+        <div class="compliance-score" id="compliance-score">
+          <div class="score-circle" id="score-circle">
+            <span id="score-text">0/4</span>
+          </div>
+          <div class="score-label" id="score-label">Poor Compliance</div>
+        </div>
+
+        <div class="results-summary" id="results-summary">
+          <div class="summary-item">
+            <i class="fas fa-check-circle"></i>
+            <span>Fields Found: <strong id="fields-found">0</strong></span>
+          </div>
+          <div class="summary-item">
+            <i class="fas fa-exclamation-triangle"></i>
+            <span>Missing: <strong id="fields-missing">4</strong></span>
+          </div>
+        </div>
+
+        <div class="quick-results" id="quick-results">
+          <!-- Results will be populated by JavaScript -->
+        </div>
+
+        <div class="actions">
+          <button class="btn btn-primary" id="view-report-btn">
+            <i class="fas fa-file-alt"></i>
+            <span>View Full Report</span>
+          </button>
+          <button class="btn btn-secondary" id="analyze-another-btn">
+            <i class="fas fa-refresh"></i>
+            <span>Check Another</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Error State -->
+      <div class="section hidden" id="error-section">
+        <div class="error-icon">
+          <i class="fas fa-exclamation-triangle"></i>
+        </div>
+        <div class="error-title">Analysis Failed</div>
+        <div class="error-message" id="error-message">
+          Unable to analyze this page. Please ensure it's a supported e-commerce product page.
+        </div>
+        
+        <div class="actions">
+          <button class="btn btn-primary" id="retry-btn">
+            <i class="fas fa-redo"></i>
+            <span>Try Again</span>
+          </button>
+          <button class="btn btn-secondary" id="manual-entry-btn">
+            <i class="fas fa-edit"></i>
+            <span>Manual Entry</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="popup-footer">
+      <div class="footer-links">
+        <a href="#" id="settings-link">
+          <i class="fas fa-cog"></i>
+          Settings
+        </a>
+        <a href="#" id="help-link">
+          <i class="fas fa-question-circle"></i>
+          Help
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

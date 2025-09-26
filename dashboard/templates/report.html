@@ -882,9 +882,6 @@
       <h1><i class="fas fa-file-alt"></i> Compliance Report</h1>
       <div class="meta">
         Generated on {{ data.timestamp or 'Unknown' }}
-        {% if data.platform %}
-        <br><span style="color: #3b82f6; font-weight: 600;">Platform: {{ data.platform }}</span>
-        {% endif %}
         {% if data.url %}
         <br><a href="{{ data.url }}" target="_blank" style="color: white; text-decoration: underline;">View Product</a>
       {% endif %}
@@ -1055,22 +1052,10 @@
     {% if data.product_details and data.product_details|length > 0 %}
     <div class="summary-card" style="margin-bottom: 30px;">
       <h3>
-        {% if data.platform == "Amazon" %}
         <div class="card-icon" style="background: linear-gradient(135deg, #ff9500, #ff6600);">
           <i class="fab fa-amazon"></i>
         </div>
         Amazon Product Details
-        {% elif data.platform == "Flipkart" %}
-        <div class="card-icon" style="background: linear-gradient(135deg, #047bd6, #0056b3);">
-          <i class="fas fa-shopping-cart"></i>
-        </div>
-        Flipkart Product Details
-        {% else %}
-        <div class="card-icon" style="background: linear-gradient(135deg, #6366f1, #4f46e5);">
-          <i class="fas fa-info-circle"></i>
-        </div>
-        Product Details
-        {% endif %}
       </h3>
       {% for key, value in data.product_details.items() %}
       <div class="kv-row">
