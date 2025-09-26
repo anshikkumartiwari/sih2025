@@ -17,6 +17,8 @@ def create_app():
     app.register_blueprint(dashboard)
     return app
 
+# Create app instance at module level for gunicorn
+app = create_app()
+
 if __name__ == "__main__":
-    app = create_app()
     app.run(host="0.0.0.0", debug=True)
