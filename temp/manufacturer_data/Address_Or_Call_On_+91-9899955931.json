@@ -1,0 +1,92 @@
+{
+  "manufacturer_name": "Address Or Call On +91-9899955931",
+  "total_products": 1,
+  "compliance_history": [
+    {
+      "timestamp": "2025-09-26T11:29:02.028254",
+      "product_title": "Farmley Pumpkin Seeds I 200g | AAA Grade Pumpkin Seeds for eating | Immunity Booster and Fiber Rich (Pack of 1)",
+      "compliance_score": 1.0,
+      "required_fields_present": 4,
+      "required_fields_total": 4,
+      "missing_fields": [],
+      "warnings": [
+        "Optional: Batch/Lot Number",
+        "Optional: Product Barcode"
+      ],
+      "url": "https://www.amazon.in/Farmley-Selecta-Jumbo-Pumpkin-Seeds/dp/B08K4QBBTW/ref=sr_1_2_sspa?crid=ESKDJIWLLI73&dib=eyJ2IjoiMSJ9._diUOlE7dRR0vTX3dSpgFc0slCbbcSUV0RkqkOHb068WmQxYQH7woVG1nsycLT0FS_kqUl0N5_2d7tvkopb0PjR7rZ5GbALEcuV8nSS-N1GadKh7HS6PwBue0NmlmmVWsiPt7p_cN2tfoPU4YG_8Ehn16M_1TvZCM6KOMuoydF8maUXv0IFkD1aQQXg9jt7EOrn3KAtojeyJWMZPmU5a5AXGxck9G7mmZj0Lbv4FsAHQAatf4DIUklVjitc9UClRS88eiZq6xU18XT7XHPJkr8joBQZSv55ChsiGhZvtiiw.WAukkII7N74U4b7XrQWaAHc-iyce_hZ0vrwqhjYi7i4&dib_tag=se&keywords=food%2Bitems&qid=1758864910&sprefix=food%2Bitem%2Caps%2C300&sr=8-2-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1https://www.amazon.in/Farmley-Selecta-Jumbo-Pumpkin-Seeds/dp/B08K4QBBTW/ref=sr_1_2_sspa?crid=ESKDJIWLLI73&dib=eyJ2IjoiMSJ9._diUOlE7dRR0vTX3dSpgFc0slCbbcSUV0RkqkOHb068WmQxYQH7woVG1nsycLT0FS_kqUl0N5_2d7tvkopb0PjR7rZ5GbALEcuV8nSS-N1GadKh7HS6PwBue0NmlmmVWsiPt7p_cN2tfoPU4YG_8Ehn16M_1TvZCM6KOMuoydF8maUXv0IFkD1aQQXg9jt7EOrn3KAtojeyJWMZPmU5a5AXGxck9G7mmZj0Lbv4FsAHQAatf4DIUklVjitc9UClRS88eiZq6xU18XT7XHPJkr8joBQZSv55ChsiGhZvtiiw.WAukkII7N74U4b7XrQWaAHc-iyce_hZ0vrwqhjYi7i4&dib_tag=se&keywords=food%2Bitems&qid=1758864910&sprefix=food%2Bitem%2Caps%2C300&sr=8-2-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1",
+      "category": "General Products"
+    }
+  ],
+  "compliance_stats": {
+    "total_scans": 1,
+    "compliant_scans": 1,
+    "non_compliant_scans": 0,
+    "average_compliance_score": 1.0,
+    "required_fields_compliance": {
+      "mrp": {
+        "present": 1,
+        "missing": 0,
+        "percentage": 100.0
+      },
+      "quantity": {
+        "present": 1,
+        "missing": 0,
+        "percentage": 100.0
+      },
+      "manufacturer": {
+        "present": 1,
+        "missing": 0,
+        "percentage": 100.0
+      },
+      "origin": {
+        "present": 1,
+        "missing": 0,
+        "percentage": 100.0
+      }
+    },
+    "optional_fields_compliance": {
+      "support": {
+        "present": 1,
+        "missing": 0,
+        "percentage": 100.0
+      },
+      "dates": {
+        "present": 1,
+        "missing": 0,
+        "percentage": 100.0
+      },
+      "batch": {
+        "present": 0,
+        "missing": 1,
+        "percentage": 0.0
+      },
+      "license": {
+        "present": 1,
+        "missing": 0,
+        "percentage": 100.0
+      },
+      "barcode": {
+        "present": 0,
+        "missing": 1,
+        "percentage": 0.0
+      }
+    }
+  },
+  "product_categories": {
+    "General Products": {
+      "total_products": 1,
+      "compliant_products": 1,
+      "average_compliance_score": 1.0
+    }
+  },
+  "recent_products": [
+    {
+      "title": "Farmley Pumpkin Seeds I 200g | AAA Grade Pumpkin Seeds for eating | Immunity Booster and Fiber Rich (Pack of 1)",
+      "compliance_score": 1.0,
+      "timestamp": "2025-09-26T11:29:02.028499",
+      "category": "General Products",
+      "url": "https://www.amazon.in/Farmley-Selecta-Jumbo-Pumpkin-Seeds/dp/B08K4QBBTW/ref=sr_1_2_sspa?crid=ESKDJIWLLI73&dib=eyJ2IjoiMSJ9._diUOlE7dRR0vTX3dSpgFc0slCbbcSUV0RkqkOHb068WmQxYQH7woVG1nsycLT0FS_kqUl0N5_2d7tvkopb0PjR7rZ5GbALEcuV8nSS-N1GadKh7HS6PwBue0NmlmmVWsiPt7p_cN2tfoPU4YG_8Ehn16M_1TvZCM6KOMuoydF8maUXv0IFkD1aQQXg9jt7EOrn3KAtojeyJWMZPmU5a5AXGxck9G7mmZj0Lbv4FsAHQAatf4DIUklVjitc9UClRS88eiZq6xU18XT7XHPJkr8joBQZSv55ChsiGhZvtiiw.WAukkII7N74U4b7XrQWaAHc-iyce_hZ0vrwqhjYi7i4&dib_tag=se&keywords=food%2Bitems&qid=1758864910&sprefix=food%2Bitem%2Caps%2C300&sr=8-2-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1https://www.amazon.in/Farmley-Selecta-Jumbo-Pumpkin-Seeds/dp/B08K4QBBTW/ref=sr_1_2_sspa?crid=ESKDJIWLLI73&dib=eyJ2IjoiMSJ9._diUOlE7dRR0vTX3dSpgFc0slCbbcSUV0RkqkOHb068WmQxYQH7woVG1nsycLT0FS_kqUl0N5_2d7tvkopb0PjR7rZ5GbALEcuV8nSS-N1GadKh7HS6PwBue0NmlmmVWsiPt7p_cN2tfoPU4YG_8Ehn16M_1TvZCM6KOMuoydF8maUXv0IFkD1aQQXg9jt7EOrn3KAtojeyJWMZPmU5a5AXGxck9G7mmZj0Lbv4FsAHQAatf4DIUklVjitc9UClRS88eiZq6xU18XT7XHPJkr8joBQZSv55ChsiGhZvtiiw.WAukkII7N74U4b7XrQWaAHc-iyce_hZ0vrwqhjYi7i4&dib_tag=se&keywords=food%2Bitems&qid=1758864910&sprefix=food%2Bitem%2Caps%2C300&sr=8-2-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1"
+    }
+  ],
+  "last_updated": "2025-09-26T11:29:02.028551"
+}

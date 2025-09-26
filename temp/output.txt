@@ -1,166 +1,171 @@
 {
-  "url": "https://www.amazon.in/Sunfeast-Yumfills-Whoopie-Chocolate-Chip/dp/B06WGM2HK2/ref=pd_sbs_d_sccl_2_4/260-7690809-9772731?pd_rd_w=EMnl6&content-id=amzn1.sym.6d240404-f8ea-42f5-98fe-bf3c8ec77086&pf_rd_p=6d240404-f8ea-42f5-98fe-bf3c8ec77086&pf_rd_r=QXNVTJ052GG6047JHVQK&pd_rd_wg=mqaUv&pd_rd_r=e658a169-24e2-498f-8e4a-3aa310ca49e7&pd_rd_i=B06WGM2HK2&th=1",
-  "title": "Sunfeast Dark Fantasy Yumfills Whoopie Pie, Chocolate Chip, 253g",
-  "mrp": "₹80.00",
-  "quantity": "100 g",
-  "manufacturer": "ITC, ITC Limited, Kolkata",
+  "url": "https://www.amazon.in/Farmley-Selecta-Jumbo-Pumpkin-Seeds/dp/B08K4QBBTW/ref=sr_1_2_sspa?crid=ESKDJIWLLI73&dib=eyJ2IjoiMSJ9._diUOlE7dRR0vTX3dSpgFc0slCbbcSUV0RkqkOHb068WmQxYQH7woVG1nsycLT0FS_kqUl0N5_2d7tvkopb0PjR7rZ5GbALEcuV8nSS-N1GadKh7HS6PwBue0NmlmmVWsiPt7p_cN2tfoPU4YG_8Ehn16M_1TvZCM6KOMuoydF8maUXv0IFkD1aQQXg9jt7EOrn3KAtojeyJWMZPmU5a5AXGxck9G7mmZj0Lbv4FsAHQAatf4DIUklVjitc9UClRS88eiZq6xU18XT7XHPJkr8joBQZSv55ChsiGhZvtiiw.WAukkII7N74U4b7XrQWaAHc-iyce_hZ0vrwqhjYi7i4&dib_tag=se&keywords=food%2Bitems&qid=1758864910&sprefix=food%2Bitem%2Caps%2C300&sr=8-2-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1https://www.amazon.in/Farmley-Selecta-Jumbo-Pumpkin-Seeds/dp/B08K4QBBTW/ref=sr_1_2_sspa?crid=ESKDJIWLLI73&dib=eyJ2IjoiMSJ9._diUOlE7dRR0vTX3dSpgFc0slCbbcSUV0RkqkOHb068WmQxYQH7woVG1nsycLT0FS_kqUl0N5_2d7tvkopb0PjR7rZ5GbALEcuV8nSS-N1GadKh7HS6PwBue0NmlmmVWsiPt7p_cN2tfoPU4YG_8Ehn16M_1TvZCM6KOMuoydF8maUXv0IFkD1aQQXg9jt7EOrn3KAtojeyJWMZPmU5a5AXGxck9G7mmZj0Lbv4FsAHQAatf4DIUklVjitc9UClRS88eiZq6xU18XT7XHPJkr8joBQZSv55ChsiGhZvtiiw.WAukkII7N74U4b7XrQWaAHc-iyce_hZ0vrwqhjYi7i4&dib_tag=se&keywords=food%2Bitems&qid=1758864910&sprefix=food%2Bitem%2Caps%2C300&sr=8-2-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1",
+  "title": "Farmley Pumpkin Seeds I 200g | AAA Grade Pumpkin Seeds for eating | Immunity Booster and Fiber Rich (Pack of 1)",
+  "mrp": "₹149.00",
+  "quantity": "0.0 g",
+  "manufacturer": "address or call on +91-9899955931",
   "origin": "India",
   "images": [
-    "temp\\temp2\\img1_51W7pWPWBjL_SL1500.jpg",
-    "temp\\temp2\\img2_51LaFCsm3-L_SL1500.jpg",
-    "temp\\temp2\\img3_61CjBfZneWL_SL1500.jpg",
-    "temp\\temp2\\img4_41b6mGeySTL_SL1500.jpg",
-    "temp\\temp2\\img5_41swDiMzRxL_SL1500.jpg",
-    "temp\\temp2\\img6_51-RdCiqtML_SL1500.jpg"
+    "temp\\temp2\\img1_41B-UlcLbJL_SL1500.jpg",
+    "temp\\temp2\\img2_41H5T7F3o-L_SL1500.jpg",
+    "temp\\temp2\\img3_51esQhxVznL_SL1500.jpg",
+    "temp\\temp2\\img4_41NQCzEHSwL_SL1500.jpg",
+    "temp\\temp2\\img5_41zwkTbxmwL_SL1500.jpg",
+    "temp\\temp2\\img6_51TV84s8WtL_SL1500.jpg"
   ],
-  "Flavour": "Chocolate Chip",
-  "Brand": "Sunfeast Dark Fantasy",
-  "Item Weight": "253 Grams",
-  "Speciality": "Vegetarian",
-  "Diet Type": "Vegetarian",
+  "Flavour": "Pumpkin Seeds",
+  "Brand": "Farmley",
+  "Item Weight": "200 Grams",
+  "Item Form": "Seed",
+  "Speciality": "Natural",
   "product_details": {
-    "Specialty": "Vegetarian",
-    "Weight": "253 Grams",
-    "Ingredient Type": "Vegetarian",
-    "Brand": "Sunfeast Dark Fantasy",
-    "Form": "whole",
-    "Package Information": "Box",
-    "Manufacturer": "ITC, ITC Limited, Kolkata",
-    "Additives": "Chocolate Pie Cake",
-    "Item model number": "8901725134693",
-    "Net Quantity": "242.0 gram",
-    "Product Dimensions": "17.3 x 12.3 x 4 cm; 253 g",
-    "Ingredients": "Refined Wheat Flour (Maida), Milk choco covering (22.9%) {Sugar, Interesterified Vegetable Fat, Milk Solids (2.75%), Cocoa Solids (1.37%), Hydrogenated Vegetable Oils, Artificial Flavouring Substances (Vanilla)}, Sugar, Liquid Glucose, Refined Palmolein, Humectant (INS 422), Invert Syrup, Cake Gel {Emulsifiers [Mono- and di-glycerides of fatty acids (from Palm oil), Salts of myristic, palmitic and stearic acids with ammonia, calcium, potassium and sodium (from Palm oil), Propylene glycol esters of fatty Acids (from Palm oil)], Humectant (INS 422)}, Milk Solids (1.61%), Raising Agents [INS 500(ii), INS 450(i), INS 450(vii), INS 503(ii)] , Emulsifiers [Polyglycerol esters of fatty acid (from Palm oil), Lecithin (from Soyabean)], Stabilizer (INS 407, INS 415), Acidity Regulator (INS 330), Preservative (INS 202), Hydrolysed Vegetable Protein, Nature Identical Flavouring Substances, Iodized Salt, Flour Treatment Agent (INS 223) and Colour (INS 102)",
+    "Specialty": "Natural",
+    "Weight": "200 Grams",
+    "Ingredient Type": "vegetarian",
+    "Brand": "Farmley",
+    "Region Produced In": "Asia",
+    "Form": "Seed",
+    "Manufacturer": "CONNEDIT BUSINESS SOLUTIONS PRIVATE LIMITED, Connedit Business Solutions Pvt Ltd",
+    "Net Quantity": "200.0 gram",
+    "Product Dimensions": "13 x 19 x 4 cm; 200 g",
+    "Ingredients": "Pumpkin Seeds",
     "Serving Size": "1",
-    "Energy (kcal)": "438.00 Kilocalories",
-    "Protein": "5.4 g",
-    "Fat": "17.2 g",
-    "Carbohydrate": "65.5 g",
-    "- Sugars": "41.1 g",
+    "Energy (kcal)": "570.00 Kilocalories",
+    "Protein": "30.5 g",
+    "Fat": "45.6 g",
+    "Carbohydrate": "12 g",
     "Country of Origin": "India",
-    "ASIN": "B06WGM2HK2",
-    "Customer Reviews": "4.3 \n4.3 out of 5 stars\n    12,445 ratings\n4.3 out of 5 stars",
-    "Date First Available": "7 August 2016",
-    "Packer": "ITC Ltd, Foods Division, Plot No 1, Sector 11, 11E, BHEL, Haridwar (UK) 249403",
-    "Item Weight": "253 g",
-    "Item Dimensions LxWxH": "17.3 x 12.3 x 4 Centimeters",
-    "Generic Name": "Yumfills Chocolate Pie Cake"
+    "ASIN": "B08K4QBBTW",
+    "Customer Reviews": "4.3 \n4.3 out of 5 stars\n    888 ratings\n4.3 out of 5 stars",
+    "Best Sellers Rank": "#537 in Grocery & Gourmet Foods (See Top 100 in Grocery & Gourmet Foods)\n#12 in Pumpkin Seeds",
+    "Date First Available": "26 September 2020",
+    "Packer": "Connedit Business Solutions Pvt Ltd",
+    "Importer": "Connedit Business Solutions Pvt Ltd",
+    "Item Weight": "200 g",
+    "Item Dimensions LxWxH": "13 x 19 x 4 Centimeters",
+    "Generic Name": "Pumpkin seeds"
   },
   "vision": {
     "selected": [
-      "temp\\temp2\\img2_51LaFCsm3-L_SL1500.jpg",
-      "temp\\temp2\\img6_51-RdCiqtML_SL1500.jpg",
-      "temp\\temp2\\img3_61CjBfZneWL_SL1500.jpg"
+      "temp\\temp2\\img3_51esQhxVznL_SL1500.jpg",
+      "temp\\temp2\\img5_41zwkTbxmwL_SL1500.jpg"
     ],
     "scoring": {
-      "temp\\temp2\\img1_51W7pWPWBjL_SL1500.jpg": {
+      "temp\\temp2\\img1_41B-UlcLbJL_SL1500.jpg": {
         "score": 0,
         "matched": [],
-        "text_preview": "Ait2 Siea Dark Fantasy Deliciously Choco Treat Yumfills Pie MECin11INDIVIDUAL PACKS INSIDE IVED New & IMprov ChocO TASTE"
+        "text_preview": "Farmley PUMPKIN SEEDS 83 2 #"
       },
-      "temp\\temp2\\img2_51LaFCsm3-L_SL1500.jpg": {
-        "score": 2,
+      "temp\\temp2\\img2_41H5T7F3o-L_SL1500.jpg": {
+        "score": 0,
+        "matched": [],
+        "text_preview": "Farmley SCAMTOKNDw Outiue llovcectonggt nlelle cratelett TMere ennt ac Fnine Mneetaa Uaeen Aetatti Hueattutt Sftet"
+      },
+      "temp\\temp2\\img3_51esQhxVznL_SL1500.jpg": {
+        "score": 6,
         "matched": [
+          "Manufacturer",
+          "ConsumerCare",
+          "FSSAI",
           "Nutritional",
-          "Ingredients"
-        ],
-        "text_preview": "NUTRITIONAL INFORMATION PER IPER SERVEI % RDA PER (APPROX, VALUES) 100 g (22 g) SERVE ENERGY (kcah 425 PROTEIN (9) 54 CARBOHYDRATE (9) 63.9 1 TOIALSUGARS () 381 ADDED SUGARS (@) 263  TOTAL FAT (0) 164..."
-      },
-      "temp\\temp2\\img3_61CjBfZneWL_SL1500.jpg": {
-        "score": 1,
-        "matched": [
+          "Ingredients",
           "Numbers"
         ],
-        "text_preview": "C 673 Shies PROPRIETARY FOOD PIE CAKE Q20 WWicB 1420 FrD JUAICHNag Use; Mof Jta/oa Perg) Mnittedontguhncc Issat LcNa. 10012051000512 [ia Eajooozzoooia No I} rofIED Whert Four (HludaO Hilk choco concri..."
+        "text_preview": "For feedback complalnt, plcase write to Nutrition Facts Customer Care Executive on the marketed by #AANEORE s address or call on +91-9899955931 Amount per 1089 A Liutaie- Emall : wecare@Farmleycom 593..."
       },
-      "temp\\temp2\\img4_41b6mGeySTL_SL1500.jpg": {
+      "temp\\temp2\\img4_41NQCzEHSwL_SL1500.jpg": {
         "score": 0,
         "matched": [],
-        "text_preview": "@Dark Fantasy Yumfills Pie Gtt OR CDark Fantasy Doliciusly Cha nent Yumfills Pie} abili Te4"
+        "text_preview": "Old New Farmley\" Farmley PUMPKIN SEEDS (NlRGY Jors Paotmcotcht JcnneoneeeaE PUMPKIN SEEDS 84$ Due to packaging transitions, product packaging may vary:"
       },
-      "temp\\temp2\\img5_41swDiMzRxL_SL1500.jpg": {
-        "score": 0,
-        "matched": [],
-        "text_preview": "GDark Fantasy Doloccal Cheonln Yumfills Pie}"
-      },
-      "temp\\temp2\\img6_51-RdCiqtML_SL1500.jpg": {
-        "score": 2,
+      "temp\\temp2\\img5_41zwkTbxmwL_SL1500.jpg": {
+        "score": 1,
         "matched": [
-          "Nutritional",
-          "Ingredients"
+          "Nutritional"
         ],
-        "text_preview": "Ingrediehts; REFINED Wheat FLour (Maidaj; Milk choco coverino (2208) {Sugar; INTERESTCRIFICD VLOLTABLI FaT; Milk solids (2,7531, Cocoa solids 01.3731, HYDROGENATED VeGETABLE Oils; rtificial FLAvOURING..."
+        "text_preview": "TINY NUTRIENT POWERHOUSES RICH IN 30% MAGNESIUM PLANT & ZINC PROTEIN Gedds PREMIUM AAA GRADE purei"
+      },
+      "temp\\temp2\\img6_51TV84s8WtL_SL1500.jpg": {
+        "score": 0,
+        "matched": [],
+        "text_preview": "Farmley\" PUMPKIN SEEDS 2 $"
       }
     }
   },
   "ocr": {
-    "extracted_text": "NUTRITIONAL INFORMATION \nPER \nIPER SERVEI % RDA PER \n(APPROX, VALUES) \n100 g \n(22 g) \nSERVE \nENERGY (kcah \n425 \nPROTEIN (9) \n54 \nCARBOHYDRATE (9) \n63.9 \n1 \nTOIALSUGARS () \n381 \nADDED SUGARS (@) \n263  \nTOTAL FAT (0) \n164 \n36 \n16 \n001 \n05 \nSATURATED FAT (@) \n107 \n24 \n10.9 \nCHOLESTEROL (mg) \n24 \n05 \nSODIUM (m9) \n[1468 | \n323 \n16 \nNUTRITIONAL INFORMATION \nPER \nIPER SERVE \n% RDA PER \n(APPROX. VALUES) \n100 g \n(22 g) \nSERVE \n425 \nPROIN ( \n3 \n283 \nTOIN FAT @ \n# \n005 \nQ01 \n05 \n24 \n109 \nCHKOLESIEROL (uD) \n24 \n05 \n323 \n16 \nNUTRITIONAL INFORMATION \nPER \nPER SERVEI % RDA PER \n{APPROX VALUES) \n100 g \n(22 g) \nSERVE \n425 \nPROIEN \n3 \nCARDOHMRAE @@ \nTOTALSUGARS() \n3 \nQo1 \n24 \n05 \n16 \nNUTRITIONAL INFORMATION \nPER \nIPER SERVE] % RDA PER \n(APPROX. VALUES) \n100 g \n(22 g) \nSERVE \nENERGY(c) \n435 \n54 \n69 \n81 \n263 \n59 \n116 \nTOINFAT @ \n36 \n54 \n001 \n05 \n24 \n109 \n24 \n05 \nSOLIUM(D) \ns8 \n323 \n16 \nShies \nPROPRIETARY FOOD \nPIE CAKE Q20 \n1420 \nUse; \nIssat \nNo \nCDark \ncool \nDry PLACE \nFantasy \nBENGALURU - \n500005 \nYumfills Pie \neltccares@ltc In 31000 425444444 \nLkNa 1012051000512 \n202 \n@Dark \nFantasy \nYumfills Pic \nGDark \nTu \nFantasy \nYumfills Pie \nM4ea \nsssat \nDark \nFantasy \nBENOALURU \nYumfills Pic \nrtificial FLAvOURING SUBSTANCES \nFATTY \n(INS 407, INS 415), \ntl \nKan \nKony \n407,",
+    "extracted_text": "For feedback \ncomplalnt, \nplcase write to \nNutrition Facts \nCustomer Care Executive on the marketed by \naddress or call on +91-9899955931 \nAmount per 1089 \nEmall : wecare@Farmleycom \nWebsite \nWwWfarmleycom \nProtein 30,89 \nMANUFACTURED \nMARKETED BY : \nCONNEDIT BUSINESS SOLUTIONS PVT LTD: \nKhasra No.17/2/2 & 3,51/1/2 Kaji Palasiya \nAdder \nIndore, Madhya Pradesh; India \n452001 \nDietary \nJssal Lic.No - 11421850000414 \nsatufated Fat 7.99 \nTrans \n0.0g \n0,096 \nPRODUCT OF INDIA \nsodum \n0.296 \nCholesterol \nINGREDIENTS : Pumpkin Seeds \nIl9 0 6 1 20 Il100 1 5 \nALLERGEN CAUTION: \nContains \ntree \nnuts \nThis   product   has \nbeen \npacked \nan integrated nuts and dried Fruits \nprocessing unit and May \ncontan \noccasional \nof other nuts \ndried fruits. \nEnergy \ntrace \nFor feedback \ncomplalnt, \nplcase write to \nNutrition Facts \nCustomer Core Executive On the marketed by \nuddress or callon \n+91 9899955931 \nAmount per 1009 \nEmall : wecareftarmleycom \nWebsite \nHarmley com \nProteln 30. \nCarbohudrares \n0.3g \nCONNEDIT BUSINESS SOLUTIONS PVT: LTD: \nKhasra No 17/2/2 & \n51/1/2 Kaji Palasiya; \nAddeo \nIndore, Madhya Pradesh, India \n452001 \nFat 46.19 \n1191 \nfssal LicNo - 11421850000414 \nsatufated Fat 7.99 \nTrans \n0,096 \nPRODUCT OF INDIA \nsodium \nCholesterol \nINGREDIENTS \nPumpkin Seeds \nIl9 0 6 1 2 0 Il100 1 5 \nALLERGEN CAUTION \nContains \ntree \nnuts. \nThis   product  has \nbeen \npacked \nan integrated \nnuts &nd dried Fruits \nprocessing unit and may \ncontain \noccasional \ndried fruits. \nLrace \nnuls \nNutrition Facts \n4491-9899955931' \nAmdunt par \n593 Jkcal \nProtaln 30,89 \nCarboldrtes 1030 \nCONNEDITELSINESSSCLUTONSFVT UD \n5200 \n1587 \nEs \nFat @0g \nYRODUGTOFINDIA \nSodlum JB.9mg \n8 Il9 061 20 Il1 00 1 5 \n{ALLERGEN CAUTION \nContaing; \nml \n1002\" \nTrald \nFor feedback / complalnt, \nplcase write t0 \nNutrition Facts \nCustomer Care Executive on the marketed by \naddress or call on +91 \n~9899955931 \nAmount per 1009\" \nEmall \nwecare@farmleycom \nEnergy 593 3kcal \n5.916 \nWebsite : wwwfarmleycom \nPtotcin 30.89 \nCarbohydrates \nCONNEDIT BUSINESS SOLUTIONS PVT LTD \nFotal Sugar 09 \nKhasra No.17/2/2 & 3,51/1/2 Kaji Palasiya, \nAdded Suqar 0.09 \n0.016 \nIndore; Madhya Pradesh, India - 452001 \nDietaly Fiber 6 89 \nTotal Fat 46.19 \n13,836 \nJssal LicNo \n11421850000414 \nsaturjted Fat 7.99 \nTrans Fat 0.0g \n0,016 \nPRODUCT OF INDIA \nSodium 18.9m9 \n0.290 \nCholesterol 0 Omg \nINGREDIENTS : Pumpkin Seeds \n8 Il9 0 6 1 2 0 |1 0015 1 \nALLERGEN CAUTION: \nContains \ntree \nnuts   This   product   has been \npacked in an integrated nuts ad dried fruits \nprocessing unit and may contain an occasional \ntrace of other nuts or dried fruits. \n10.39 \nTINY NUTRIENT \nPOWERHOUSES \nRICH IN \n30% \nMAGNESIUM \nPLANT \n& ZINC \nPROTEIN \nPREMIUM \nAAA \nGRADE \nTINY NUTRIENT \nPOWerHOUSES \nRICH IN \n30% \nMAGNESIUM \nPLANT \n& ZINC \nPROTEIN \nPREMIUM \nAAA \nGRADE \nTINY NUTRIENT \nPOWERHOUSES \nRICH IN \n30% \nMAGNESIUM \nPLANT \n6 ZINC \nPROTEIN \nPREMIUM \nAAA \nGRADE \nTINY NUTRIENT \nPOWERHOUSES \nRICH IN \n30% \nMAGNESIUM \nPLANT \n& ZINC \nPROTEIN \nPREMIUM \nAAA \nGRADE",
     "fields": {
-      "support": "1012051000512",
-      "license": "1012051000512",
-      "quantity": "100 g"
+      "manufacturer": "address or call on +91-9899955931",
+      "support": "Executive on the marketed by address or call on  91-9899955931 Amount per 1089 Emall : wecare Farmleycom Website WwWfarmleycom Protein 30, 9899955931",
+      "dates": {
+        "label": "packed",
+        "date": "an"
+      },
+      "license": "11421850000414",
+      "quantity": "0.0 g"
     },
     "compliance": {
       "mrp": false,
       "quantity": true,
-      "manufacturer": false,
+      "manufacturer": true,
       "origin": false,
       "support": true,
-      "dates": false,
+      "dates": true,
       "batch": false,
       "license": true,
       "barcode": false
     },
     "missing": [
       "Maximum Retail Price (₹)",
-      "Manufacturer/Packer Name",
       "Country of Origin"
     ],
     "warnings": [
-      "Optional: Manufacturing/Expiry Date",
       "Optional: Batch/Lot Number",
       "Optional: Product Barcode"
     ],
     "summary": {
-      "total_fields_found": 3,
-      "required_present": 1,
+      "total_fields_found": 5,
+      "required_present": 2,
       "required_total": 4,
-      "compliance_score": "1/4"
+      "compliance_score": "2/4"
     }
   },
-  "support": "1012051000512",
-  "license": "1012051000512",
+  "support": "Executive on the marketed by address or call on  91-9899955931 Amount per 1089 Emall : wecare Farmleycom Website WwWfarmleycom Protein 30, 9899955931",
+  "dates": {
+    "label": "packed",
+    "date": "an"
+  },
+  "license": "11421850000414",
   "compliance": {
     "mrp": true,
     "quantity": true,
     "manufacturer": true,
     "origin": true,
     "support": true,
-    "dates": false,
+    "dates": true,
     "batch": false,
     "license": true,
     "barcode": false
   },
   "missing_fields": [],
   "warnings": [
-    "Optional: Manufacturing/Expiry Date",
     "Optional: Batch/Lot Number",
     "Optional: Product Barcode"
   ],
   "compliance_summary": {
-    "total_fields_found": 6,
+    "total_fields_found": 7,
     "required_present": 4,
     "required_total": 4,
     "compliance_score": "4/4"
   },
   "manufacturer_analytics": {
-    "manufacturer_name": "Itc, Itc Limited, Kolkata",
-    "total_products": 3,
+    "manufacturer_name": "Address Or Call On +91-9899955931",
+    "total_products": 1,
     "average_compliance_score": 1.0,
     "compliance_level": "Excellent"
   },
   "gemini_status": {
-    "gemini_available": true,
+    "gemini_available": false,
     "api_key_set": false,
     "ready": false
   }

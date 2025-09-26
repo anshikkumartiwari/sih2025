@@ -22,7 +22,7 @@ FIELD_REGEX: Dict[str, str] = {
     "manufacturer": r"(?:MARKETED\s*BY|MANUFACTURED\s*BY|Manufacturer|Mfg\s*by|Packed\s*by|Packer|Importer|MFD\.?\s*BY)\s*:?\s*([^,\n]+(?:LIMITED|LTD|PVT|PRIVATE|CORP|CORPORATION)?[^,\n]*)",
     "origin": r"(?:Country\s*of\s*Origin|Made\s*in|Origin|COUNTRY\s*OF\s*ORIGIN)\s*:?\s*([^,\n]+)",
     "support": r"(?:FOR\s*FEEDBACK|Consumer\s*Care|Customer\s*Care|Helpline|Email|Phone|Contact|ITC\s*CARES)\s*:?\s*([^,\n@]+@[^,\n]+|[^,\n]*\d{10,}[^,\n]*)",
-    "dates": r"(?:PKD\.?/BATCH|USE\s*BY|Mfg|Exp|Best\s*Before|Use\s*By|Manufacturing|Expiry|PACKED|BATCH)\s*:?\s*(\d{1,2}[/-]\d{1,2}[/-]\d{2,4}|[A-Z0-9]+)",
+    "dates": r"((?:PKD\.?/BATCH|USE\s*BY|Mfg|Exp|Best\s*Before|Use\s*By|Manufacturing|Expiry|PACKED|BATCH))\s*:?\s*(\d{1,2}[/-]\d{1,2}[/-]\d{2,4}|[A-Z0-9]+)",
     "batch": r"(?:PKD\.?/BATCH|Batch|Lot|BATCH)\s*:?\s*([A-Z0-9]+)",
     "license": r"(?:FSSAI|License|Lic\.?|Lic\.?\s*No\.?|Lic\s*No|FSSAI\s*Lic|Food\s*Safety|Registration|Reg\s*No)\s*:?\s*([0-9]+)",
     "barcode": r"(?:Barcode|EAN|UPC|QR\s*Code)\s*:?\s*([0-9]+)",
