@@ -3,7 +3,15 @@ import os
 import json
 from typing import Dict, List, Optional
 
-GEMINI_API_KEY="AIzaSyBwMQ-D_cqHS1qUaML-JRWW15JJJYTzIOs"
+GEMINI_API_KEY=os.getenv("GEMINI_API_KEY", "")
+
+# Prefer public Generative AI model IDs; try fallbacks if a specific version is not accessible
+MODEL_CANDIDATES = [
+    "gemini-1.5-flash",
+    "gemini-1.5-pro",
+    "gemini-1.0-pro",
+    "gemini-pro",
+]
 
 try:
     import google.generativeai as genai  # type: ignore
@@ -14,23 +22,58 @@ except Exception:
 def setup_gemini(api_key: Optional[str] = None) -> bool:
     """Initialize Gemini API with provided or environment key."""
     if genai is None:
+        print("[DEBUG] google-generativeai package not available")
         return False
     
-    key = api_key or os.getenv("GEMINI_API_KEY")
+    # Try provided key, else environment-backed key
+    key = api_key or os.getenv("GEMINI_API_KEY") or GEMINI_API_KEY
     if not key:
+        print("[DEBUG] No Gemini API key found")
         return False
     
-    genai.configure(api_key=key)
-    return True
+    try:
+        genai.configure(api_key=key)
+        print("[DEBUG] Gemini API configured successfully")
+        return True
+    except Exception as e:
+        print(f"[DEBUG] Failed to configure Gemini API: {e}")
+        return False
+
+
+def _create_model() -> Optional[object]:
+    """Create a GenerativeModel by trying candidates in order."""
+    if genai is None:
+        return None
+    last_error = None
+    for model_id in MODEL_CANDIDATES:
+        try:
+            print(f"[DEBUG] Trying Gemini model: {model_id}")
+            model = genai.GenerativeModel(model_id)
+            # Light ping by generating a harmless empty content to validate availability
+            # (Avoid heavy calls; some versions may lazy-validate on first generate.)
+            return model
+        except Exception as e:
+            last_error = str(e)
+            print(f"[DEBUG] Model {model_id} unavailable: {e}")
+            continue
+    print(f"[DEBUG] No Gemini models available from candidates. Last error: {last_error}")
+    return None
 
 
 def analyze_packaging_text(text: str, api_key: Optional[str] = None) -> Dict[str, object]:
     """Use Gemini to analyze packaging text for LM compliance with comprehensive cross-verification."""
+    print(f"[DEBUG] Starting Gemini analysis for text length: {len(text)}")
+    
     if not setup_gemini(api_key):
+        print("[DEBUG] Gemini setup failed")
         return {"error": "Gemini API not available"}
     
     try:
-        model = genai.GenerativeModel('gemini-1.5-flash')
+        print("[DEBUG] Creating Gemini model...")
+        model = _create_model()
+        if model is None:
+            return {"error": "No accessible Gemini model. Check API key and model access."}
+        print("[DEBUG] Model created successfully")
         
         prompt = f"""
         You are an expert in Indian Legal Metrology Rules (2011) compliance. Analyze this raw OCR text extracted from a product packaging label and provide comprehensive compliance analysis.
@@ -96,21 +139,34 @@ def analyze_packaging_text(text: str, api_key: Optional[str] = None) -> Dict[str
         7. Cross-verify findings with Legal Metrology requirements
         """
         
+        print("[DEBUG] Generating content with Gemini...")
         response = model.generate_content(prompt)
+        print(f"[DEBUG] Gemini response received, length: {len(response.text) if response.text else 0}")
         
         # Try to parse JSON response
         try:
             result = json.loads(response.text)
-        except json.JSONDecodeError:
+            print("[DEBUG] Successfully parsed JSON response")
+        except json.JSONDecodeError as e:
+            print(f"[DEBUG] JSON parsing failed: {e}")
             # If JSON parsing fails, try to extract JSON from the response
             import re
             json_match = re.search(r'\{.*\}', response.text, re.DOTALL)
             if json_match:
-                result = json.loads(json_match.group(0))
+                try:
+                    result = json.loads(json_match.group(0))
+                    print("[DEBUG] Successfully extracted and parsed JSON from response")
+                except json.JSONDecodeError as e2:
+                    print(f"[DEBUG] Failed to parse extracted JSON: {e2}")
+                    result = {
+                        "error": "Failed to parse Gemini response as JSON",
+                        "raw_response": response.text[:500] + "..." if len(response.text) > 500 else response.text
+                    }
             else:
+                print("[DEBUG] No JSON pattern found in response")
                 result = {
                     "error": "Failed to parse Gemini response as JSON",
-                    "raw_response": response.text
+                    "raw_response": response.text[:500] + "..." if len(response.text) > 500 else response.text
                 }
         
         return result
@@ -125,7 +181,9 @@ def enhance_ocr_with_gemini(ocr_text: str, api_key: Optional[str] = None) -> Dic
         return {"enhanced": False, "reason": "Gemini API not available"}
     
     try:
-        model = genai.GenerativeModel('gemini-1.5-flash')
+        model = _create_model()
+        if model is None:
+            return {"enhanced": False, "reason": "No accessible Gemini model. Check API key and model access."}
         
         prompt = f"""
         This text was extracted from product packaging via OCR. Clean it up and extract Legal Metrology fields:
@@ -156,7 +214,9 @@ def comprehensive_compliance_analysis(ocr_text: str, ocr_fields: Dict[str, objec
         return {"error": "Gemini API not available"}
     
     try:
-        model = genai.GenerativeModel('gemini-1.5-flash')
+        model = _create_model()
+        if model is None:
+            return {"error": "No accessible Gemini model. Check API key and model access."}
         
         prompt = f"""
         You are an expert in Indian Legal Metrology Rules (2011) compliance. Perform comprehensive analysis comparing OCR extraction with AI-powered field detection.
@@ -279,8 +339,16 @@ def comprehensive_compliance_analysis(ocr_text: str, ocr_fields: Dict[str, objec
 
 def get_gemini_analysis_status() -> Dict[str, bool]:
     """Check if Gemini API is properly configured."""
+    api_key_available = bool(os.getenv("GEMINI_API_KEY") or GEMINI_API_KEY)
+    is_ready = setup_gemini()
+    
+    print(f"[DEBUG] Gemini status check:")
+    print(f"[DEBUG] - genai available: {genai is not None}")
+    print(f"[DEBUG] - API key available: {api_key_available}")
+    print(f"[DEBUG] - setup successful: {is_ready}")
+    
     return {
         "gemini_available": genai is not None,
-        "api_key_set": bool(os.getenv("GEMINI_API_KEY")),
-        "ready": setup_gemini()
+        "api_key_set": api_key_available,
+        "ready": is_ready
     }

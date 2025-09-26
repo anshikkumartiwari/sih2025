@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ product.product_info.title }} - Product Details</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #3b82f6;
+            --primary-dark: #2563eb;
+            --secondary: #94a3b8;
+            --accent: #8b5cf6;
+            --success: #10b981;
+            --danger: #ef4444;
+            --warning: #f59e0b;
+            --bg-gradient: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+            --card-gradient: linear-gradient(145deg, #1e293b 0%, #334155 100%);
+            --bg-primary: #0f172a;
+            --bg-secondary: #1e293b;
+            --bg-tertiary: #334155;
+            --text-primary: #f8fafc;
+            --text-secondary: #cbd5e1;
+            --text-muted: #94a3b8;
+            --border: #475569;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            background: var(--card-gradient);
+            padding: 20px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .main-content {
+            padding: 40px 0;
+        }
+
+        .product-header {
+            background: var(--card-gradient);
+            padding: 40px;
+            border-radius: 20px;
+            border: 1px solid var(--border);
+            margin-bottom: 30px;
+        }
+
+        .product-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: var(--text-primary);
+        }
+
+        .product-meta {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .meta-item {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .meta-label {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        .meta-value {
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .compliance-badge {
+            display: inline-block;
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-top: 20px;
+        }
+
+        .compliance-excellent {
+            background: var(--success);
+            color: white;
+        }
+
+        .compliance-good {
+            background: var(--primary);
+            color: white;
+        }
+
+        .compliance-fair {
+            background: var(--warning);
+            color: white;
+        }
+
+        .compliance-poor {
+            background: var(--danger);
+            color: white;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .section {
+            background: var(--card-gradient);
+            padding: 30px;
+            border-radius: 16px;
+            border: 1px solid var(--border);
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .details-grid {
+            display: grid;
+            gap: 15px;
+        }
+
+        .detail-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            background: var(--bg-tertiary);
+            border-radius: 12px;
+            border-left: 4px solid var(--primary);
+        }
+
+        .detail-label {
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .detail-value {
+            color: var(--text-secondary);
+            text-align: right;
+            max-width: 60%;
+            word-wrap: break-word;
+        }
+
+        .compliance-fields {
+            display: grid;
+            gap: 10px;
+        }
+
+        .field-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px;
+            background: var(--bg-tertiary);
+            border-radius: 8px;
+        }
+
+        .field-icon {
+            font-size: 1rem;
+        }
+
+        .field-present {
+            color: var(--success);
+        }
+
+        .field-missing {
+            color: var(--danger);
+        }
+
+        .field-name {
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .field-value {
+            color: var(--text-secondary);
+            margin-left: auto;
+        }
+
+        .full-width {
+            grid-column: 1 / -1;
+        }
+
+        .technical-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+
+        .tech-item {
+            background: var(--bg-tertiary);
+            padding: 15px;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .tech-number {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 5px;
+        }
+
+        .tech-label {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 24px;
+            background: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: background 0.3s ease;
+            margin-bottom: 30px;
+        }
+
+        .back-button:hover {
+            background: var(--primary-dark);
+            color: white;
+        }
+
+        .no-data {
+            text-align: center;
+            color: var(--text-muted);
+            padding: 40px;
+            font-style: italic;
+        }
+
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .nav-links {
+                justify-content: center;
+            }
+
+            .product-title {
+                font-size: 2rem;
+            }
+
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .product-meta {
+                grid-template-columns: 1fr;
+            }
+
+            .technical-info {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-box"></i>
+                    Product Details
+                </div>
+                <nav class="nav-links">
+                    <a href="{{ url_for('dashboard.home') }}">Home</a>
+                    <a href="{{ url_for('dashboard.demo') }}">Demo</a>
+                    <a href="{{ url_for('dashboard.process') }}">Process</a>
+                    <a href="{{ url_for('dashboard.manufacturers') }}">Manufacturers</a>
+                    <a href="{{ url_for('dashboard.analytics') }}">Analytics</a>
+                    <a href="{{ url_for('dashboard.history') }}">History</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <a href="javascript:history.back()" class="back-button">
+                <i class="fas fa-arrow-left"></i>
+                Back
+            </a>
+
+            {% if product and not product.get('error') %}
+            <!-- Product Header -->
+            <div class="product-header">
+                <h1 class="product-title">{{ product.product_info.title }}</h1>
+                <div class="product-meta">
+                    <div class="meta-item">
+                        <div class="meta-label">Manufacturer</div>
+                        <div class="meta-value">{{ product.product_info.manufacturer }}</div>
+                    </div>
+                    <div class="meta-item">
+                        <div class="meta-label">Category</div>
+                        <div class="meta-value">{{ product.product_info.category }}</div>
+                    </div>
+                    <div class="meta-item">
+                        <div class="meta-label">Scan Date</div>
+                        <div class="meta-value">{{ product.timestamp[:10] }}</div>
+                    </div>
+                    <div class="meta-item">
+                        <div class="meta-label">Scan ID</div>
+                        <div class="meta-value">{{ product.scan_id }}</div>
+                    </div>
+                </div>
+                <div class="compliance-badge compliance-{{ product.compliance_data.level }}">
+                    {{ "%.1f"|format(product.compliance_data.score * 100) }}% Compliance
+                </div>
+            </div>
+
+            <!-- Main Content Grid -->
+            <div class="content-grid">
+                <!-- Product Details Section -->
+                <div class="section">
+                    <h2 class="section-title">
+                        <i class="fas fa-info-circle"></i>
+                        Product Details
+                    </h2>
+                    {% if product.technical_data.product_details %}
+                    <div class="details-grid">
+                        {% for key, value in product.technical_data.product_details.items() %}
+                        <div class="detail-item">
+                            <div class="detail-label">{{ key }}</div>
+                            <div class="detail-value">{{ value }}</div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    {% else %}
+                    <div class="no-data">
+                        <i class="fas fa-info-circle" style="font-size: 2rem; margin-bottom: 10px;"></i>
+                        <p>No detailed product information available</p>
+                    </div>
+                    {% endif %}
+                </div>
+
+                <!-- Compliance Analysis Section -->
+                <div class="section">
+                    <h2 class="section-title">
+                        <i class="fas fa-shield-check"></i>
+                        Compliance Analysis
+                    </h2>
+                    <div class="compliance-fields">
+                        {% for field, value in product.extracted_fields.items() %}
+                        {% if field in ['mrp', 'quantity', 'manufacturer', 'origin', 'support', 'dates', 'batch', 'license', 'barcode'] %}
+                        <div class="field-item">
+                            <i class="fas fa-{% if value %}check{% else %}times{% endif %} field-icon field-{% if value %}present{% else %}missing{% endif %}"></i>
+                            <span class="field-name">{{ field.upper() }}</span>
+                            <span class="field-value">{{ value or 'Not Found' }}</span>
+                        </div>
+                        {% endif %}
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+
+            <!-- Technical Information Section -->
+            <div class="section full-width">
+                <h2 class="section-title">
+                    <i class="fas fa-cogs"></i>
+                    Technical Information
+                </h2>
+                <div class="technical-info">
+                    <div class="tech-item">
+                        <div class="tech-number">{{ product.technical_data.images_count }}</div>
+                        <div class="tech-label">Images Processed</div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-number">{{ product.technical_data.ocr_text_length }}</div>
+                        <div class="tech-label">OCR Text Length</div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-number">{{ product.technical_data.vision_selected }}</div>
+                        <div class="tech-label">Vision Selected Images</div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-number">{{ product.compliance_data.required_present }}/{{ product.compliance_data.required_total }}</div>
+                        <div class="tech-label">Required Fields</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Missing Fields and Warnings -->
+            {% if product.compliance_data.missing_fields or product.compliance_data.warnings %}
+            <div class="content-grid">
+                {% if product.compliance_data.missing_fields %}
+                <div class="section">
+                    <h2 class="section-title">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        Missing Required Fields
+                    </h2>
+                    <div class="details-grid">
+                        {% for field in product.compliance_data.missing_fields %}
+                        <div class="detail-item">
+                            <div class="detail-label">{{ field }}</div>
+                            <div class="detail-value" style="color: var(--danger);">Missing</div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                {% endif %}
+
+                {% if product.compliance_data.warnings %}
+                <div class="section">
+                    <h2 class="section-title">
+                        <i class="fas fa-warning"></i>
+                        Warnings
+                    </h2>
+                    <div class="details-grid">
+                        {% for warning in product.compliance_data.warnings %}
+                        <div class="detail-item">
+                            <div class="detail-label">Warning</div>
+                            <div class="detail-value" style="color: var(--warning);">{{ warning }}</div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                {% endif %}
+            </div>
+            {% endif %}
+
+            {% else %}
+            <div class="no-data">
+                <i class="fas fa-exclamation-triangle" style="font-size: 3rem; margin-bottom: 20px; color: var(--danger);"></i>
+                <h3>Error Loading Product Details</h3>
+                <p>{{ product.get('error', 'Unknown error occurred') }}</p>
+                <a href="{{ url_for('dashboard.history') }}" style="color: var(--primary); text-decoration: none; font-weight: 600;">
+                    <i class="fas fa-arrow-left"></i> Back to History
+                </a>
+            </div>
+            {% endif %}
+        </div>
+    </main>
+</body>
+</html>

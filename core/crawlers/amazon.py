@@ -128,7 +128,7 @@ def crawl(url: str):
                         for i, img in enumerate(popover_imgs, start=1):
                             src = img.get_attribute("src")
                             if src and "gif" not in src.lower():
-                                hires_url = src.replace("._SX38_SY50_CR,0,0,38,50_", "._SL1500_")
+                                hires_url = src.replace(".SX38_SY50_CR,0,0,38,50", ".SL1500")
                                 if hires_url not in downloaded_urls:
                                     path = download_image(hires_url, TEMP_DIR, f"popover{i}")
                                     if path:
@@ -192,7 +192,7 @@ def crawl(url: str):
                         main_src = main_img.get_attribute("src")
                         if main_src and main_src not in downloaded_urls and "gif" not in main_src.lower():
                             if "._SX" in main_src or "._SY" in main_src:
-                                highres_main = re.sub(r'\._S[XY]\d+_', '._SL1500_', main_src)
+                                highres_main = re.sub(r'\.S[XY]\d+', '.SL1500', main_src)
                             else:
                                 highres_main = main_src
                             path = download_image(highres_main, TEMP_DIR, f"img{img_counter}")
@@ -209,7 +209,7 @@ def crawl(url: str):
                             path_parts = parsed.path.split('/I/')
                             if len(path_parts) > 1:
                                 asin = path_parts[1].split('.')[0]
-                                highres_url = f"https://m.media-amazon.com/images/I/{asin}._SL1500_.jpg"
+                                highres_url = f"https://m.media-amazon.com/images/I/{asin}.SL1500.jpg"
                             else:
                                 highres_url = src
                             if highres_url not in downloaded_urls:
@@ -231,3 +231,156 @@ def crawl(url: str):
             browser.close()
 
     return data
+
+
+def product_direct_details(url: str):
+    """
+    Extract product details from the #detailBullets_feature_div section
+    Returns JSON with all the product details like dimensions, manufacturer, etc.
+    """
+    details = {}
+    
+    with sync_playwright() as p:
+        browser = p.firefox.launch(headless=True)
+        context = browser.new_context(user_agent="Mozilla/5.0")
+        page = context.new_page()
+
+        try:
+            page.goto(url, timeout=60000, wait_until="domcontentloaded")
+            
+            # Extract from detailBullets_feature_div
+            try:
+                detail_bullets = page.query_selector("#detailBullets_feature_div")
+                if detail_bullets:
+                    print("[DEBUG] Found detailBullets_feature_div section")
+                    
+                    # Get all list items in the detail bullets
+                    list_items = detail_bullets.query_selector_all("ul li")
+                    
+                    for item in list_items:
+                        try:
+                            # Look for spans with label and value
+                            spans = item.query_selector_all("span")
+                            if len(spans) >= 2:
+                                # First span usually contains the label
+                                label_span = spans[0]
+                                value_span = spans[1]
+                                
+                                label = label_span.inner_text().strip()
+                                value = value_span.inner_text().strip()
+                                
+                                # Clean up the label (remove colon and extra characters)
+                                label = re.sub(r'[:\u200f\u200e\u2060\u202a\u202c]', '', label).strip()
+                                
+                                # Skip empty values
+                                if label and value and value != "‏":
+                                    details[label] = value
+                                    print(f"[DEBUG] Extracted detail: {label} = {value}")
+                            
+                            # Alternative structure - look for text content with colon
+                            else:
+                                text_content = item.inner_text().strip()
+                                if ":" in text_content and "‏" in text_content:
+                                    # Split by colon and clean up
+                                    parts = text_content.split(":", 1)
+                                    if len(parts) == 2:
+                                        label = parts[0].strip()
+                                        value = parts[1].strip()
+                                        
+                                        # Clean up special characters
+                                        label = re.sub(r'[:\u200f\u200e\u2060\u202a\u202c]', '', label).strip()
+                                        value = re.sub(r'[\u200f\u200e\u2060\u202a\u202c]', '', value).strip()
+                                        
+                                        if label and value and value != "‏":
+                                            details[label] = value
+                                            print(f"[DEBUG] Extracted detail (alt): {label} = {value}")
+                        
+                        except Exception as e:
+                            print(f"[DEBUG] Error processing list item: {e}")
+                            continue
+                
+                else:
+                    print("[DEBUG] detailBullets_feature_div not found")
+                    
+            except Exception as e:
+                print(f"[DEBUG] Error extracting detail bullets: {e}")
+            
+            # Also try alternative selectors for product details
+            try:
+                # Try the table-based product details
+                detail_tables = page.query_selector_all("#productDetails_techSpec_section_1 tr, #productDetails_detailBullets_sections1 tr")
+                for row in detail_tables:
+                    try:
+                        th = row.query_selector("th")
+                        td = row.query_selector("td")
+                        if th and td:
+                            label = th.inner_text().strip()
+                            value = td.inner_text().strip()
+                            
+                            # Clean up the label
+                            label = re.sub(r'[:\u200f\u200e\u2060\u202a\u202c]', '', label).strip()
+                            
+                            if label and value:
+                                details[label] = value
+                                print(f"[DEBUG] Extracted table detail: {label} = {value}")
+                    except Exception as e:
+                        continue
+                        
+            except Exception as e:
+                print(f"[DEBUG] Error extracting table details: {e}")
+            
+            # Try alternative product detail sections
+            try:
+                # Try productDetails_expanderTables_depthLeftSections
+                left_sections = page.query_selector("#productDetails_expanderTables_depthLeftSections")
+                if left_sections:
+                    print("[DEBUG] Found productDetails_expanderTables_depthLeftSections")
+                    rows = left_sections.query_selector_all("tr")
+                    for row in rows:
+                        try:
+                            td_elements = row.query_selector_all("td")
+                            if len(td_elements) >= 2:
+                                label = td_elements[0].inner_text().strip()
+                                value = td_elements[1].inner_text().strip()
+                                
+                                # Clean up the label
+                                label = re.sub(r'[:\u200f\u200e\u2060\u202a\u202c]', '', label).strip()
+                                
+                                if label and value and label not in details:
+                                    details[label] = value
+                                    print(f"[DEBUG] Extracted left section detail: {label} = {value}")
+                        except Exception as e:
+                            continue
+                
+                # Try productDetails_expanderTables_depthRightSections
+                right_sections = page.query_selector("#productDetails_expanderTables_depthRightSections")
+                if right_sections:
+                    print("[DEBUG] Found productDetails_expanderTables_depthRightSections")
+                    rows = right_sections.query_selector_all("tr")
+                    for row in rows:
+                        try:
+                            td_elements = row.query_selector_all("td")
+                            if len(td_elements) >= 2:
+                                label = td_elements[0].inner_text().strip()
+                                value = td_elements[1].inner_text().strip()
+                                
+                                # Clean up the label
+                                label = re.sub(r'[:\u200f\u200e\u2060\u202a\u202c]', '', label).strip()
+                                
+                                if label and value and label not in details:
+                                    details[label] = value
+                                    print(f"[DEBUG] Extracted right section detail: {label} = {value}")
+                        except Exception as e:
+                            continue
+                            
+            except Exception as e:
+                print(f"[DEBUG] Error extracting expander table details: {e}")
+
+        except Exception as e:
+            print(f"[ERROR] Failed to extract product details: {e}")
+
+        finally:
+            browser.close()
+
+    print(f"[DEBUG] Total details extracted: {len(details)}")
+    return details

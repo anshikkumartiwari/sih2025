@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manufacturer Analytics - Compliance Checker</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #3b82f6;
+            --primary-dark: #2563eb;
+            --secondary: #94a3b8;
+            --accent: #8b5cf6;
+            --success: #10b981;
+            --danger: #ef4444;
+            --warning: #f59e0b;
+            --bg-gradient: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+            --card-gradient: linear-gradient(145deg, #1e293b 0%, #334155 100%);
+            --bg-primary: #0f172a;
+            --bg-secondary: #1e293b;
+            --bg-tertiary: #334155;
+            --text-primary: #f8fafc;
+            --text-secondary: #cbd5e1;
+            --text-muted: #94a3b8;
+            --border: #475569;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            background: var(--card-gradient);
+            padding: 20px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .main-content {
+            padding: 40px 0;
+        }
+
+        .page-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .page-title h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .page-title p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .stat-card {
+            background: var(--card-gradient);
+            padding: 30px;
+            border-radius: 16px;
+            text-align: center;
+            border: 1px solid var(--border);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        .stat-label {
+            color: var(--text-muted);
+            font-size: 1rem;
+        }
+
+        .manufacturers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .manufacturer-card {
+            background: var(--card-gradient);
+            padding: 25px;
+            border-radius: 16px;
+            border: 1px solid var(--border);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .manufacturer-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+
+        .manufacturer-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .manufacturer-name {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .compliance-badge {
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .compliance-excellent {
+            background: #10b981;
+            color: white;
+        }
+
+        .compliance-good {
+            background: #3b82f6;
+            color: white;
+        }
+
+        .compliance-fair {
+            background: #f59e0b;
+            color: white;
+        }
+
+        .compliance-poor {
+            background: #ef4444;
+            color: white;
+        }
+
+        .manufacturer-stats {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .stat-desc {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .manufacturer-categories {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 15px;
+        }
+
+        .category-tag {
+            background: var(--bg-tertiary);
+            color: var(--text-secondary);
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+        }
+
+        .comparison-section {
+            background: var(--card-gradient);
+            padding: 30px;
+            border-radius: 16px;
+            border: 1px solid var(--border);
+            margin-bottom: 40px;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: var(--text-primary);
+        }
+
+        .top-performers, .bottom-performers {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .performer-card {
+            background: var(--bg-tertiary);
+            padding: 15px;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .performer-name {
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .performer-score {
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        .no-data {
+            text-align: center;
+            color: var(--text-muted);
+            padding: 40px;
+            font-style: italic;
+        }
+
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .nav-links {
+                justify-content: center;
+            }
+
+            .page-title h1 {
+                font-size: 2rem;
+            }
+
+            .manufacturers-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-shield-check"></i>
+                    LM Compliance Checker
+                </div>
+                <nav class="nav-links">
+                    <a href="{{ url_for('dashboard.home') }}">Home</a>
+                    <a href="{{ url_for('dashboard.demo') }}">Demo</a>
+                    <a href="{{ url_for('dashboard.process') }}">Process</a>
+                    <a href="{{ url_for('dashboard.manufacturers') }}">Manufacturers</a>
+                    <a href="{{ url_for('dashboard.analytics') }}">Analytics</a>
+                    <a href="{{ url_for('dashboard.history') }}">History</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="page-title">
+                <h1>Manufacturer Analytics</h1>
+                <p>Comprehensive compliance analysis and comparison across manufacturers</p>
+            </div>
+
+            {% if comparison and not comparison.get('error') %}
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">{{ comparison.industry_overview.total_manufacturers }}</div>
+                    <div class="stat-label">Total Manufacturers</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">{{ comparison.industry_overview.total_products_scanned }}</div>
+                    <div class="stat-label">Products Scanned</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">{{ "%.1f"|format(comparison.industry_overview.industry_average_compliance * 100) }}%</div>
+                    <div class="stat-label">Industry Average Compliance</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">{{ comparison.industry_overview.compliance_distribution.excellent }}</div>
+                    <div class="stat-label">Excellent Performers</div>
+                </div>
+            </div>
+
+            <div class="comparison-section">
+                <h2 class="section-title">Industry Overview</h2>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number">{{ comparison.industry_overview.compliance_distribution.excellent }}</div>
+                        <div class="stat-label">Excellent (90%+)</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">{{ comparison.industry_overview.compliance_distribution.good }}</div>
+                        <div class="stat-label">Good (75-89%)</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">{{ comparison.industry_overview.compliance_distribution.fair }}</div>
+                        <div class="stat-label">Fair (50-74%)</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">{{ comparison.industry_overview.compliance_distribution.poor }}</div>
+                        <div class="stat-label">Poor (<50%)</div>
+                    </div>
+                </div>
+
+                {% if comparison.top_performers %}
+                <h3 class="section-title">Top Performers</h3>
+                <div class="top-performers">
+                    {% for manufacturer in comparison.top_performers %}
+                    <div class="performer-card">
+                        <div class="performer-name">{{ manufacturer.name }}</div>
+                        <div class="performer-score">{{ "%.1f"|format(manufacturer.average_compliance_score * 100) }}%</div>
+                    </div>
+                    {% endfor %}
+                </div>
+                {% endif %}
+
+                {% if comparison.bottom_performers %}
+                <h3 class="section-title">Needs Improvement</h3>
+                <div class="bottom-performers">
+                    {% for manufacturer in comparison.bottom_performers %}
+                    <div class="performer-card">
+                        <div class="performer-name">{{ manufacturer.name }}</div>
+                        <div class="performer-score">{{ "%.1f"|format(manufacturer.average_compliance_score * 100) }}%</div>
+                    </div>
+                    {% endfor %}
+                </div>
+                {% endif %}
+            </div>
+            {% endif %}
+
+            {% if manufacturers %}
+            <h2 class="section-title">All Manufacturers</h2>
+            <div class="manufacturers-grid">
+                {% for manufacturer in manufacturers %}
+                <div class="manufacturer-card" onclick="window.location.href='{{ url_for('dashboard.manufacturer_detail', manufacturer_name=manufacturer.name) }}'">
+                    <div class="manufacturer-header">
+                        <div class="manufacturer-name">{{ manufacturer.name }}</div>
+                        <div class="compliance-badge compliance-{{ 'excellent' if manufacturer.average_compliance_score >= 0.9 else 'good' if manufacturer.average_compliance_score >= 0.75 else 'fair' if manufacturer.average_compliance_score >= 0.5 else 'poor' }}">
+                            {{ "%.1f"|format(manufacturer.average_compliance_score * 100) }}%
+                        </div>
+                    </div>
+                    <div class="manufacturer-stats">
+                        <div class="stat-item">
+                            <div class="stat-value">{{ manufacturer.total_products }}</div>
+                            <div class="stat-desc">Products</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">{{ manufacturer.total_scans }}</div>
+                            <div class="stat-desc">Scans</div>
+                        </div>
+                    </div>
+                    {% if manufacturer.categories %}
+                    <div class="manufacturer-categories">
+                        {% for category in manufacturer.categories[:3] %}
+                        <span class="category-tag">{{ category }}</span>
+                        {% endfor %}
+                        {% if manufacturer.categories|length > 3 %}
+                        <span class="category-tag">+{{ manufacturer.categories|length - 3 }} more</span>
+                        {% endif %}
+                    </div>
+                    {% endif %}
+                </div>
+                {% endfor %}
+            </div>
+            {% else %}
+            <div class="no-data">
+                <i class="fas fa-chart-line" style="font-size: 3rem; margin-bottom: 20px; color: var(--text-muted);"></i>
+                <h3>No Manufacturer Data Available</h3>
+                <p>Start scanning products to build manufacturer analytics</p>
+                <a href="{{ url_for('dashboard.process') }}" style="color: var(--primary); text-decoration: none; font-weight: 600;">
+                    <i class="fas fa-play"></i> Start Scanning
+                </a>
+            </div>
+            {% endif %}
+        </div>
+    </main>
+</body>
+</html>

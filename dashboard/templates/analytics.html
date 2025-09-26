@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historical Analytics - Compliance Checker</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        :root {
+            --primary: #3b82f6;
+            --primary-dark: #2563eb;
+            --secondary: #94a3b8;
+            --accent: #8b5cf6;
+            --success: #10b981;
+            --danger: #ef4444;
+            --warning: #f59e0b;
+            --bg-gradient: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+            --card-gradient: linear-gradient(145deg, #1e293b 0%, #334155 100%);
+            --bg-primary: #0f172a;
+            --bg-secondary: #1e293b;
+            --bg-tertiary: #334155;
+            --text-primary: #f8fafc;
+            --text-secondary: #cbd5e1;
+            --text-muted: #94a3b8;
+            --border: #475569;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            background: var(--card-gradient);
+            padding: 20px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .main-content {
+            padding: 40px 0;
+        }
+
+        .page-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .page-title h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .page-title p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .stat-card {
+            background: var(--card-gradient);
+            padding: 30px;
+            border-radius: 16px;
+            text-align: center;
+            border: 1px solid var(--border);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        .stat-label {
+            color: var(--text-muted);
+            font-size: 1rem;
+        }
+
+        .section {
+            background: var(--card-gradient);
+            padding: 30px;
+            border-radius: 16px;
+            border: 1px solid var(--border);
+            margin-bottom: 30px;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: var(--text-primary);
+        }
+
+        .chart-container {
+            position: relative;
+            height: 400px;
+            margin-bottom: 30px;
+        }
+
+        .compliance-distribution {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .distribution-card {
+            background: var(--bg-tertiary);
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .distribution-number {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .distribution-excellent { color: var(--success); }
+        .distribution-good { color: var(--primary); }
+        .distribution-fair { color: var(--warning); }
+        .distribution-poor { color: var(--danger); }
+
+        .field-analysis {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .field-card {
+            background: var(--bg-tertiary);
+            padding: 20px;
+            border-radius: 12px;
+        }
+
+        .field-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .field-name {
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .field-percentage {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--success);
+        }
+
+        .field-stats {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .manufacturer-list {
+            display: grid;
+            gap: 15px;
+        }
+
+        .manufacturer-item {
+            background: var(--bg-tertiary);
+            padding: 20px;
+            border-radius: 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .manufacturer-info {
+            flex: 1;
+        }
+
+        .manufacturer-name {
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: var(--text-primary);
+        }
+
+        .manufacturer-meta {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .manufacturer-score {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .category-list {
+            display: grid;
+            gap: 15px;
+        }
+
+        .category-item {
+            background: var(--bg-tertiary);
+            padding: 20px;
+            border-radius: 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .category-info {
+            flex: 1;
+        }
+
+        .category-name {
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: var(--text-primary);
+        }
+
+        .category-meta {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .category-score {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--accent);
+        }
+
+        .export-section {
+            text-align: center;
+            padding: 20px;
+            background: var(--bg-tertiary);
+            border-radius: 12px;
+        }
+
+        .export-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .export-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 24px;
+            background: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: background 0.3s ease;
+        }
+
+        .export-btn:hover {
+            background: var(--primary-dark);
+            color: white;
+        }
+
+        .recent-products {
+            display: grid;
+            gap: 15px;
+        }
+
+        .product-item {
+            background: var(--bg-tertiary);
+            padding: 15px;
+            border-radius: 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .product-info {
+            flex: 1;
+        }
+
+        .product-title {
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: var(--text-primary);
+        }
+
+        .product-meta {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .product-score {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .no-data {
+            text-align: center;
+            color: var(--text-muted);
+            padding: 40px;
+            font-style: italic;
+        }
+
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .nav-links {
+                justify-content: center;
+            }
+
+            .page-title h1 {
+                font-size: 2rem;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .field-analysis {
+                grid-template-columns: 1fr;
+            }
+
+            .export-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-chart-line"></i>
+                    Historical Analytics
+                </div>
+                <nav class="nav-links">
+                    <a href="{{ url_for('dashboard.home') }}">Home</a>
+                    <a href="{{ url_for('dashboard.demo') }}">Demo</a>
+                    <a href="{{ url_for('dashboard.process') }}">Process</a>
+                    <a href="{{ url_for('dashboard.manufacturers') }}">Manufacturers</a>
+                    <a href="{{ url_for('dashboard.analytics') }}">Analytics</a>
+                    <a href="{{ url_for('dashboard.history') }}">History</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="page-title">
+                <h1>Historical Analytics Dashboard</h1>
+                <p>Comprehensive analysis of all compliance scans and trends</p>
+            </div>
+
+            {% if analytics and not analytics.get('error') %}
+            <!-- Overview Statistics -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">{{ analytics.overview.total_scans }}</div>
+                    <div class="stat-label">Total Scans</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">{{ "%.1f"|format(analytics.overview.overall_compliance_percentage) }}%</div>
+                    <div class="stat-label">Overall Compliance</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">{{ "%.1f"|format(analytics.overview.recent_avg_score * 100) }}%</div>
+                    <div class="stat-label">Recent Average Score</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">{{ analytics.manufacturer_analysis.total_manufacturers }}</div>
+                    <div class="stat-label">Manufacturers</div>
+                </div>
+            </div>
+
+            <!-- Compliance Distribution -->
+            <div class="section">
+                <h2 class="section-title">Compliance Distribution</h2>
+                <div class="compliance-distribution">
+                    <div class="distribution-card">
+                        <div class="distribution-number distribution-excellent">{{ analytics.overview.compliance_distribution.excellent }}</div>
+                        <div class="stat-label">Excellent (90%+)</div>
+                    </div>
+                    <div class="distribution-card">
+                        <div class="distribution-number distribution-good">{{ analytics.overview.compliance_distribution.good }}</div>
+                        <div class="stat-label">Good (75-89%)</div>
+                    </div>
+                    <div class="distribution-card">
+                        <div class="distribution-number distribution-fair">{{ analytics.overview.compliance_distribution.fair }}</div>
+                        <div class="stat-label">Fair (50-74%)</div>
+                    </div>
+                    <div class="distribution-card">
+                        <div class="distribution-number distribution-poor">{{ analytics.overview.compliance_distribution.poor }}</div>
+                        <div class="stat-label">Poor (<50%)</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Field Compliance Analysis -->
+            <div class="section">
+                <h2 class="section-title">Field Compliance Analysis</h2>
+                <div class="field-analysis">
+                    <div>
+                        <h3 style="color: var(--text-primary); margin-bottom: 15px;">Required Fields</h3>
+                        {% for field, stats in analytics.field_analysis.required_fields.items() %}
+                        <div class="field-card">
+                            <div class="field-header">
+                                <div class="field-name">{{ field.upper() }}</div>
+                                <div class="field-percentage">{{ "%.1f"|format(stats.percentage) }}%</div>
+                            </div>
+                            <div class="field-stats">
+                                <span>Present: {{ stats.present }}</span>
+                                <span>Missing: {{ stats.missing }}</span>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    <div>
+                        <h3 style="color: var(--text-primary); margin-bottom: 15px;">Optional Fields</h3>
+                        {% for field, stats in analytics.field_analysis.optional_fields.items() %}
+                        <div class="field-card">
+                            <div class="field-header">
+                                <div class="field-name">{{ field.upper() }}</div>
+                                <div class="field-percentage">{{ "%.1f"|format(stats.percentage) }}%</div>
+                            </div>
+                            <div class="field-stats">
+                                <span>Present: {{ stats.present }}</span>
+                                <span>Missing: {{ stats.missing }}</span>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+
+            <!-- Top Manufacturers -->
+            {% if analytics.manufacturer_analysis.top_performers %}
+            <div class="section">
+                <h2 class="section-title">Top Performing Manufacturers</h2>
+                <div class="manufacturer-list">
+                    {% for manufacturer, stats in analytics.manufacturer_analysis.top_performers %}
+                    <div class="manufacturer-item">
+                        <div class="manufacturer-info">
+                            <div class="manufacturer-name">{{ manufacturer }}</div>
+                            <div class="manufacturer-meta">{{ stats.total_scans }} scans • {{ stats.categories|length }} categories</div>
+                        </div>
+                        <div class="manufacturer-score">{{ "%.1f"|format(stats.average_compliance_score * 100) }}%</div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endif %}
+
+            <!-- Category Analysis -->
+            {% if analytics.category_analysis.categories %}
+            <div class="section">
+                <h2 class="section-title">Category Analysis</h2>
+                <div class="category-list">
+                    {% for category, stats in analytics.category_analysis.categories %}
+                    <div class="category-item">
+                        <div class="category-info">
+                            <div class="category-name">{{ category }}</div>
+                            <div class="category-meta">{{ stats.total_scans }} scans • {{ stats.manufacturers|length }} manufacturers</div>
+                        </div>
+                        <div class="category-score">{{ "%.1f"|format(stats.average_compliance_score * 100) }}%</div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endif %}
+
+            <!-- Daily Trends Chart -->
+            <div class="section">
+                <h2 class="section-title">Daily Scan Trends (Last 30 Days)</h2>
+                <div class="chart-container">
+                    <canvas id="dailyTrendsChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Recent Products -->
+            {% if analytics.recent_scans %}
+            <div class="section">
+                <h2 class="section-title">Recent Products</h2>
+                <div class="recent-products">
+                    {% for product in analytics.recent_scans %}
+                    <div class="product-item">
+                        <div class="product-info">
+                            <div class="product-title">
+                                <a href="{{ url_for('dashboard.product_detail', scan_id=product.scan_id) }}" 
+                                   style="color: var(--text-primary); text-decoration: none; transition: color 0.3s ease;"
+                                   onmouseover="this.style.color='var(--primary)'" 
+                                   onmouseout="this.style.color='var(--text-primary)'">
+                                    {{ product.product_info.title }}
+                                </a>
+                            </div>
+                            <div class="product-meta">
+                                {{ product.product_info.category }} • {{ product.timestamp[:10] }}
+                            </div>
+                        </div>
+                        <div class="product-score">
+                            {{ "%.1f"|format(product.compliance_data.score * 100) }}%
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endif %}
+
+            <!-- Export Section -->
+            <div class="section">
+                <div class="export-section">
+                    <h3 style="margin-bottom: 20px; color: var(--text-primary);">Export Data</h3>
+                    <div class="export-buttons">
+                        <a href="{{ url_for('dashboard.export_data', format='json') }}" class="export-btn">
+                            <i class="fas fa-download"></i>
+                            Export JSON
+                        </a>
+                        <a href="{{ url_for('dashboard.export_data', format='csv') }}" class="export-btn">
+                            <i class="fas fa-file-csv"></i>
+                            Export CSV
+                        </a>
+                        <a href="{{ url_for('dashboard.history') }}" class="export-btn">
+                            <i class="fas fa-history"></i>
+                            View History
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            {% else %}
+            <div class="no-data">
+                <i class="fas fa-chart-line" style="font-size: 3rem; margin-bottom: 20px; color: var(--text-muted);"></i>
+                <h3>No Historical Data Available</h3>
+                <p>{{ analytics.get('error', 'Start scanning products to build historical analytics') }}</p>
+                <a href="{{ url_for('dashboard.process') }}" style="color: var(--primary); text-decoration: none; font-weight: 600;">
+                    <i class="fas fa-play"></i> Start Scanning
+                </a>
+            </div>
+            {% endif %}
+        </div>
+    </main>
+
+    <script>
+        // Daily Trends Chart
+        {% if analytics and not analytics.get('error') and analytics.trends.daily_scans %}
+        const dailyData = {{ analytics.trends.daily_scans | tojson }};
+        const dates = Object.keys(dailyData).sort();
+        const scanCounts = dates.map(date => dailyData[date]);
+        
+        const ctx = document.getElementById('dailyTrendsChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: dates,
+                datasets: [{
+                    label: 'Daily Scans',
+                    data: scanCounts,
+                    borderColor: '#3b82f6',
+                    backgroundColor: 'rgba(59, 130, 246, 0.1)',
+                    borderWidth: 2,
+                    fill: true,
+                    tension: 0.4
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        labels: {
+                            color: '#cbd5e1'
+                        }
+                    }
+                },
+                scales: {
+                    x: {
+                        ticks: {
+                            color: '#94a3b8'
+                        },
+                        grid: {
+                            color: '#475569'
+                        }
+                    },
+                    y: {
+                        ticks: {
+                            color: '#94a3b8'
+                        },
+                        grid: {
+                            color: '#475569'
+                        }
+                    }
+                }
+            }
+        });
+        {% endif %}
+    </script>
+</body>
+</html>

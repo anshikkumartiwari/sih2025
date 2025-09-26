@@ -1,0 +1,120 @@
+{
+  "manufacturer_name": "Itc, Itc Limited, Kolkata",
+  "total_products": 2,
+  "compliance_history": [
+    {
+      "timestamp": "2025-09-26T03:07:43.815737",
+      "product_title": "Sunfeast Dark Fantasy Yumfills Whoopie Pie, Chocolate Chip, 253g",
+      "compliance_score": 1.0,
+      "required_fields_present": 4,
+      "required_fields_total": 4,
+      "missing_fields": [],
+      "warnings": [
+        "Optional: Manufacturing/Expiry Date",
+        "Optional: Batch/Lot Number",
+        "Optional: Product Barcode"
+      ],
+      "url": "https://www.amazon.in/Sunfeast-Yumfills-Whoopie-Chocolate-Chip/dp/B06WGM2HK2/ref=pd_sbs_d_sccl_2_4/260-7690809-9772731?pd_rd_w=EMnl6&content-id=amzn1.sym.6d240404-f8ea-42f5-98fe-bf3c8ec77086&pf_rd_p=6d240404-f8ea-42f5-98fe-bf3c8ec77086&pf_rd_r=QXNVTJ052GG6047JHVQK&pd_rd_wg=mqaUv&pd_rd_r=e658a169-24e2-498f-8e4a-3aa310ca49e7&pd_rd_i=B06WGM2HK2&th=1",
+      "category": "Food & Beverages"
+    },
+    {
+      "timestamp": "2025-09-26T03:15:39.155834",
+      "product_title": "Sunfeast Dark Fantasy Dark Fantasy Choco Fills, 300g",
+      "compliance_score": 1.0,
+      "required_fields_present": 4,
+      "required_fields_total": 4,
+      "missing_fields": [],
+      "warnings": [
+        "Optional: Manufacturing/Expiry Date",
+        "Optional: Batch/Lot Number",
+        "Optional: Product Barcode"
+      ],
+      "url": "https://www.amazon.in/Dark-Fantasy-Choco-Fills-300g/dp/B01I17U9ZO/ref=pd_sbs_d_sccl_2_6/260-7690809-9772731?pd_rd_w=UhdLS&content-id=amzn1.sym.6d240404-f8ea-42f5-98fe-bf3c8ec77086&pf_rd_p=6d240404-f8ea-42f5-98fe-bf3c8ec77086&pf_rd_r=5028GW2RZ98XYKPMESJK&pd_rd_wg=GCh2M&pd_rd_r=49d61023-5fe8-4536-b1ab-ef550ed0b001&pd_rd_i=B01I17U9ZO&th=1",
+      "category": "General Products"
+    }
+  ],
+  "compliance_stats": {
+    "total_scans": 2,
+    "compliant_scans": 2,
+    "non_compliant_scans": 0,
+    "average_compliance_score": 1.0,
+    "required_fields_compliance": {
+      "mrp": {
+        "present": 2,
+        "missing": 0,
+        "percentage": 100.0
+      },
+      "quantity": {
+        "present": 2,
+        "missing": 0,
+        "percentage": 100.0
+      },
+      "manufacturer": {
+        "present": 2,
+        "missing": 0,
+        "percentage": 100.0
+      },
+      "origin": {
+        "present": 2,
+        "missing": 0,
+        "percentage": 100.0
+      }
+    },
+    "optional_fields_compliance": {
+      "support": {
+        "present": 2,
+        "missing": 0,
+        "percentage": 100.0
+      },
+      "dates": {
+        "present": 0,
+        "missing": 2,
+        "percentage": 0.0
+      },
+      "batch": {
+        "present": 0,
+        "missing": 2,
+        "percentage": 0.0
+      },
+      "license": {
+        "present": 2,
+        "missing": 0,
+        "percentage": 100.0
+      },
+      "barcode": {
+        "present": 0,
+        "missing": 2,
+        "percentage": 0.0
+      }
+    }
+  },
+  "product_categories": {
+    "Food & Beverages": {
+      "total_products": 1,
+      "compliant_products": 1,
+      "average_compliance_score": 1.0
+    },
+    "General Products": {
+      "total_products": 1,
+      "compliant_products": 1,
+      "average_compliance_score": 1.0
+    }
+  },
+  "recent_products": [
+    {
+      "title": "Sunfeast Dark Fantasy Dark Fantasy Choco Fills, 300g",
+      "compliance_score": 1.0,
+      "timestamp": "2025-09-26T03:15:39.155985",
+      "category": "General Products",
+      "url": "https://www.amazon.in/Dark-Fantasy-Choco-Fills-300g/dp/B01I17U9ZO/ref=pd_sbs_d_sccl_2_6/260-7690809-9772731?pd_rd_w=UhdLS&content-id=amzn1.sym.6d240404-f8ea-42f5-98fe-bf3c8ec77086&pf_rd_p=6d240404-f8ea-42f5-98fe-bf3c8ec77086&pf_rd_r=5028GW2RZ98XYKPMESJK&pd_rd_wg=GCh2M&pd_rd_r=49d61023-5fe8-4536-b1ab-ef550ed0b001&pd_rd_i=B01I17U9ZO&th=1"
+    },
+    {
+      "title": "Sunfeast Dark Fantasy Yumfills Whoopie Pie, Chocolate Chip, 253g",
+      "compliance_score": 1.0,
+      "timestamp": "2025-09-26T03:07:43.815788",
+      "category": "Food & Beverages",
+      "url": "https://www.amazon.in/Sunfeast-Yumfills-Whoopie-Chocolate-Chip/dp/B06WGM2HK2/ref=pd_sbs_d_sccl_2_4/260-7690809-9772731?pd_rd_w=EMnl6&content-id=amzn1.sym.6d240404-f8ea-42f5-98fe-bf3c8ec77086&pf_rd_p=6d240404-f8ea-42f5-98fe-bf3c8ec77086&pf_rd_r=QXNVTJ052GG6047JHVQK&pd_rd_wg=mqaUv&pd_rd_r=e658a169-24e2-498f-8e4a-3aa310ca49e7&pd_rd_i=B06WGM2HK2&th=1"
+    }
+  ],
+  "last_updated": "2025-09-26T03:15:39.156023"
+}

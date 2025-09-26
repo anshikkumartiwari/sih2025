@@ -12,7 +12,7 @@
   <link rel="icon" href="{{ url_for('static', filename='img/placeholder.png') }}">
   <meta name="color-scheme" content="light dark" />
   <meta name="theme-color" content="#0b5cff" />
-  <meta name="description" content="AI-powered tool for real-time validation of product listings on e-commerce platforms under Legal Metrology Rules.">
+  <meta name="description" content="Advanced AI-powered tool for real-time validation of product listings on e-commerce platforms under Legal Metrology Rules.">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
             :root {
@@ -519,8 +519,9 @@
     </div>
     <div class="topbar-actions">
       <a class="link" href="{{ url_for('dashboard.process') }}">Try Demo</a>
+      <a class="link" href="{{ url_for('dashboard.manufacturers') }}">Analytics</a>
       <a class="link" href="#features">Features</a>
-      <a class="link" href="#solution">Solution</a>
+      <a class="link" href="#features">Solution</a>
       <a class="link" href="#contact">Contact</a>
     </div>
   </nav>
@@ -530,13 +531,13 @@
     <div class="hero-content">
       <div class="hero-text">
         <h1>Automated Compliance Checker for Legal Metrology</h1>
-        <p class="tagline">AI-powered tool for real-time validation of product listings on e-commerce platforms</p>
+        <p class="tagline">Advanced AI-powered tool for real-time validation of product listings on e-commerce platforms</p>
         <div class="hero-cta">
           <a href="{{ url_for('dashboard.process') }}" class="btn-hero btn-primary">
             <i class="fas fa-play"></i>
             Try Demo
           </a>
-          <a href="#solution" class="btn-hero btn-secondary">
+          <a href="#features" class="btn-hero btn-secondary">
             <i class="fas fa-info-circle"></i>
             Learn More
           </a>
@@ -547,11 +548,11 @@
             <div class="stat-label">Products Analyzed</div>
           </div>
           <div class="stat-item">
-            <div class="stat-number" data-counter="95">0%</div>
+            <div class="stat-number" data-counter="95%">0%</div>
             <div class="stat-label">Accuracy Rate</div>
           </div>
           <div class="stat-item">
-            <div class="stat-number" data-counter="24">0/7</div>
+            <div class="stat-number" data-counter="24/7">0/7</div>
             <div class="stat-label">Availability</div>
           </div>
         </div>
@@ -586,10 +587,10 @@
     <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
       <div class="section-title" style="margin-bottom: 40px;">
         <h2>How It Works</h2>
-        <p>AI-powered compliance validation in three simple steps</p>
+        <p>Advanced AI-powered compliance validation in three simple steps</p>
       </div>
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px;">
-        <div class="feature-card" onclick="window.location.href='{{ url_for('dashboard.process') }}'" style="cursor: pointer;">
+        <a href="{{ url_for('dashboard.process') }}" class="feature-card" style="cursor: pointer; text-decoration: none; color: inherit;">
           <div class="feature-header">
             <div class="feature-icon">
               <i class="fas fa-upload"></i>
@@ -600,20 +601,20 @@
           <div style="margin-top: 15px; color: var(--primary); font-weight: 600;">
             <i class="fas fa-arrow-right"></i> Try Now
           </div>
-        </div>
-        <div class="feature-card" onclick="window.location.href='{{ url_for('dashboard.process') }}'" style="cursor: pointer;">
+        </a>
+        <a href="{{ url_for('dashboard.process') }}" class="feature-card" style="cursor: pointer; text-decoration: none; color: inherit;">
           <div class="feature-header">
             <div class="feature-icon">
               <i class="fas fa-brain"></i>
             </div>
-            <h3>2. AI Analysis</h3>
+            <h3>2. Advanced AI Analysis</h3>
           </div>
           <p>Our system crawls the product, extracts images, and runs OCR + compliance checks.</p>
           <div style="margin-top: 15px; color: var(--primary); font-weight: 600;">
             <i class="fas fa-arrow-right"></i> See Demo
           </div>
-        </div>
-        <div class="feature-card" onclick="window.location.href='{{ url_for('dashboard.process') }}'" style="cursor: pointer;">
+        </a>
+        <a href="{{ url_for('dashboard.process') }}" class="feature-card" style="cursor: pointer; text-decoration: none; color: inherit;">
           <div class="feature-header">
             <div class="feature-icon">
               <i class="fas fa-chart-bar"></i>
@@ -624,7 +625,7 @@
           <div style="margin-top: 15px; color: var(--primary); font-weight: 600;">
             <i class="fas fa-arrow-right"></i> View Results
           </div>
-        </div>
+        </a>
       </div>
     </div>
   </section>
@@ -640,7 +641,7 @@
         <div class="benefit-card">
           <div class="benefit-number">95%</div>
           <h3>Accuracy</h3>
-          <p>AI-powered validation with high precision</p>
+          <p>Advanced AI-powered validation with high precision</p>
         </div>
         <div class="benefit-card">
           <div class="benefit-number">90%</div>
@@ -666,7 +667,7 @@
     <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
       <div class="cta-content">
         <h2>Ready to Transform Compliance Monitoring?</h2>
-        <p>Experience the power of AI-driven compliance validation</p>
+        <p>Experience the power of our advanced AI-driven compliance validation</p>
         <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
           <a href="{{ url_for('dashboard.process') }}" class="btn-hero btn-primary">
             <i class="fas fa-play"></i>

@@ -51,7 +51,7 @@ def score_image_for_label_text(reader, image_path: str) -> Tuple[int, List[str],
             return 0, [], extracted_text
             
         # Check for readable text quality indicators
-        readable_chars = sum(1 for c in extracted_text if c.isalnum() or c in ' .,:₹-/')
+        readable_chars = sum(1 for c in extracted_text if c.isalnum() or c in ' .,:₹-/_')
         total_chars = len(extracted_text)
         readability_ratio = readable_chars / total_chars if total_chars > 0 else 0
         

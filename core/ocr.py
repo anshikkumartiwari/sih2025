@@ -51,7 +51,14 @@ def _preprocess_image(path: str):
     if cv2 is None or np is None:
         return []
     try:
-        img = cv2.imdecode(np.fromfile(path, dtype=np.uint8), cv2.IMREAD_COLOR)
+        img = None
+        # Prefer robust file read via imdecode; fallback to imread
+        try:
+            img = cv2.imdecode(np.fromfile(path, dtype=np.uint8), cv2.IMREAD_COLOR)
+        except Exception:
+            img = None
+        if img is None:
+            img = cv2.imread(path, cv2.IMREAD_COLOR)
         if img is None:
             return []
         gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)

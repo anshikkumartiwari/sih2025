@@ -1,0 +1,119 @@
+{
+  "manufacturer_name": "Bingo",
+  "total_products": 2,
+  "compliance_history": [
+    {
+      "timestamp": "2025-09-26T03:18:22.101574",
+      "product_title": "Bingo Potato Chips - Chilli Sprinkled, 52g Pouch",
+      "compliance_score": 0.75,
+      "required_fields_present": 3,
+      "required_fields_total": 4,
+      "missing_fields": [
+        "Country of Origin"
+      ],
+      "warnings": [
+        "Optional: Manufacturing/Expiry Date",
+        "Optional: Batch/Lot Number",
+        "Optional: Product Barcode"
+      ],
+      "url": "https://www.amazon.in/Bingo-Potato-Chips-Chilli-Sprinkled/dp/B08DNR1513/ref=sr_1_1_in_f3_0o_fs_sspa?crid=1QUFY8U7KFMTP&dib=eyJ2IjoiMSJ9.KQVz5M-pBRUrTiWDB47OfppjxEOyRSWYv06CYhfN7lbLvkqp43Q1ALjbQDDzwQK_8_g2H03yfNy_BJfw5RiVon3uRrGYO7dvM_TFQWgyu0ptX-ZeRKpwliTk9BJnxeKBAQxOzHawId2LjO7iKLKnXWCrTc8TFxYs2C99XlJiAyQIPW5mmkokYtKGLoa9K2FM2sRn2EfkUG2t9AOX6Vk51tI62xfOEwT9bahC-OgCzKWFkCbXXvGWeIJPLeEpgIMsfdn33BrV41O5vT_xDww8q8mVBYSVLvQr6-SiScycBVY.8XuZXjmvsrKCNf4hTVW-5TgTtsVLAxtNWHF-kv5v6_U&dib_tag=se&keywords=chips&qid=1758572888&sprefix=chips%2Caps%2C297&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1",
+      "category": "General Products"
+    },
+    {
+      "timestamp": "2025-09-26T09:46:56.533983",
+      "product_title": "Bingo Potato Chips - Chilli Sprinkled, 52g Pouch",
+      "compliance_score": 0.75,
+      "required_fields_present": 3,
+      "required_fields_total": 4,
+      "missing_fields": [
+        "Country of Origin"
+      ],
+      "warnings": [
+        "Optional: Manufacturing/Expiry Date",
+        "Optional: Batch/Lot Number",
+        "Optional: Product Barcode"
+      ],
+      "url": "https://www.amazon.in/Bingo-Potato-Chips-Chilli-Sprinkled/dp/B08DNR1513/ref=sr_1_1_in_f3_0o_fs_sspa?crid=1QUFY8U7KFMTP&dib=eyJ2IjoiMSJ9.KQVz5M-pBRUrTiWDB47OfppjxEOyRSWYv06CYhfN7lbLvkqp43Q1ALjbQDDzwQK_8_g2H03yfNy_BJfw5RiVon3uRrGYO7dvM_TFQWgyu0ptX-ZeRKpwliTk9BJnxeKBAQxOzHawId2LjO7iKLKnXWCrTc8TFxYs2C99XlJiAyQIPW5mmkokYtKGLoa9K2FM2sRn2EfkUG2t9AOX6Vk51tI62xfOEwT9bahC-OgCzKWFkCbXXvGWeIJPLeEpgIMsfdn33BrV41O5vT_xDww8q8mVBYSVLvQr6-SiScycBVY.8XuZXjmvsrKCNf4hTVW-5TgTtsVLAxtNWHF-kv5v6_U&dib_tag=se&keywords=chips&qid=1758572888&sprefix=chips%2Caps%2C297&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1",
+      "category": "General Products"
+    }
+  ],
+  "compliance_stats": {
+    "total_scans": 2,
+    "compliant_scans": 2,
+    "non_compliant_scans": 0,
+    "average_compliance_score": 0.75,
+    "required_fields_compliance": {
+      "mrp": {
+        "present": 2,
+        "missing": 0,
+        "percentage": 100.0
+      },
+      "quantity": {
+        "present": 2,
+        "missing": 0,
+        "percentage": 100.0
+      },
+      "manufacturer": {
+        "present": 2,
+        "missing": 0,
+        "percentage": 100.0
+      },
+      "origin": {
+        "present": 0,
+        "missing": 2,
+        "percentage": 0.0
+      }
+    },
+    "optional_fields_compliance": {
+      "support": {
+        "present": 2,
+        "missing": 0,
+        "percentage": 100.0
+      },
+      "dates": {
+        "present": 0,
+        "missing": 2,
+        "percentage": 0.0
+      },
+      "batch": {
+        "present": 0,
+        "missing": 2,
+        "percentage": 0.0
+      },
+      "license": {
+        "present": 2,
+        "missing": 0,
+        "percentage": 100.0
+      },
+      "barcode": {
+        "present": 0,
+        "missing": 2,
+        "percentage": 0.0
+      }
+    }
+  },
+  "product_categories": {
+    "General Products": {
+      "total_products": 2,
+      "compliant_products": 2,
+      "average_compliance_score": 0.75
+    }
+  },
+  "recent_products": [
+    {
+      "title": "Bingo Potato Chips - Chilli Sprinkled, 52g Pouch",
+      "compliance_score": 0.75,
+      "timestamp": "2025-09-26T09:46:56.534072",
+      "category": "General Products",
+      "url": "https://www.amazon.in/Bingo-Potato-Chips-Chilli-Sprinkled/dp/B08DNR1513/ref=sr_1_1_in_f3_0o_fs_sspa?crid=1QUFY8U7KFMTP&dib=eyJ2IjoiMSJ9.KQVz5M-pBRUrTiWDB47OfppjxEOyRSWYv06CYhfN7lbLvkqp43Q1ALjbQDDzwQK_8_g2H03yfNy_BJfw5RiVon3uRrGYO7dvM_TFQWgyu0ptX-ZeRKpwliTk9BJnxeKBAQxOzHawId2LjO7iKLKnXWCrTc8TFxYs2C99XlJiAyQIPW5mmkokYtKGLoa9K2FM2sRn2EfkUG2t9AOX6Vk51tI62xfOEwT9bahC-OgCzKWFkCbXXvGWeIJPLeEpgIMsfdn33BrV41O5vT_xDww8q8mVBYSVLvQr6-SiScycBVY.8XuZXjmvsrKCNf4hTVW-5TgTtsVLAxtNWHF-kv5v6_U&dib_tag=se&keywords=chips&qid=1758572888&sprefix=chips%2Caps%2C297&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1"
+    },
+    {
+      "title": "Bingo Potato Chips - Chilli Sprinkled, 52g Pouch",
+      "compliance_score": 0.75,
+      "timestamp": "2025-09-26T03:18:22.101611",
+      "category": "General Products",
+      "url": "https://www.amazon.in/Bingo-Potato-Chips-Chilli-Sprinkled/dp/B08DNR1513/ref=sr_1_1_in_f3_0o_fs_sspa?crid=1QUFY8U7KFMTP&dib=eyJ2IjoiMSJ9.KQVz5M-pBRUrTiWDB47OfppjxEOyRSWYv06CYhfN7lbLvkqp43Q1ALjbQDDzwQK_8_g2H03yfNy_BJfw5RiVon3uRrGYO7dvM_TFQWgyu0ptX-ZeRKpwliTk9BJnxeKBAQxOzHawId2LjO7iKLKnXWCrTc8TFxYs2C99XlJiAyQIPW5mmkokYtKGLoa9K2FM2sRn2EfkUG2t9AOX6Vk51tI62xfOEwT9bahC-OgCzKWFkCbXXvGWeIJPLeEpgIMsfdn33BrV41O5vT_xDww8q8mVBYSVLvQr6-SiScycBVY.8XuZXjmvsrKCNf4hTVW-5TgTtsVLAxtNWHF-kv5v6_U&dib_tag=se&keywords=chips&qid=1758572888&sprefix=chips%2Caps%2C297&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1"
+    }
+  ],
+  "last_updated": "2025-09-26T09:46:56.534091"
+}

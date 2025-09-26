@@ -1,82 +1,114 @@
 {
-  "url": "https://www.amazon.in/Dark-Fantasy-Choco-Fills-300g/dp/B01I17U9ZO/ref=pd_sbs_d_sccl_2_6/260-7690809-9772731?pd_rd_w=UhdLS&content-id=amzn1.sym.6d240404-f8ea-42f5-98fe-bf3c8ec77086&pf_rd_p=6d240404-f8ea-42f5-98fe-bf3c8ec77086&pf_rd_r=5028GW2RZ98XYKPMESJK&pd_rd_wg=GCh2M&pd_rd_r=49d61023-5fe8-4536-b1ab-ef550ed0b001&pd_rd_i=B01I17U9ZO&th=1",
-  "title": "Sunfeast Dark Fantasy Dark Fantasy Choco Fills, 300g",
-  "mrp": "₹106.00",
-  "quantity": "230 g",
-  "manufacturer": "ITC, ITC Limited, Kolkata",
-  "origin": "India",
+  "url": "https://www.amazon.in/Bingo-Potato-Chips-Chilli-Sprinkled/dp/B08DNR1513/ref=sr_1_1_in_f3_0o_fs_sspa?crid=1QUFY8U7KFMTP&dib=eyJ2IjoiMSJ9.KQVz5M-pBRUrTiWDB47OfppjxEOyRSWYv06CYhfN7lbLvkqp43Q1ALjbQDDzwQK_8_g2H03yfNy_BJfw5RiVon3uRrGYO7dvM_TFQWgyu0ptX-ZeRKpwliTk9BJnxeKBAQxOzHawId2LjO7iKLKnXWCrTc8TFxYs2C99XlJiAyQIPW5mmkokYtKGLoa9K2FM2sRn2EfkUG2t9AOX6Vk51tI62xfOEwT9bahC-OgCzKWFkCbXXvGWeIJPLeEpgIMsfdn33BrV41O5vT_xDww8q8mVBYSVLvQr6-SiScycBVY.8XuZXjmvsrKCNf4hTVW-5TgTtsVLAxtNWHF-kv5v6_U&dib_tag=se&keywords=chips&qid=1758572888&sprefix=chips%2Caps%2C297&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1",
+  "title": "Bingo Potato Chips - Chilli Sprinkled, 52g Pouch",
+  "mrp": "₹20",
+  "quantity": "52 Grams",
+  "manufacturer": "Bingo",
+  "origin": null,
   "images": [
-    "temp\\temp2\\img1_51HDRdNLU-L__SL1500_.jpg",
-    "temp\\temp2\\img2_51B2mZrokgL__SL1500_.jpg",
-    "temp\\temp2\\img3_51u70hvu3nL__SL1500_.jpg",
-    "temp\\temp2\\img4_41WxKKK8KrL__SL1500_.jpg",
-    "temp\\temp2\\img5_51OHwhZkGRL__SL1500_.jpg",
-    "temp\\temp2\\img6_51ydbOA0BqL__SL1500_.jpg"
+    "temp\\temp2\\img1_81tzFgAzZBL__SX679_.jpg",
+    "temp\\temp2\\img2_51OqN1FHk9L_SL1500.jpg",
+    "temp\\temp2\\img3_51UDa3gWx1L_SL1500.jpg",
+    "temp\\temp2\\img4_51LXUSWC7ZL_SL1500.jpg",
+    "temp\\temp2\\img5_51U7f32lSxL_SL1500.jpg",
+    "temp\\temp2\\img6_518NaRMq1_L_SL1500.jpg",
+    "temp\\temp2\\img7_51E0w4_1-ML_SL1500.jpg",
+    "temp\\temp2\\img8_51d-5RpAi5L_SL1500.jpg"
   ],
-  "Occasion": "Anniversary, New Baby, Thank, Thanksgiving",
-  "Flavour": "Chocolate",
-  "Diet Type": "Vegetarian",
+  "Brand": "Bingo",
+  "Flavour": "Chili",
+  "Net Quantity": "52 Grams",
   "Number of Items": "1",
-  "Net Quantity": "230.0 gram",
-  "Brand": "Sunfeast Dark Fantasy",
-  "Item Weight": "230 Grams",
-  "Number of Pieces": "20",
-  "Item Form": "Cookie",
-  "Speciality": "suitable for vegetarians",
+  "Type": "Potato Chip",
+  "Diet Type": "Vegetarian",
+  "Item Form": "Chips",
+  "Item Weight": "0.05 Kilograms",
+  "Size": "52 g (Pack of 1)",
+  "Item dimensions L x W x H": "17.8 x 15.2 x 7.6 Centimeters",
+  "product_details": {
+    "Specialty": "Vegetarian",
+    "Weight": "0.05 Kilograms",
+    "Ingredient Type": "Vegetarian",
+    "Brand": "Bingo",
+    "Form": "Chips",
+    "Package Information": "Bag",
+    "Manufacturer": "Bingo",
+    "Item part number": "100625073",
+    "Net Quantity": "52 Grams",
+    "Product Dimensions": "17.78 x 15.24 x 7.62 cm; 50 g",
+    "Ingredients": "Potato (55.7%), Refined palamolein, seasoning mix{iodised salt, chilli powder (1.1%), #Spices & condiments. onion, maltodextrin, refined whear flour (Maida), Milk Solids, Black Salt, Tomato Powder [Tomato Paste, Anticaking Agent (INS 551)], Refined Sugar, Hydrolyzed Vegetable Protein, Acidity Regulators (INS 296, INS 330, INS 334), Garlic, Anticaking Agent (INS 551), Flavour Enhancers (INS 627, INS 631)) And lodised Salt.",
+    "ASIN": "B08DNR1513",
+    "Customer Reviews": "4.3 \n4.3 out of 5 stars\n    15,844 ratings\n4.3 out of 5 stars",
+    "Best Sellers Rank": "#65 in Grocery & Gourmet Foods (See Top 100 in Grocery & Gourmet Foods)\n#2 in Potato Chips",
+    "Date First Available": "28 April 2020",
+    "Item Weight": "50 g",
+    "Item Dimensions LxWxH": "17.8 x 15.2 x 7.6 Centimeters"
+  },
   "vision": {
     "selected": [
-      "temp\\temp2\\img2_51B2mZrokgL__SL1500_.jpg",
-      "temp\\temp2\\img3_51u70hvu3nL__SL1500_.jpg"
+      "temp\\temp2\\img3_51UDa3gWx1L_SL1500.jpg",
+      "temp\\temp2\\img4_51LXUSWC7ZL_SL1500.jpg"
     ],
     "scoring": {
-      "temp\\temp2\\img1_51HDRdNLU-L__SL1500_.jpg": {
+      "temp\\temp2\\img1_81tzFgAzZBL__SX679_.jpg": {
         "score": 0,
         "matched": [],
-        "text_preview": "Dark Fantasy Choco Fills CRTGIhal FLLED Coome Kitn Mil Ghocoibtr notcs biscuIS"
+        "text_preview": "POTATO CHIPS CHILLI SPRINKLED BINGOI Tyle"
       },
-      "temp\\temp2\\img2_51B2mZrokgL__SL1500_.jpg": {
-        "score": 2,
+      "temp\\temp2\\img2_51OqN1FHk9L_SL1500.jpg": {
+        "score": 0,
+        "matched": [],
+        "text_preview": "POTATO CHIPS CHILLI SPRINKLED BINGo?"
+      },
+      "temp\\temp2\\img3_51UDa3gWx1L_SL1500.jpg": {
+        "score": 4,
         "matched": [
           "FSSAI",
+          "Nutritional",
+          "Ingredients",
           "Numbers"
         ],
-        "text_preview": "Watni RIT WE M,4Lirdeua uun Jar Nfd Jatin Ei; iiono NkrtiL L0 eDarasy Isu Malaenuontolt Mivgiuiviv iennnatt iic %No; LiHa 10312034640812  1001204300008 Heto Hceaa Ftceeti Choco Fils No. 7005 117012000..."
+        "text_preview": "DNUIRITION  INFORMATION Energy (Kcal) 544 Protein (g) 7.1 Carbohydrate (g) 54.1 of which Sugar (g) 2.6 Fat (g) 33.2 Trans fat (g) 0.1 Saturate fat (g) 16.2 Sodium (mg) 859 fssai Lic; No. 1001203100031..."
       },
-      "temp\\temp2\\img3_51u70hvu3nL__SL1500_.jpg": {
-        "score": 2,
+      "temp\\temp2\\img4_51LXUSWC7ZL_SL1500.jpg": {
+        "score": 1,
         "matched": [
-          "Nutritional",
-          "Ingredients"
+          "MRP"
         ],
-        "text_preview": "INGREDIENTS:   CHOco cREME (38.023) {SUGAR, REFINED PALMOLEIn; REFINED PALM OlL_ COCOA   SOLIDS EMULSIFIER [LecIThIN (FROM SONABEAN)I;  WATURE Identical FLAVOURING SUBSTANceS (CHOCOLATE) , ARTIFICIAL ..."
+        "text_preview": "na9it In oet bile 04 Jochioa Vert Iperlult BNcoI 74i5s4 ao1yro Tnea 'MRP 20,00 incl: cfall taxes Vahdugue Cnneuritiee 'dAEMAMLi4 u4egLaui 204 M Tiatua #m; MFDCJI : Moanneohre Ruds@ In 312 ci\""
       },
-      "temp\\temp2\\img4_41WxKKK8KrL__SL1500_.jpg": {
+      "temp\\temp2\\img5_51U7f32lSxL_SL1500.jpg": {
         "score": 0,
         "matched": [],
-        "text_preview": "@Dark Fantasy Choco Fills litb G0d OR GDark Fantasy Choco Fills"
+        "text_preview": "CRISPV, CRUNCHY & SPICY eo1pgo CHILLI SPRINKIFD BINGo?"
       },
-      "temp\\temp2\\img5_51OHwhZkGRL__SL1500_.jpg": {
+      "temp\\temp2\\img6_518NaRMq1_L_SL1500.jpg": {
         "score": 0,
         "matched": [],
-        "text_preview": "CDark Fantasy Dark Fantasy Choco Fills Eodent FDaasy UNITS acd 20 WSIBE"
+        "text_preview": "PACKETFUL OF SUNSHINE BINGoI ceteo CHILLI TRIYKFO"
       },
-      "temp\\temp2\\img6_51ydbOA0BqL__SL1500_.jpg": {
+      "temp\\temp2\\img7_51E0w4_1-ML_SL1500.jpg": {
         "score": 0,
         "matched": [],
-        "text_preview": "HAR TIFFIN Kl SWEET ENDING Citatnt M FDarasy"
+        "text_preview": "POTzo PERFEGTION"
+      },
+      "temp\\temp2\\img8_51d-5RpAi5L_SL1500.jpg": {
+        "score": 0,
+        "matched": [],
+        "text_preview": "'PERFECT PARTNER THE SNACKING BINGo? re1ao  CHI Sriinri"
       }
     }
   },
   "ocr": {
-    "extracted_text": "eDarasy \nIsu \nChoco Fils \nNo. 1001603100178 \n[0017C \n7063001007 \n3621999000184 \nVc No.10018012000497 \n@ic No: 12621999000017 \n230 g \nIRs per g) \nEDarksy \nNo1001603100178 \nNo 10017 \n7063001007 \nNo: 10017071000926= \n3621999000184 \nLc No \n10018012000497 \nLic No 12621999000017 \n230 8 \nFor FEEDBACH COMPLAIM COMACT: \nODark \nFantasy \nKa 13621 \n55 \nFE \n6 \npor \nfx \nFantasy \nLic No 70017063001007 \nLic No.10018012000497 \nlic No: 12621999000017 \nNETWEIGHT: \n230 \nSS \nper @) \nFORFEEDBACIVCOMPLAIM COMACT: \nMCCARES \nBOXNO 592 BENGALURU - 560005 \nItccareso \nTRo \nINGREDIENTS:   CHOco \ncREME \n(38.023) \n{SUGAR, \nREFINED \nPALMOLEIn; \nREFINED PALM OlL_ \nEMULSIFIER \n[LecIThIN (FROM SONABEAN)I;  WATURE Identical FLAVOURING \nSUBSTANceS (CHOCOLATE) , ARTIFICIAL FLAVOURING SUBSTANCES \n(VANILLA)},  MAIda  (REFINED WHEAT  FLOUR), HYDROGENATED \nVEGETABLE OIL, SUGaR, INVERT SYRUP; LIQUID GLUCOSE, RaISIng \nBUTTER; \nMilk   SOLIDS; \nIODIZEd \nSALT; \nNATURE \nIdentical \nFLAVOURING   SUBSTANCES ( Milk CHOCOLATE), COLOURS (INS \n150c, \nINS  150d) , \nEMULSIFIERS  [LEcithin  (FROM   SOYABEAn); \nARTIFICIAL FLAVOURING SUBSTANCES (MILK, VANILLA)_ \nINGREDIENTS: \ncREME \n(38.026) \n{SUGAR; \nREFINED \nPALMOLEIN; \nREFINED PALM O1L_ \nEMULSIFIER \n[LecIThIN (FROM SOYABEAN)]; \nNATURE IDENTICAL FLAVOURING \nSUBSTANCeS (CHOCOLATE), ARTIFICIAL FLAVOURING SUBSTANCES \n(VAnIlla)} MAida (REFINED WHEAT FLOUR), HYDROGENATED \nVEGETABLE OIL, SUGAR, INVERT SYRUP; LIQUID GLUCOSE, RAISING \nAGENTS [INS 503(i) , INS 5o0(i) , INS 450(6)], COCOA SOLIDS (0.790) , \nBUTTER; \nMilk   SOLIDS; \nIODIZED \nSALT ; \nNATURE \nFLAVOURING   SUBSTANCES \n(~Milk CHOCOLATE); \nCOLOURS   (INS \n150c, \nINS  150d), \nEMULSIFIERS  [LEcithin (FROM   SOYABEAn); \nARTIFICIAL FLAVOURING SUBSTANCES (MILK, VANilla)_ \nINGREDIENIS; \nchoco \n(REME ` \n(8.096} \n{SUGAR; \nREFINED \nPALMOLEIN ,  REFINEO PALM OIL \n{0(04  SOLIDS, EMULSIFIER \n[LECITHIN (FROM SOYABEAN)]; NATURE IDENTICAL FLAVQURING \nVEGETABLE CIL, SUGAR; INVERT SYRUP Liquid GLUCOSE, RAISING \nBUTTER; \nIODIZED \nSALT, \nHATURE \nIDENTICAL \nFLAVOURING SUBSTANCES (\"Milk CKOCOLATE)   (OLOURS (INS \n150, INS 150d}; EMULSIFIERS [LECITHIN  (FROM SOYABEAN); \nARTIFICTAE FLAVOURING SUBSTANCES (MILK, VANILLA): \nINGREDIENTS: \nCREME \n(38.096) \n{SUGAR; \nREFINED \n[lecithin (FRoM SOYABEAN)]; NATURE IDENTICAL FLAVOURING \nSUBSTANCES (CHOCOLATE), ARTIFICIAL FLAVOURING SUBSTANCES \n(VANilla)}; Maida  (REFiNed WHEAT FLOUR) HYDROGENATED \nVEGETABLE OIL, SUGAR, INVERT SYRUP; Liquid GLUCOSE, RAISIng \nAGENTS [INS 503(i) , INS 5oo(i) , INS 450()], COCOA SOLIDS (0.790), \nBUTTER; \nMilk   SOLIdS, \niodized   SAlt, \nNATURE \nIDENTICAL \nFLAVOURING   SUBSTANCES \nMilk CHOCOLATe), COLOURS (InS \n150c,  INS 150d), EMULSIFIERS [Lecithin (FROM  SOYABEAN); \nARTIFICIAL FLAVOURING SUBSTANCES (MIlk, VANILLa):",
+    "extracted_text": "DNUIRITION  \nINFORMATION \nEnergy (Kcal) \n544 \nProtein (g) \n7.1 \nCarbohydrate (g) \n54.1 \nof which Sugar (g) \n2.6 \nFat (g) \n33.2 \nTrans fat (g) \n0.1 \nSaturate fat (g) \n16.2 \nSodium (mg) \n859 \nfssai \nLic; No. 10012031000312 \nDNUIRIIIONC \nINFORMATION \nEnergy (Kcal) \n544 \nProtein \n7.1 \nCarbohydrate (g) \n54.1 \nof which Sugar (g) \n2.6 \nFat (g) \n33.2 \nTrans fat (g) \n0.1 \nSaturate fat (g) \n16.2 \nSodium (mg) \n859 \nfssai \nLic No. 10012031000312 \nONUIRIION \nvhich Sugar \nturate fat \nDNUIRIITIONC \nINFORMATION \nEnergy (Kcal) \n544 \nProtein (g) \n7.1 \nCarbohydrate (g) \n54.1 \nof which Sugar (g) \n2.6 \n(g) \n33.2 \nTrans fat (g) \n0.1 \nSaturate fat (g) \n16.2 \nSodium (mg) \n859 \nfssai \nLic No 10012031000312 \nFat \n'MRP \n20,00 incl: cfall taxes \nlochron \n\"MRP \n20,00 incl: ofall taxes \nBINc? \n'MRP Rs 20,00 incl: ofall taxes  \nGum",
     "fields": {
-      "license": "70017063001007",
-      "support": "1001603100178",
-      "quantity": "230 g"
+      "mrp": "₹20",
+      "license": "10012031000312",
+      "support": "10012031000312"
     },
     "compliance": {
-      "mrp": false,
-      "quantity": true,
+      "mrp": true,
+      "quantity": false,
       "manufacturer": false,
       "origin": false,
       "support": true,
@@ -86,7 +118,7 @@
       "barcode": false
     },
     "missing": [
-      "Maximum Retail Price (₹)",
+      "Net Quantity/Weight",
       "Manufacturer/Packer Name",
       "Country of Origin"
     ],
@@ -102,12 +134,12 @@
       "compliance_score": "1/4"
     }
   },
-  "support": "1001603100178",
-  "license": "70017063001007",
+  "support": "10012031000312",
+  "license": "10012031000312",
   "compliance": {
-    "mrp": false,
+    "mrp": true,
     "quantity": true,
-    "manufacturer": false,
+    "manufacturer": true,
     "origin": false,
     "support": true,
     "dates": false,
@@ -116,8 +148,6 @@
     "barcode": false
   },
   "missing_fields": [
-    "Maximum Retail Price (₹)",
-    "Manufacturer/Packer Name",
     "Country of Origin"
   ],
   "warnings": [
@@ -126,13 +156,19 @@
     "Optional: Product Barcode"
   ],
   "compliance_summary": {
-    "total_fields_found": 3,
-    "required_present": 1,
+    "total_fields_found": 5,
+    "required_present": 3,
     "required_total": 4,
-    "compliance_score": "1/4"
+    "compliance_score": "3/4"
+  },
+  "manufacturer_analytics": {
+    "manufacturer_name": "Bingo",
+    "total_products": 2,
+    "average_compliance_score": 0.75,
+    "compliance_level": "Good"
   },
   "gemini_status": {
-    "gemini_available": false,
+    "gemini_available": true,
     "api_key_set": false,
     "ready": false
   }

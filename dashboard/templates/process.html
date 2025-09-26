@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Compliance Checker - Analyze Product</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
   <script defer src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
@@ -188,6 +189,96 @@
         grid-template-columns: 1fr;
       }
     }
+
+    /* Live scan styles */
+    .live-scan {
+      margin-top: 24px;
+      background: #334155;
+      border-radius: 12px;
+      border: 1px solid #475569;
+      overflow: hidden;
+    }
+    .live-scan-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 16px;
+      background: #1e293b;
+      border-bottom: 1px solid #475569;
+      color: #f8fafc;
+    }
+    .live-scan-body {
+      padding: 12px;
+    }
+    .scan-video {
+      width: 100%;
+      border-radius: 8px;
+      background: black;
+      max-height: 360px;
+      object-fit: cover;
+    }
+    .scan-frame {
+      position: relative;
+      width: 100%;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .scan-overlay {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      box-shadow: inset 0 0 0 2px rgba(59, 130, 246, 0.8);
+    }
+    .scan-line {
+      position: absolute;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, transparent, #22c55e, transparent);
+      opacity: 0.9;
+      animation: scanMove 2.2s linear infinite;
+    }
+    @keyframes scanMove {
+      0% { top: 8%; }
+      50% { top: 92%; }
+      100% { top: 8%; }
+    }
+    .scan-actions {
+      display: flex;
+      gap: 10px;
+      margin-top: 12px;
+      flex-wrap: wrap;
+      position: sticky;
+      bottom: 0;
+      background: linear-gradient(180deg, rgba(30,41,59,0) 0%, rgba(30,41,59,0.85) 35%, rgba(30,41,59,1) 100%);
+      padding: 12px 8px 8px 8px;
+      border-top: 1px solid #475569;
+      border-radius: 0 0 12px 12px;
+      backdrop-filter: blur(6px);
+    }
+    .btn-small {
+      padding: 10px 14px;
+      border-radius: 10px;
+      border: 1px solid #475569;
+      background: #0f172a;
+      color: #f8fafc;
+      cursor: pointer;
+    }
+    .btn-small.primary { background: linear-gradient(135deg, #3b82f6, #2563eb); border: none; }
+    .muted-text { color: #94a3b8; font-size: 0.9rem; }
+    .hidden { display: none; }
+    .progress-inline { display: inline-flex; align-items: center; gap: 8px; }
+    .dot { width: 8px; height: 8px; border-radius: 50%; background: #3b82f6; animation: pulse 1s infinite ease-in-out; }
+    .dot:nth-child(2){ animation-delay: .15s }
+    .dot:nth-child(3){ animation-delay: .3s }
+    @keyframes pulse { 0%{opacity:.2; transform:scale(.8)} 50%{opacity:1; transform:scale(1)} 100%{opacity:.2; transform:scale(.8)} }
+
+    /* Mobile refinements */
+    @media (max-width: 480px) {
+      .btn-small { width: 100%; text-align: center; }
+      .process-card { padding: 24px; }
+      .scan-video { max-height: 320px; }
+    }
   </style>
 </head>
 <body>
@@ -229,6 +320,47 @@
           <span>Analyze Compliance</span>
         </button>
       </form>
+
+      <div style="margin: 20px 0; text-align:center; color:#94a3b8;">or</div>
+
+      <form id="upload-form" method="POST" action="{{ url_for('dashboard.upload') }}" enctype="multipart/form-data">
+        <div class="url-input-group">
+          <label for="photo" style="display: block; margin-bottom: 8px; font-weight: 600; color: #374151;">
+            <i class="fas fa-camera"></i> Upload/Scan a Photo
+          </label>
+          <input type="file" id="photo" name="photo" accept="image/*" capture="environment" class="url-input">
+        </div>
+        <button type="submit" class="analyze-btn">
+          <i class="fas fa-upload"></i>
+          <span>Analyze Uploaded Image</span>
+        </button>
+      </form>
+
+      <!-- Live Camera Scan (mobile-friendly) -->
+      <div class="live-scan" id="live-scan">
+        <div class="live-scan-header">
+          <div class="progress-inline">
+            <span id="scan-state" class="muted-text">Idle</span>
+          </div>
+          <div class="progress-inline hidden" id="scan-dots">
+            <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+          </div>
+        </div>
+        <div class="live-scan-body">
+          <div class="scan-frame">
+            <video id="video" class="scan-video" autoplay playsinline muted></video>
+            <div class="scan-overlay"></div>
+            <div id="scanLine" class="scan-line hidden"></div>
+          </div>
+          <canvas id="canvas" class="hidden"></canvas>
+          <div class="scan-actions">
+            <button type="button" id="toggleScan" class="btn-small primary">
+              <i class="fas fa-video"></i> Start Scan
+            </button>
+          </div>
+          <div id="live-status" class="muted-text" style="margin-top:6px"></div>
+        </div>
+      </div>
 
       <!-- Progress Indicator -->
       <div id="progress" class="progress-card hidden">
@@ -317,6 +449,103 @@
         document.querySelector('#step3 .step-icon').classList.add('active');
       }, 6000);
     });
+
+    // Live camera logic
+    const video = document.getElementById('video');
+    const canvas = document.getElementById('canvas');
+    const toggleBtn = document.getElementById('toggleScan');
+    const liveStatus = document.getElementById('live-status');
+    const scanState = document.getElementById('scan-state');
+    const scanDots = document.getElementById('scan-dots');
+    let stream;
+    let scanning = false;
+    let uploading = false;
+
+    function setState(text, busy=false){
+      scanState.textContent = text;
+      if (busy){ scanDots.classList.remove('hidden'); } else { scanDots.classList.add('hidden'); }
+    }
+
+    async function startCamera(){
+      try {
+        setState('Starting camera...', true);
+        stream = await navigator.mediaDevices.getUserMedia({ video: { facingMode: { ideal: 'environment' } }, audio: false });
+        video.srcObject = stream;
+        setState('Camera ready');
+        liveStatus.textContent = 'Point the camera at the label. Scanning will auto-capture frames.';
+        document.getElementById('scanLine').classList.remove('hidden');
+      } catch (e) {
+        setState('Camera access denied');
+        liveStatus.textContent = 'Grant camera permission or use Upload instead.';
+      }
+    }
+
+    function stopCamera(){
+      if (stream){
+        stream.getTracks().forEach(t => t.stop());
+        stream = null;
+      }
+      video.srcObject = null;
+      setState('Idle');
+      liveStatus.textContent = '';
+      document.getElementById('scanLine').classList.add('hidden');
+    }
+
+    async function captureBlob(){
+      if (!stream){ return null; }
+      const w = video.videoWidth || 1280;
+      const h = video.videoHeight || 720;
+      if (!w || !h) return null;
+      canvas.width = w; canvas.height = h;
+      const ctx = canvas.getContext('2d');
+      ctx.drawImage(video, 0, 0, w, h);
+      return await new Promise(resolve => canvas.toBlob(resolve, 'image/jpeg', 0.85));
+    }
+
+    async function uploadBlob(blob){
+      const form = new FormData();
+      form.append('photo', blob, 'scan.jpg');
+      return await fetch("{{ url_for('dashboard.upload') }}", { method: 'POST', body: form, redirect: 'follow' });
+    }
+
+    async function scanLoop(){
+      while (scanning){
+        if (uploading){ await new Promise(r => setTimeout(r, 200)); continue; }
+        try{
+          setState('Scanning...', true);
+          const blob = await captureBlob();
+          if (!blob){ await new Promise(r => setTimeout(r, 200)); continue; }
+          uploading = true;
+          setState('Uploading...', true);
+          const resp = await uploadBlob(blob);
+          uploading = false;
+          setState('Analyzing...', true);
+          window.location.href = "{{ url_for('dashboard.report') }}";
+          return;
+        }catch(e){
+          uploading = false;
+          setState('Retrying...', true);
+          await new Promise(r => setTimeout(r, 800));
+        }
+      }
+    }
+
+    async function toggleScan(){
+      if (!scanning){
+        try{
+          await startCamera();
+          scanning = true;
+          toggleBtn.innerHTML = '<i class="fas fa-stop"></i> Stop Scan';
+          scanLoop();
+        }catch(e){}
+      } else {
+        scanning = false;
+        toggleBtn.innerHTML = '<i class="fas fa-video"></i> Start Scan';
+        stopCamera();
+      }
+    }
+
+    toggleBtn?.addEventListener('click', toggleScan);
   </script>
 </body>
 </html>

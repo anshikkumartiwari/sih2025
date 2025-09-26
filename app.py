@@ -1,4 +1,9 @@
 from flask import Flask
+try:
+    from dotenv import load_dotenv  # type: ignore
+    load_dotenv()
+except Exception:
+    pass
 from dashboard.dashboard import dashboard  # import the Blueprint object
 
 def create_app():
@@ -9,4 +14,4 @@ def create_app():
 
 if __name__ == "__main__":
     app = create_app()
-    app.run(debug=True)
+    app.run(host="0.0.0.0", debug=True)

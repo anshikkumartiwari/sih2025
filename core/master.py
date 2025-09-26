@@ -1,10 +1,23 @@
 from core.crawlers import amazon
 from core import vision, ocr
 from core import gemini_analysis
+from core import manufacturer_tracker
+from core import historical_data
 
 def process_product(url: str):
     if any(domain in url.lower() for domain in ["amazon", "amzn.in"]):
         data = amazon.crawl(url)
+        
+        # Extract detailed product information
+        print(f"[DEBUG] Extracting detailed product information...")
+        try:
+            product_details = amazon.product_direct_details(url)
+            data["product_details"] = product_details
+            print(f"[DEBUG] Extracted {len(product_details)} product details")
+        except Exception as e:
+            print(f"[ERROR] Failed to extract product details: {e}")
+            data["product_details"] = {}
+        
         # Collect downloaded images
         images = data.get("images") or []
 
@@ -102,13 +115,41 @@ def process_product(url: str):
         print(f"[DEBUG] - Warnings: {warnings}")
         print(f"[DEBUG] - Compliance summary: {compliance_summary}")
         
+        # Update manufacturer compliance tracking
+        print(f"[DEBUG] Updating manufacturer compliance tracking...")
+        try:
+            manufacturer_data = manufacturer_tracker.update_manufacturer_compliance(data)
+            data["manufacturer_analytics"] = {
+                "manufacturer_name": manufacturer_data["manufacturer_name"],
+                "total_products": manufacturer_data["total_products"],
+                "average_compliance_score": manufacturer_data["compliance_stats"]["average_compliance_score"],
+                "compliance_level": "Excellent" if manufacturer_data["compliance_stats"]["average_compliance_score"] >= 0.9 else
+                                 "Good" if manufacturer_data["compliance_stats"]["average_compliance_score"] >= 0.75 else
+                                 "Fair" if manufacturer_data["compliance_stats"]["average_compliance_score"] >= 0.5 else "Poor"
+            }
+            print(f"[DEBUG] Manufacturer tracking updated for: {manufacturer_data['manufacturer_name']}")
+        except Exception as e:
+            print(f"[ERROR] Failed to update manufacturer tracking: {e}")
+            data["manufacturer_analytics"] = {"error": f"Manufacturer tracking failed: {e}"}
+        
+        # Store complete scan data in historical records
+        print(f"[DEBUG] Storing scan data in historical records...")
+        try:
+            historical_data.store_scan_data(data)
+            print(f"[DEBUG] Historical data updated successfully")
+        except Exception as e:
+            print(f"[ERROR] Failed to store historical data: {e}")
+        
         # Enhanced Gemini Analysis with Cross-Verification and OCR refinement
         raw_text = ocr_result.get("extracted_text", "")
         if raw_text:
+            print(f"[DEBUG] Starting Gemini analysis with text length: {len(raw_text)}")
             gemini_status = gemini_analysis.get_gemini_analysis_status()
             data["gemini_status"] = gemini_status
+            print(f"[DEBUG] Gemini status: {gemini_status}")
             
             if gemini_status["ready"]:
+                print("[DEBUG] Gemini is ready, starting analysis...")
                 try:
                     # Step 1: Ask Gemini to clean/refine OCR text (spelling/grammar correction)
                     enhanced = gemini_analysis.enhance_ocr_with_gemini(raw_text)
@@ -184,8 +225,175 @@ def process_product(url: str):
                                 data["warnings"] = gemini_compliance["missing_optional"]
                             
                 except Exception as e:
+                    print(f"[ERROR] Gemini analysis failed: {str(e)}")
                     data["gemini_analysis"] = {"error": f"Gemini analysis failed: {str(e)}"}
                     data["gemini_comprehensive"] = {"error": f"Comprehensive analysis failed: {str(e)}"}
+            else:
+                print(f"[DEBUG] Gemini not ready. Status: {gemini_status}")
+        else:
+            print("[DEBUG] No OCR text available for Gemini analysis")
         
         return data
     return {"error": "Unsupported platform"}
+
+
+def process_uploaded_images(image_paths):
+    """Run the same pipeline (vision → OCR → merge → compliance → gemini) for local images."""
+    data = {"images": image_paths[:]}  # copy list
+
+    # Score/select best label images; do OCR on relevant images only
+    selected, debug = vision.select_best_label_images(image_paths, min_matches=1, max_images=5)
+    data["vision"] = {"selected": selected, "scoring": debug}
+
+    # Pick relevant images: score >= 1 else all
+    relevant_images = [img for img in image_paths if debug.get(img, {}).get("score", 0) >= 1]
+    if not relevant_images:
+        relevant_images = image_paths
+        print(f"[DEBUG] (upload) No images with keywords found, using all {len(image_paths)} images for OCR")
+    else:
+        print(f"[DEBUG] (upload) Using {len(relevant_images)} relevant images for OCR")
+
+    ocr_result = ocr.extract_fields_from_images(relevant_images)
+    data["ocr"] = ocr_result
+
+    # Merge OCR fields
+    for key in [
+        "mrp",
+        "quantity",
+        "manufacturer",
+        "origin",
+        "support",
+        "dates",
+        "batch",
+        "license",
+        "barcode",
+    ]:
+        if ocr_result.get("fields", {}).get(key):
+            data[key] = ocr_result["fields"][key]
+            print(f"[DEBUG] (upload) Merged OCR field {key}: {ocr_result['fields'][key]}")
+
+    # Compliance analysis (same as in process_product)
+    merged_fields = {
+        key: data.get(key)
+        for key in [
+            "mrp",
+            "quantity",
+            "manufacturer",
+            "origin",
+            "support",
+            "dates",
+            "batch",
+            "license",
+            "barcode",
+        ]
+    }
+
+    required_fields = {
+        "mrp": "Maximum Retail Price (₹)",
+        "quantity": "Net Quantity/Weight",
+        "manufacturer": "Manufacturer/Packer Name",
+        "origin": "Country of Origin",
+    }
+    optional_fields = {
+        "support": "Consumer Care Contact",
+        "dates": "Manufacturing/Expiry Date",
+        "batch": "Batch/Lot Number",
+        "license": "FSSAI License Number",
+        "barcode": "Product Barcode",
+    }
+
+    compliance = {}
+    missing = []
+    warnings = []
+
+    for field, label in required_fields.items():
+        present = bool(merged_fields.get(field))
+        compliance[field] = present
+        if not present:
+            missing.append(label)
+
+    for field, label in optional_fields.items():
+        present = bool(merged_fields.get(field))
+        compliance[field] = present
+        if not present:
+            warnings.append(f"Optional: {label}")
+
+    if merged_fields.get("mrp"):
+        try:
+            mrp_val = float(str(merged_fields["mrp"]).replace("₹", "").replace(",", ""))
+            if mrp_val <= 0:
+                warnings.append("MRP should be positive")
+        except:
+            warnings.append("MRP format may be invalid")
+
+    if merged_fields.get("quantity"):
+        qty_str = str(merged_fields["quantity"]).lower()
+        if not any(unit in qty_str for unit in ["g", "kg", "ml", "l", "pcs", "pack"]):
+            warnings.append("Quantity unit may be missing or invalid")
+
+    compliance_summary = {
+        "total_fields_found": len([f for f in merged_fields.values() if f]),
+        "required_present": len([f for f in required_fields.keys() if compliance.get(f)]),
+        "required_total": len(required_fields),
+        "compliance_score": f"{len([f for f in required_fields.keys() if compliance.get(f)])}/{len(required_fields)}",
+    }
+
+    data["compliance"] = compliance
+    data["missing_fields"] = missing
+    data["warnings"] = warnings
+    data["compliance_summary"] = compliance_summary
+
+    # Update manufacturer compliance tracking for uploaded images
+    print(f"[DEBUG] (upload) Updating manufacturer compliance tracking...")
+    try:
+        manufacturer_data = manufacturer_tracker.update_manufacturer_compliance(data)
+        data["manufacturer_analytics"] = {
+            "manufacturer_name": manufacturer_data["manufacturer_name"],
+            "total_products": manufacturer_data["total_products"],
+            "average_compliance_score": manufacturer_data["compliance_stats"]["average_compliance_score"],
+            "compliance_level": "Excellent" if manufacturer_data["compliance_stats"]["average_compliance_score"] >= 0.9 else
+                             "Good" if manufacturer_data["compliance_stats"]["average_compliance_score"] >= 0.75 else
+                             "Fair" if manufacturer_data["compliance_stats"]["average_compliance_score"] >= 0.5 else "Poor"
+        }
+        print(f"[DEBUG] (upload) Manufacturer tracking updated for: {manufacturer_data['manufacturer_name']}")
+    except Exception as e:
+        print(f"[ERROR] (upload) Failed to update manufacturer tracking: {e}")
+        data["manufacturer_analytics"] = {"error": f"Manufacturer tracking failed: {e}"}
+
+    # Store complete scan data in historical records for uploaded images
+    print(f"[DEBUG] (upload) Storing scan data in historical records...")
+    try:
+        historical_data.store_scan_data(data)
+        print(f"[DEBUG] (upload) Historical data updated successfully")
+    except Exception as e:
+        print(f"[ERROR] (upload) Failed to store historical data: {e}")
+
+    # Gemini analysis
+    raw_text = ocr_result.get("extracted_text", "")
+    if raw_text:
+        print(f"[DEBUG] (upload) Starting Gemini analysis with text length: {len(raw_text)}")
+        gemini_status = gemini_analysis.get_gemini_analysis_status()
+        data["gemini_status"] = gemini_status
+        if gemini_status["ready"]:
+            try:
+                enhanced = gemini_analysis.enhance_ocr_with_gemini(raw_text)
+                data["gemini_enhanced"] = enhanced
+                effective_text = (
+                    enhanced.get("cleaned_text")
+                    if enhanced.get("enhanced") and enhanced.get("cleaned_text")
+                    else raw_text
+                )
+                gemini_basic = gemini_analysis.analyze_packaging_text(effective_text)
+                data["gemini_analysis"] = gemini_basic
+                comprehensive_analysis = gemini_analysis.comprehensive_compliance_analysis(
+                    effective_text, merged_fields
+                )
+                data["gemini_comprehensive"] = comprehensive_analysis
+            except Exception as e:
+                print(f"[ERROR] (upload) Gemini analysis failed: {str(e)}")
+                data["gemini_analysis"] = {"error": f"Gemini analysis failed: {str(e)}"}
+                data["gemini_comprehensive"] = {"error": f"Comprehensive analysis failed: {str(e)}"}
+    else:
+        print("[DEBUG] (upload) No OCR text available for Gemini analysis")
+
+    return data
